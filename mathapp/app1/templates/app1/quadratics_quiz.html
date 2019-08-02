@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Quadratics quiz</title>
+
+
+  </head>
+
+
+
+<style>
+.titles {
+  background-color: powderblue;
+  color: #566368;
+  font-size: 300%;
+}
+
+.questions {
+ background-color:powderblue;
+ color: #566368;
+ font-size: 120%;
+}
+.grey-box {
+ background-color: gray;
+ height: 200px;
+ margin-bottom: 10px;
+ font-size: 2em;
+ text-align: center;
+ padding: 80px;
+}
+
+}
+</style>
+
+
+<body>
+	<div class="titles">
+		<center>Quadratics Quiz</center>
+	</div>
+
+	<div class="questions">
+		<p>Question 1: What are the roots of</p>
+		<div lang="latex">
+		y = x^{2} -5x +6
+		</div>
+			
+				<button type="button" onclick="alert('Incorrect')">-2 and -3</button>
+				<button type="button" onclick="alert('Correct!')">2 and 3</button>
+				<button type="button" onclick="alert('Incorrect')">-5 and 6</button>
+				<button type="button" onclick="alert('Incorrect')">No roots exist</button>
+			
+	</div>
+
+	<div id="spoiler1" style="display:none">
+
+	Hint: Factor using the product sum method and solve for when y = 0.
+
+	</div>
+
+	<button title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+       {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	
+	<div class="questions">
+		<p>Question 2: What are the coordinates of the vertex of</p>
+		<div lang="latex">
+		y = -\frac{3}{2}(x-5)(2x+1)
+		</div>
+
+				<button type="button" onclick="alert('Incorrect')">(5 , -1/2)</button>
+				<button type="button" onclick="alert('Incorrect')">(-9/4 , 15/2)</button>
+				<button type="button" onclick="alert('Incorrect')">(5 , 3/2)</button>
+				<button type="button" onclick="alert('Correct!')">(9/4 , 15/2)</button>
+
+	</div>
+
+	<div id="spoiler2" style="display:none">
+
+	Hint: Find the mid-point of the two x-intercepts.
+
+	</div>
+
+	<button title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+       {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>
