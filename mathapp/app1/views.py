@@ -7,6 +7,9 @@ from django.http import HttpResponse
 def home(request):
     return render(request,'app1/home.html')
 
+def login(request):
+    pass
+
 def quadratics_quiz(request):
     return render(request,'app1/quadratics_quiz.html')
 
