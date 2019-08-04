@@ -12,57 +12,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Log In</title>
+    <title></title>
   </head>
 
 <style>
 
-.banner {
-  height: 100vh;
-  background-color: #1e522c;
-}
-
-.title {
-  background-color:#1e3f2c;
-  color: #018268;
-  font-size: 300%;
-  text-shadow: 2px 2px 0px #000000;
-}
-
-.info {
-  color: #000000;
-  padding: 5px;
-}
-
 </style>
 
 <body>
+{% block content %}
 
-	<div class='banner'>
+	<a href='{% url 'forum' %}'>Return to forum</a>
+	<br>
 
-	
-	<div>
-		<form class='info' method='POST'>
-			{% csrf_token %}
-			<fieldset>
-				<legend class = 'title'><left>Login</left></legend>
-				{{ form.as_p }}
-			</fieldset>
-			<div>
-				<button type='submit'>Login</button>
-			</div>
-		</form>
-		<div>
-			<small class='text-muted'>
-				Don't have an account? <a class="ml-2" href='{% url 'register' %}'>Sign Up</a>
-				<br>
-				<a href='{% url 'app-home' %}'>Return Home</a>
-			</small>
-		</div>
-	</div>
+	<img src='{{object.author.profile.image.url}}'>
+	<a href='#'>{{object.author}}</a>
+	<small class='text-muted'>{{object.date_posted|date:'F d,Y'}}</small>
+	<h2>{{object.title}}</h2>
+	<p>{{object.content}}</p>
 
-</div>
-
+{% endblock content%}
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

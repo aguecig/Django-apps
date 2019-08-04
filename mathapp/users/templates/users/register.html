@@ -17,18 +17,37 @@
 
 <style>
 
+
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.info {
+  color: #000000;
+  padding: 5px;
+}
+
+
 </style>
 
 <body>
 
 
-
+	<div class='banner'>
 
 	<div>
-		<form method='POST'>
+		<form class='info' method='POST'>
 			{% csrf_token %}
 			<fieldset>
-				<legend><center>Register Account</center></legend>
+				<legend class='title'><left>Register Account</left></legend>
 				{{ form.as_p }}
 			</fieldset>
 			<div>
@@ -38,9 +57,12 @@
 		<div>
 			<small class='text-muted'>
 				Already have an account? <a class="ml-2" href='{% url 'login' %}'>Sign In</a>
+				<br>
+				<a href='{% url 'app-home' %}'>Return Home</a>
 			</small>
 		</div>
 	</div>
+</div>
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

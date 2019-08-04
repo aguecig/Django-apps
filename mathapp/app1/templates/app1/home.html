@@ -38,11 +38,17 @@
  font-size: 120%;
 }
 
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
 .bigbanner {
  background-image: 
  background-repeat: no-repeat;
  background-color: #1e522c;
  background-position: center;
+ height: 100vh;
 
 }
 .tables {
@@ -105,23 +111,22 @@ th,tr,td {
 			{% endif %}
 		</div>
 
-	<div class='bigbanner' style='height:500px;padding-top:100px></div>
+	<div class='bigbanner'>		
 
-
-		<div class='container'>
+		<div>
 
 			<div class='title'><center>High School Math Resources</center></div>
 
 
 			{% if user.is_authenticated %}
 			<div class='subtitles'>
-				<a href=#>Go to Forum</a>
+				<a href='{% url 'forum' %}'>Go to Forum</a>
 				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'profile' %}'>View Profile</a>
 				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'logout' %}'>Log Out</a></left>
 			</div>
 			{% else %}
 			<div class='subtitles'>
-				<left><a href='{% url 'register' %}'>Create Account</a>&nbsp;&nbsp&nbsp;&nbsp<a href=#>Go to Forum</a>
+				<left><a href='{% url 'register' %}'>Create Account</a>&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'forum' %}'>Go to Forum</a>
 				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'login' %}'>Log In</a></left>
 
 			</div>
@@ -159,7 +164,7 @@ th,tr,td {
 			time if you find that one of the sections you are looking for information on is not yet available. A few things you should 
 			note if you plan on utilizing this site:</p>
 			
-			<div='container'>
+			
 				<ul class='lists'>
 					<li style=" margin-bottom: 10px;">The notes are purposely condensed (a TLDR version, so to speak) and are not 
 					intended to be a full lesson of the concepts covered in the quizzes.
@@ -172,13 +177,10 @@ th,tr,td {
 					<li>The questions also contain hints, but I strongly suggest you attempt the question first before looking at any of 
 					the hints.</li>
 					</ul>
-
-
 			
-			</div>
 	
 			<div class='paragraphs2'>
-				<br>
+				<br><br><br><br><br><br><br><br>
 				You can also <a href='{% url 'register' %}''>create an account</a> so you can make posts in the forum where 
 				you can discuss the notes and quizzes with other users. Perhaps there is a question you cannot solve and need 
 				assistance. Or maybe you are confident in your solution, and the solution is not showing up in the multiple choice. 
@@ -189,7 +191,7 @@ th,tr,td {
 			</div>
 
 		</div>
-
+ </div>
 
 
 <footer class='foot'>

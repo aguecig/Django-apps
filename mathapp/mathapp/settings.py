@@ -121,6 +121,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# store media files to this route (eg profile pics)
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# media on the browser
+MEDIA_URL = '/media/'
+
 LOGIN_REDIRECT_URL = 'app-home'
 
 LOGIN_URL = 'login'

@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Log In</title>
+    <title>Create Post</title>
   </head>
 
 <style>
+
 
 .banner {
   height: 100vh;
@@ -34,33 +35,31 @@
   padding: 5px;
 }
 
+
 </style>
 
 <body>
 
+
 	<div class='banner'>
 
-	
 	<div>
 		<form class='info' method='POST'>
 			{% csrf_token %}
 			<fieldset>
-				<legend class = 'title'><left>Login</left></legend>
+				<legend class='title'><left>Create Forum Post</left></legend>
 				{{ form.as_p }}
 			</fieldset>
 			<div>
-				<button type='submit'>Login</button>
+				<button type='submit'>Post</button>
 			</div>
 		</form>
 		<div>
 			<small class='text-muted'>
-				Don't have an account? <a class="ml-2" href='{% url 'register' %}'>Sign Up</a>
-				<br>
-				<a href='{% url 'app-home' %}'>Return Home</a>
+				<a href='{% url 'forum' %}'>Return to Forum</a>
 			</small>
 		</div>
 	</div>
-
 </div>
 
 <!-- Optional JavaScript -->

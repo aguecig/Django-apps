@@ -16,12 +16,63 @@
   </head>
 
 <style>
+.info {
+  padding:10px;
+  background-color: #1e522c;
+  color: #000000;
+}
+
+.username {
+  padding:10px;
+  font-size:200%;
+  background-color: #1e522c;
+  color: #018268;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.picture {
+  margin:10px;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
+
 
 </style>
 
 <body>
 
-	<h1> {{user.username}} </h1>
+	<div class='banner'>
+	
+	<a class='info' href='{% url 'app-home' %}'>Return Home</a>	
+
+	<div class='username'>{{ user.username }}</div>
+
+
+	<img class='picture' src='{{ user.profile.image.url }}'>
+
+	<p class='info'>User email: {{ user.email }}<p>
+	
+
+	<div class='info'>
+		<form method='POST' enctype='multipart/form-data'>
+		{% csrf_token %}
+			<fieldset>
+				<legend>Update Information</legend>
+					{{ u_form }}
+					<br>
+					{{ p_form }}
+			</fieldset>
+			<br>
+			<button type='submit'>Update Profile Information</button>
+		</form>
+
+	</div>
+
+	</div>
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
