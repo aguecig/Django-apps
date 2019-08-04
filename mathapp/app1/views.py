@@ -13,6 +13,9 @@ def login(request):
 def quadratics_quiz(request):
     return render(request,'app1/quadratics_quiz.html')
 
+def quadratics_info(request):
+    return render(request,'app1/quadratics_info.html')
+
 
 def test(request):
     alpha_dict= {'a': '1', 'b': '2'}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title></title>
+  </head>
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 200%;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 5px;
+}
+
+.category {
+ background-color:#1e522c;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #1e3f2c;
+ color: white;
+ font-size: 120%;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#1e522c;
+ color: #000000;
+ font-size:80%;
+ margin: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: absolute;
+  right: 0px;
+  width: 880px;
+  padding: 10px;
+}
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px;
+}
+
+</style>
+
+<body>
+
+	<div class='title'>
+
+		<center>Quadratics Information Sheet</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:60%;' href='{% url 'app-home' %}'>Return Home</a>
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Forms of Quadratic Functions</h1>
+
+		<center><table class='tables'>
+			<tr>
+				<th><center>Form</center></th>
+				<th><center>Equation</center></th>
+				<th><center>Info Given</center></th>
+			</tr>
+
+			<tr>
+				<td><center>Standard</center></td>
+				<td><center>
+					<div lang="latex" align='center'>
+					y = ax^{2}+bx+c
+					</div>
+				</td></center>
+				<td><left>a: Direction of opening</left> <br><left>c: y-intercept</left></td>
+			</tr>
+
+			<tr>
+				<td><center>Factored</center></td>
+				<td><center>
+					<div lang="latex" align='center'>
+					y = a(x-s)(x-t)
+					</div>
+				</td></center>
+				<td><left>a: Direction of opening</left> <br><left>s, t: x-intercepts</left></td>
+			</tr>
+
+			<tr>
+				<td><center>Vertex</center></td>
+				<td><center>
+					<div lang="latex" align='center'>
+					y = a(x-h)^{2}+k
+					</div>
+				</td></center>
+				<td><left>a: Direction of opening</left> <br><left>(h,k): vertex</left></td>
+			</tr>
+		</table></center>
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Transformations of Quadratic Functions</h1>
+
+			<div lang="latex" align='center'>
+			y = a[c(x-h)]^{2}+k
+			</div>
+
+		<center><table class='tables'>
+
+			<tr>
+				<th><center>Variable</center></th>
+				<th><center>Type of Transformation</center></th>
+				<th><center>Special Note</center></th>
+			</tr>
+
+			<tr>
+				<td><center>a</center></td>
+				<td><left>Vertical stretch/compression <br></left><left>Reflection in x-axis</left></td>
+				<td><left>Stretch occurs if | a | > 1<br></left><left>Compression occurs if | a | < 1<br></left>
+					<left>Reflection occurs if a < 0</left></td>
+			</tr>
+
+			<tr>
+				<td><center>c</center></td>
+				<td><left>Horizontal stretch/compression <br></left><left>Reflection in y-axis</left></td>
+				<td><left>Stretch occurs if | c | < 1<br></left><left>Compression occurs if | c | > 1<br></left>
+					<left>Reflection occurs if c < 0</left></td>
+			</tr>
+
+			<tr>
+				<td><center>h</center></td>
+				<td><left>Horizontal translation</left></td>
+				<td><left>Translation to the right occurs if h > 0<br></left>
+					<left>Translation to the left occurs if h < 0</left></td>
+			</tr>
+
+			<tr>
+				<td><center>k</center></td>
+				<td><left>Vertical translation</left></td>
+				<td><left>Translation upwards occurs if k > 0<br></left>
+					<left>Translation downwards occurs if k < 0</left></td>
+			</tr>
+
+		</table></center>
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Quadratic Formula</h1>
+
+			<p class='paragraphs'>Use when trying to solve formula of the form</p>
+				<div lang="latex" align='center'>
+					ax^{2}+bx+c=0
+				</div>
+			<p class='paragraphs'>Then the solutions are given by</p>
+
+				<div lang="latex" align='center'>
+					x = \frac{-b \pm \sqrt{b^{2}-4ac}}{2a}
+				</div>
+
+			<p class='paragraphs'>The discriminant is</p>
+
+				<div lang="latex" align='center'>
+					b^{2}-4ac
+				</div>
+			<p class='paragraphs'>And can be used to determine the number of real roots:</p>
+				<ul class='paragraphs'>
+					<li>No real roots if less than 0</li>
+					<li>Exactly one real root if equal to 0</li>
+					<li>Exactly two real roots if greater than 0</li>
+				</ul>
+
+	</div>
+
+	<div class='category'>
+		<h1 class='subtitles'>Problem Solving</h1>
+
+			<center><table class='tables'>
+
+				<tr>
+					<th><center>Quadratics Concept</center></th>
+					<th><center>Associated Phrases</center></th>
+				</tr>
+
+				<tr>
+					<td><center>Vertex</center></td>
+					<td><left>Greatest possible area<br></left>
+					    <left>Highest point of object<br></left>
+					    <left>Least possible product of two integers<br></left>
+					    <left>Other max/min related concepts . . .</left></td>
+				</tr>
+
+				<tr>
+					<td><center>Y-intercept</center></td>
+					<td><left>Initial height of object<br></left>
+					    <left>Intial profits/revenue<br></left>
+					    <left>Other initial value related concept . . .</td>
+				</tr>
+
+				<tr>
+					<td><center>X-intercepts</center></td>
+					<td><left>When object hits ground<br></left>
+					    <left>Revenue breaks even<br></left>
+					    <left>Solving quadratic equations in general</td>
+				</tr>
+
+			</table></center>
+
+	</div>
+
+
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
