@@ -21,24 +21,58 @@
   </head>
 
 <style>
+
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
 .title {
   background-color:#1e3f2c;
   color: #018268;
   font-size: 300%;
   text-shadow: 2px 2px 0px #000000;
+
 }
 .hline { 
-width:100%; 
-height:5px; 
-background: #000000;
+  width:100%; 
+  height:5px; 
+  background: #000000;
  }
+
+.auth_date_tab {
+  margin-left:50px;
+}
+
+.message {
+  margin-left:20px;
+  color:#000000;
+}
+
+.pg_btns {
+  font-size: 200%;
+}
+
+.loggedin {
+  color: #ff9600;
+}
+
+.nav_pgs {
+  margin-left:20px;
+  color:#000000;
+  font-size: 150%
+}
+
+
 </style>
 
-<body>
+<body style="background-color:#1e522c;">
 <header class="site-header">
   <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
     <div class="container">
-      <a class='navbar-brand mr-4' href="#"><center>Forum</center></a>
+      <a class='navbar-brand mr-4' style='font-size:200%;'>Discussion Forum</a>
+	<br>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,30 +82,77 @@ background: #000000;
         </div>
         <!-- Navbar Right Side -->
         <div class="navbar-nav">
+
+
+	{% if user.is_authenticated %}
+	  <p class='"nav-item nav-link loggedin'>Welcome {{user}}!</p>
 	  <a class="nav-item nav-link" href='{% url 'post-create' %}'>New Post</a>
+	  <a class="nav-item nav-link" href='{% url 'logout' %}'>Logout</a>
+	 </div>
+	
+	{% else %}
           <a class="nav-item nav-link" href='{% url 'login' %}'>Login</a>
           <a class="nav-item nav-link" href='{% url 'register' %}'>Register</a>
         </div>
+	{% endif %}
+
       </div>
     </div>
   </nav>
 </header>
 
+<div class='banner'>
+
 {% block content %}
+
 	{% for post in posts %}
+
+		<a class='auth_date_tab' href='#'>Author: {{post.author}}</a>
+		<br>
 		<img src='{{post.author.profile.image.url}}'>
-		<a href='#'>Author: {{post.author}}</a>
 		<br>
-		<small class='text-muted'>Date: {{post.date_posted|date:'F d,Y'}}</small>
+		<small class='text-muted auth_date_tab'>Date: {{post.date_posted|date:'F d,Y'}}</small>
 		<br>
-		<a href='{% url 'post-detail' post.id %}'>Topic: {{post.title}}</a>
+		<a class='' href='{% url 'post-detail' post.id %}'><center>Topic: {{post.title}}</center></a>
 		<br><br><br>
-		<p>{{post.content}}</p>
+		<p class='message'>{{post.content}}</p>
 	<div class='hline'></div>
+
 	{% endfor %}
+
+	<p class='nav_pgs'>Navigate Forum</p>
+
+	{% if is_paginated %}
+
+		{% if page_obj.has_previous %}
+			<center><a class='btn-outline-info mb-4 pg_btns' href='/forum/?page=1'>First</a>
+			&nbsp;&nbsp&nbsp;&nbsp
+			<a class='btn-outline-info mb-4 pg_btns' href='/forum/?page={{page_obj.previous_page_number}}'>Prev</a></center>
+		{% endif %}
+
+	{% endif %}
+
+	{% for num in page_obj.paginator.page_range %}
+	&nbsp;&nbsp&nbsp;&nbsp
+		{% if page_obj.number == num %}
+			<a class='btn-info mb-4 pg_btns' href='/forum/?page={{num}}'>{{num}}</a>
+		{% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+			<a class='btn-outline-info mb-4 pg_btns' href='/forum/?page={{num}}'>{{num}}</a>
+		{% endif %}
+		
+	{% endfor %}
+
+	{% if page_obj.has_next %}
+
+		<center><a class='btn-outline-info mb-4 pg_btns' href='/forum/?page={{page_obj.next_page_number}}'>Next</a>
+		&nbsp;&nbsp&nbsp;&nbsp
+		<a class='btn-outline-info mb-4 pg_btns' href='/forum/?page={{page_obj.paginator.num_pages}}'>Last</a></center>
+
+	{% endif %}
+
 {% endblock content%}
 
-
+</div>
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

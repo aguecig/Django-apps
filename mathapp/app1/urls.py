@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-# import class based views from views.app
+# import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
 

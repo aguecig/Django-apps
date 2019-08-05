@@ -30,7 +30,7 @@
 .subtitles {
   background-color:#1e522c;
   color: #018268;
-  font-size: 100%;
+  font-size: 150%;
   text-shadow: 2px 2px 0px #000000;
   padding: 5px;
 }
@@ -131,8 +131,9 @@ th,tr,td {
 	</div>
 
 	<div class = subtitles>
-	<left><a href='{% url 'app-home' %}'>Return Home</a></left>
-
+		<a href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp&nbsp&nbsp
+		<a  href='{% url 'forum' %}'>Stuck? Go to the forums!</a>
 	</div>
 
 	<div class="questions">

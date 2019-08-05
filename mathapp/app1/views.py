@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+
+# we can set post formats in the models directory
 from .models import Post
 
 # import post views
@@ -9,17 +11,6 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin 
 
 
-
-# dummy data
-
-#posts = [
-#        {
-#            'author':'sylvester',
-#            'title':'Forum post 1',
-#            'content':'testing to see  if forum works',
-#            'date_posted':'now'
-#            }
-#        ]
 
 # create function based views for webpages on the site
 
@@ -55,6 +46,8 @@ class PostListView(ListView):
     context_object_name = 'posts'
     # display newest posts first
     ordering = ['-date_posted']
+    # set max posts per page
+    paginate_by = 5
     
 class PostDetailView(DetailView):
     model = Post

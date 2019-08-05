@@ -39,6 +39,10 @@
   background-color: #1e522c;
 }
 
+.return_home {
+  font-size: 120%;
+  margin-left:20px;
+}
 
 
 </style>
@@ -47,7 +51,7 @@
 
 	<div class='banner'>
 	
-	<a class='info' href='{% url 'app-home' %}'>Return Home</a>	
+	<a class='return_home' href='{% url 'app-home' %}'>Return Home</a>	
 
 	<div class='username'>{{ user.username }}</div>
 

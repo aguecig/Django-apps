@@ -71,6 +71,10 @@
  padding: 5px;
 }
 
+.loggedin {
+  color: #ff9600;
+}
+
 
 .lists {
   color: #000000;
@@ -99,7 +103,9 @@ th,tr,td {
 </style>
 
 
-<body>
+<body style="background-color:#1e522c">
+
+
 
 		<div>
 			{% if messages %}
@@ -111,7 +117,7 @@ th,tr,td {
 			{% endif %}
 		</div>
 
-	<div class='bigbanner'>		
+		
 
 		<div>
 
@@ -123,6 +129,7 @@ th,tr,td {
 				<a href='{% url 'forum' %}'>Go to Forum</a>
 				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'profile' %}'>View Profile</a>
 				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'logout' %}'>Log Out</a></left>
+				&nbsp;&nbsp&nbsp;&nbsp<right class='loggedin'>Welcome {{user}}!</right>
 			</div>
 			{% else %}
 			<div class='subtitles'>
@@ -181,17 +188,21 @@ th,tr,td {
 	
 			<div class='paragraphs2'>
 				<br><br><br><br><br><br><br><br>
-				You can also <a href='{% url 'register' %}''>create an account</a> so you can make posts in the forum where 
+				You can also <a href='{% url 'register' %}''>create an account</a> so you can make posts in the 
+				<a href='{% url 'forum' %}'>forum</a> where 
 				you can discuss the notes and quizzes with other users. Perhaps there is a question you cannot solve and need 
 				assistance. Or maybe you are confident in your solution, and the solution is not showing up in the multiple choice. 
-				In that case, you are certainly encouraged to post your finding on the forum and maybe you have found a mistake. 
+				In that case, you are certainly encouraged to post your finding on the forum and maybe you have found a mistake.
+				Do you have a question from your own homework that you are trying to get help with for an upcoming test? Post it 
+				and maybe someone can give you help. The forum is really meant for anything math related, be it from this site, your 
+				own school work, or something you were thinking about on your spare time and wanted to discuss!   
 				General feedback for the website is also appreciated.
 				<br><br>
 
 			</div>
 
 		</div>
- </div>
+
 
 
 <footer class='foot'>

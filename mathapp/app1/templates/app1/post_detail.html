@@ -17,16 +17,27 @@
 
 <style>
 
+.message {
+  margin-left:20px;
+  color:#000000;
+}
+
+.title {
+  margin-left:20px;
+  color:#000000;
+  font-size: 200%;
+}
+
 </style>
 
-<body>
+<body style="background-color:#1e522c">
 {% block content %}
 
-	<a href='{% url 'forum' %}'>Return to forum</a>
+	<a style='margin-left:10px;' href='{% url 'forum' %}'>Return to forum</a>
 	<br>	
 
+	<p class='title'>{{object.author}}</p>
 	<img src='{{object.author.profile.image.url}}'>
-	<a href='#'>{{object.author}}</a>
 	<small class='text-muted'>{{object.date_posted|date:'F d,Y'}}</small>
 	
 	{% if object.author == user %}
@@ -34,8 +45,8 @@
 		<a class='btn btn-danger btn-sm mt-1 mb-1' href='{% url 'post-delete' object.id %}'>Delete Post</a>
 	{% endif %}
 	
-	<h2>{{object.title}}</h2>
-	<p>{{object.content}}</p>
+	<h2 class='title'>{{object.title}}</h2>
+	<p class='message'>{{object.content}}</p>
 
 {% endblock content%}
 <!-- Optional JavaScript -->
