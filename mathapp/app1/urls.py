@@ -11,6 +11,7 @@ urlpatterns = [
         path('quadinfo/',views.quadratics_info,name='quad_info'),
         path('quadquiz/',views.quadratics_quiz,name='quad_quiz'),
         path('polyquiz/',views.polynomial_functions_quiz,name='poly_quiz'),
+        path('polyinfo/',views.polynomial_functions_info,name='poly_info'),
         # forum page
         path('forum/',PostListView.as_view(),name='forum'),
         # go to specific posts in the forum

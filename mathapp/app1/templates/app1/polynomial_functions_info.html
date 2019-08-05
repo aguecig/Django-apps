@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Polynomial Function Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 200%;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 5px;
+}
+
+.category {
+ background-color:#1e522c;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #1e3f2c;
+ color: white;
+ font-size: 120%;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#1e522c;
+ color: #000000;
+ font-size:80%;
+ margin: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: absolute;
+  right: 0px;
+  width: 880px;
+  padding: 10px;
+}
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px;
+}
+
+</style>
+
+<body>
+
+	<div class='title'>
+
+		<center>Polynomial Functions Information Sheet</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:60%;' href='{% url 'app-home' %}'>Return Home</a>
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>End Characterisitics of Polynomial Functions</h1>
+
+		<center><table class='tables'>
+			<tr>
+				<th><center>Degree</center></th>
+				<th><center>Sign of Lead Coefficient</center></th>
+				<th><center>Quadrant Start/End</center></th>
+			</tr>
+
+			<tr>
+				<td><center>Even</center></td>
+				<td><center>+</center></td>
+				<td><center>2 to 1</center></td>
+			</tr>
+
+			<tr>
+				<td><center>Even</center></td>
+				<td><center>-</center></td>
+				<td><center>3 to 4</center></td>			
+			</tr>
+
+			<tr>
+				<td><center>Odd</center></td>
+				<td><center>+</center></td>
+				<td><center>3 to 1</center></td>
+			</tr>
+
+			<tr>
+				<td><center>Odd</center></td>
+				<td><center>-</center></td>
+				<td><center>2 to 4</center></td>
+			</tr>
+		</table></center>
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Remainder Theorem and Factor Theorem</h1>
+
+			<p class='paragraphs'>Given a polynomial function f(x) and a binomial x - r, the remainder 
+			theorem states that when f(x) is divided by x - r, the remainder is f(r).</p>
+
+			<p class='paragraphs'>Given a polynomial function f(x) and a binomial x - r, the factor 
+			theorem states that x - r is a factor of f(x) if and only if f(r) = 0.</p>
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Even and Odd functions</h1>
+
+			<p class='paragraphs'>The condition for a function f(x) to be classified as an even 
+			function is given by:</p>
+
+				<div lang="latex" align='center'>
+					f(-x) = f(x)
+				</div>
+
+			<p class='paragraphs'>The condition for a function f(x) to be classified as an odd 
+			function is given by:</p>
+
+				<div lang="latex" align='center'>
+					f(-x) = -f(x)
+				</div>
+
+			<p class='paragraphs'>If neither of these conditions are meant, the function is said to be 
+			neither even nor odd.</p>
+
+	</div>
+
+
+
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

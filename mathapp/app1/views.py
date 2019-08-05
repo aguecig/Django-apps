@@ -35,6 +35,9 @@ def quadratics_info(request):
 def polynomial_functions_quiz(request):
     return render(request,'app1/polynomial_functions_quiz.html')
 
+def polynomial_functions_info(request):
+    return render(request,'app1/polynomial_functions_info.html')
+
 def forum(request):  
     context = {
                 'posts':Post.objects.all()
