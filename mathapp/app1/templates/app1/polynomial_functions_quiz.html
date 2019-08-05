@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Polynomial Functions Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 100%;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 5px;
+}
+.links {
+ background-color: #1e3f2c;
+ color: white;
+ font-size: 120%;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.questions {
+ background-color:#1e522c;
+ color: #000000;
+ font-size:125%;
+}
+
+.graph {
+ background-color: #1e522c;
+
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #1e3f2c;
+ }
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px;
+}
+
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#1e522c;
+  padding:10px;
+  box-shadow: 0px 10px 18px;
+}
+
+.ul { 
+display:table; 
+margin:0 auto;
+}
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: absolute;
+  right: 0px;
+  width: 880px;
+  padding: 10px;
+}
+
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+
+</style>
+
+
+<body>	
+
+	<div class="title">
+		<center>Polynomial Functions Quiz</center>
+	</div>
+
+	<div class = subtitles>
+	<left><a href='{% url 'app-home' %}'>Return Home</a></left>
+
+	</div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 1: What are the end behaviours of the polynomial function given by</p></center>
+			<div lang="latex" align='center'>
+				f(x) = -\frac{3}{2}x(x-5)^{2}(x+11)^{4}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">Quadrants 2 to 1</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">Quadrants 2 to 4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">Quadrants 3 to 1</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">Quadrants 3 to 4</button>
+			
+	</div>
+
+	<div id="spoiler1" style="display:none">
+
+		Hint: The degree of a polynomial in factored form is equal to the sum of the orders of the factors
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class='questions'>
+	<br>
+		<center><p>Question 2: Determine the locations of the x-intercepts for the polynomial function given by</p></center>
+			<div lang="latex" align='center'>
+				g(n) = -6n^{4}+21n^{3}+30n^{2}-105n
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-5, 5, 7/2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">0, -5, 5, 7/2</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<div lang='latex' align='center'>
+				0, \pm \sqrt{5}, \frac{7}{2}
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">0, 7/2</button>
+			
+	</div>
+
+	<div id="spoiler2" style="display:none">
+
+		Hint: Try common factoring first, then factor by grouping
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class='questions'>
+	<br>
+		<center><p>Question 3: A polynomial function has three x-intercepts with the following locations and orders:</p></center>
+		   <center><ul class='ul'>
+				<li> x = -4 of order 1</li>
+				<li> x = -2 of order 2 </i>
+				<li> x = 2 of order 1</li>
+   		   </ul></center>
+		<center><p>If the polynomial also has a y-intercept located at y = 5, what is the equation of the polynomial function?</p></center>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<div lang='latex' align='center'>
+				h(x) = -\frac{5}{32}(x+4)(x+2)^{2}(x-2)
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang='latex' align='center'>
+				h(x) = -\frac{5}{32}(x-4)(x-2)^{2}(x+2)
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang='latex' align='center'>
+				h(x) =5(x+4)(x+2)^{2}(x-2)
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang='latex' align='center'>
+				h(x) =5(x-4)(x-2)^{2}(x+2)
+				</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler3" style="display:none">
+
+		Hint: Use the y-intercept to find the a-value
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+		
+	<div class="questions">
+
+<br>
+		<center><p>Question 4: Given the following polynomial expression:</p></center>
+			<div lang="latex" align='center'>
+				f(x) = -\frac{1}{2}x^{4} + kx^{3} -x + 7
+			</div>
+		<center><p>what is the value of k if the remainder of f(x) is -2 when divided by x + 1?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-17/2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-1/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">17/2</button>
+			
+	</div>
+
+	<div id="spoiler4" style="display:none">
+
+		Hint: Use the remainder theorem
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+		<center><p><br><br>Question 5: What is the equation of the polynomial pictured below in <i>factored form?</i></p></center>
+
+		<div class='graph'>
+		<center>
+		<iframe src="https://www.desmos.com/calculator/zr6bobwbu6?embed" width="500px" height="400px" style="border: 1px solid #ccc" frameborder=0></iframe>
+		</center>
+		</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>f(x) = 3(x+1)(x-4)(x-5)</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>f(x) = -(x+1)^{3}(x-4)^{2}(x-5)</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<div lang="latex" align='center'>f(x) = -\frac{1}{28}(x+1)^{3}(x-4)^{2}(x-5)</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>f(x) = -3(x+1)^{3}(x-4)^{2}(x-5)</div>
+				</button>
+
+	</div>
+
+	<div id="spoiler5" style="display:none">
+
+		Hint: Find a point on the graph to solve for the a-value
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+	
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 6: You are given the following polynomial functions:</p></center>
+			<div lang="latex" align='center'>
+				f(x) = x^{3}+ax^{2}+3x+b,\quad g(x)=x^{3}-x^{2}+ax+b
+			</div>
+		<center><p>If the remainder of f(x) is 7 when divided by x-2 and x-1 is a factor of g(x), what are the 
+		values of the constants a and b?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">a = 1, b = 2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">a = -1, b = -2</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">a = -3, b = 5</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">a = 3/2, b = 5/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">a = -2/3, b = 4</button>
+			
+	</div>
+
+	<div id="spoiler6" style="display:none">
+
+		Hint: Think of substitution or elimination
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 7: For which polynomial is 2x + 3 a factor?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>
+					f(x) = \frac{5}{2}x^{3} - 2x^{2} + \frac{2}{3}x - 1
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>
+					f(x) = x^{4} - x^{2} + 24
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>
+					f(x) = -\frac{1}{2}x^{3}+4x -\frac{3}{2}
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<div lang="latex" align='center'>
+					f(x) = -x^{3} + \frac{5}{2}x + 6x
+				</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler7" style="display:none">
+
+		Hint: Use the factor theorem
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 8: Which of the following points is <b>not</b> a solution to the polynomial equation given by</p></center>
+				<div lang="latex" align='center'>
+					4 - q^{2} = 4q^{2} - q^{4}
+				</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-1 </button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-2</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">4</button>
+			
+	</div>
+
+	<div id="spoiler8" style="display:none">
+
+		Hint: Collect terms and factor by grouping is best
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 9: What is the solution to the polynomial inequality given by</p></center>
+				<div lang="latex" align='center'>
+					-n^{3} + 4n < -8 + 2n^{2}
+				</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">n < -2 </button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">n < -2 or -2 < n < 2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">n > 2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">none of the above</button>
+			
+	</div>
+
+	<div id="spoiler9" style="display:none">
+
+		Hint: Graph or use a factor chart
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 10: Suppose a shipping freight is to be constructed so that its volume is exactly 
+		70 cubic metres. The freight must be constructed under the following conditions:</p></center>
+		   <center><ul class='ul'>
+				<li> The width must be exactly 3 metres more than the height</li>
+				<li> The length must be exactly 2 metres more than the width</i>
+   		   </ul></center>
+		<center><p>What must the dimensions of the freight be?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1mx3mx5m</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">2mx5mx7m</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3mx6mx8m</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2mx10mx35m</button>
+			
+	</div>
+
+	<div id="spoiler10" style="display:none">
+
+		Hint: Create an equation for the volume of a rectangular prism
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 11: A tech company is producing LCD monitors and must factor in both production 
+		costs and sales revenues in order to determine how many monitors they should manufacture in order to 
+		generate a profit. An analyst determines that there profits can be reasonably modelled by the following 
+		polynomial equation:</p></center>
+				<div lang="latex" align='center'>
+					P(n) = -n^{3}+9n^{2}-14n-24
+				</div>
+		<center><p>Where n is the number of monitors manufactured in a week, and P is the amount of profit, in 
+		thousands of dollars, in a year. Determine what range of monitors the company should produce in order 
+		to make a profit.</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">From 1 to 4</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">From 4 to 6</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">More than 4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">More than 6</button>
+			
+	</div>
+
+	<div id="spoiler11" style="display:none">
+
+		Hint: Solve a polynomial inequality
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 12: A polynomial has exactly three turning points. Which of the following <b>cannot</b> 
+		be true?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">It has no x-intercepts</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">It can begin in Q3 and end in Q4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">It is an even degree polynomial</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">It can have a negative lead coefficient</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">All of the above could be true</button>
+			
+	</div>
+
+	<div id="spoiler12" style="display:none">
+
+		Hint: Try drawing out each case and see if it is possible to match the given condition
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 13: Which polynomial below is not an example of an odd degree polynomial?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>
+					f(x) = \frac{5}{2}x^{4} - 2x^{2} + \frac{2}{3}x^{5} - 1
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<div lang="latex" align='center'>
+					f(x) = -\frac{3}{2}
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>
+					f(x) = -x(3x+5)^{2}(x-7)^{6}
+				</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<div lang="latex" align='center'>
+					f(x) = x^{6}-x^{3}+8x^{7}-100x+75
+				</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler13" style="display:none">
+
+		Hint: What is the definition of an odd polynomial?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 14: The polynomial given by</center>
+				<div lang="latex" align='center'>
+					f(x) = -\frac{7}{2}(x-3)^{2}(x+3)^{2}
+				</div>
+		<center><p>is:</center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">An even function</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">An odd function</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">An even and odd function</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">Neither an even function nor an odd function</button>
+			
+	</div>
+
+	<div id="spoiler14" style="display:none">
+
+		Hint: Evaulaute f(-x). What do you get?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+	<div class="questions">
+
+<br>
+		<center><p>Question 15: What is the least possible and most possible number of intercepts a polynomial of 
+		degree 6 can have?</p></center>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1 and 5</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1 and 6</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">0 and 5</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">0 and 6</button>
+			
+	</div>
+
+	<div id="spoiler15" style="display:none">
+
+		Hint: Draw the cases out
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question15" type="button" onclick="if(document.getElementById('spoiler15') .style.display=='none')
+     		  {document.getElementById('spoiler15') .style.display=''}else{document.getElementById('spoiler15') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

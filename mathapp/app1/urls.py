@@ -7,8 +7,11 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 
 urlpatterns = [
         path('',views.home,name='app-home'),
+        # static math pages
         path('quadinfo/',views.quadratics_info,name='quad_info'),
         path('quadquiz/',views.quadratics_quiz,name='quad_quiz'),
+        path('polyquiz/',views.polynomial_functions_quiz,name='poly_quiz'),
+        # forum page
         path('forum/',PostListView.as_view(),name='forum'),
         # go to specific posts in the forum
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),

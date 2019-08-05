@@ -129,3 +129,4 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = 'app-home'
 
 LOGIN_URL = 'login'
+
