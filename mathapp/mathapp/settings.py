@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+# heroku imports
+
+import django_heroku
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,12 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')yf+*kkv&tc$g=6az#di6(k4@2cv6dpo#g+@0@$o0^cps__6=l'
+#SECRET_KEY = ')yf+*kkv&tc$g=6az#di6(k4@2cv6dpo#g+@0@$o0^cps__6=l'
+SECRET_KEY = '95fe5dc234c19f0e172e494c4e4ab2fce626ec99ffb08d25'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# add hosts during production
+ALLOWED_HOSTS = [ 'gcmathsite.herokuapp.com' ]
 
 
 # Application definition
@@ -119,6 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# need to set this route to deploy to heroku
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+
 STATIC_URL = '/static/'
 
 # store media files to this route (eg profile pics)
@@ -130,3 +140,6 @@ LOGIN_REDIRECT_URL = 'app-home'
 
 LOGIN_URL = 'login'
 
+
+# heroku stuff
+django_heroku.settings(locals())
