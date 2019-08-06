@@ -4,8 +4,6 @@ from . import views
 # import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
-from django.conf import settings
-from django.conf.urls.static import static
 
 urlpatterns = [
         path('',views.home,name='app-home'),
@@ -24,4 +22,4 @@ urlpatterns = [
         path('forum/post/<int:pk>/update/',PostUpdateView.as_view(),name='post-update'),
         # delete posts
         path('forum/post/<int:pk>/delete/',PostDeleteView.as_view(),name='post-delete'),
-        ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        ]

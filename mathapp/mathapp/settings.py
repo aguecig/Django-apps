@@ -33,7 +33,7 @@ DEBUG = False
 # add hosts during production
 ALLOWED_HOSTS = [ 'gcmathsite.herokuapp.com' ]
 
-
+# 
 # Application definition
 
 INSTALLED_APPS = [
