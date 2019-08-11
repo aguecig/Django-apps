@@ -16,9 +16,9 @@ urlpatterns = [
         path('forum/',PostListView.as_view(),name='forum'),
         # go to specific posts in the forum
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),
-        # go to new post page
+        # go to make new post page
         path('forum/post/new/',PostCreateView.as_view(),name='post-create'),
-        # update forum posts
+        # update forum post
         path('forum/post/<int:pk>/update/',PostUpdateView.as_view(),name='post-update'),
         # delete posts
         path('forum/post/<int:pk>/delete/',PostDeleteView.as_view(),name='post-delete'),

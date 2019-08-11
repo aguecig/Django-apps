@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Test Page</title>
+    <title></title>
   </head>
 
 <style>
@@ -20,13 +20,6 @@
 </style>
 
 <body>
-<div>
-{% block content %}
-	{% for i in info %}
-		<p>{{i.info}}</p>
-	{% endfor %}
-{% endblock content %}
-</div>
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

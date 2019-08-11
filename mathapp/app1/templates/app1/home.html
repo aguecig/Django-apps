@@ -33,7 +33,7 @@
   margin:20px;
 }
 .links {
- background-color: #1e3f2c;
+ background-color: #1e522c;
  color: white;
  font-size: 120%;
 }
@@ -94,9 +94,53 @@ table {
   border: 3px solid black;
 }
 
+.tablecaption {
+  caption-side:top; 
+  color: #ff9600;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+
 th,tr,td {
   border: 1px solid black;
   padding: 5px;
+}
+
+.dropbutton {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #1e522c;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+.forumlink {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border-bottom: 5px solid #000000;
+  caption-side: top;
 }
 
 
@@ -121,25 +165,40 @@ th,tr,td {
 
 		<div>
 
-			<div class='title'><center>High School Math Resources</center></div>
+			<div class='title'><center>Math Resources</center></div>
 
 
 			{% if user.is_authenticated %}
 			<div class='subtitles'>
-				<a href='{% url 'forum' %}'>Go to Forum</a>
-				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'profile' %}'>View Profile</a>
-				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'logout' %}'>Log Out</a></left>
-				&nbsp;&nbsp&nbsp;&nbsp<right class='loggedin'>Welcome {{user}}!</right>
+				<div class='dropdown'>
+				<button class='dropbutton'>Account Info</button>
+					<div class='dropdowncontent'>
+						<center><a class='links' href='{% url 'profile' %}'>View Profile</a></center>
+						<br>
+						<center><a class='links' href='{% url 'logout' %}'>Log Out</a></left></center>
+					</div>
+				</div>
+			&nbsp;&nbsp&nbsp;&nbsp<a class='forumlink' href='{% url 'forum' %}'>Go to Forum</a>
+			&nbsp;&nbsp&nbsp;&nbsp<right class='loggedin'>Welcome {{user}}!</right>
 			</div>
 			{% else %}
 			<div class='subtitles'>
-				<left><a href='{% url 'register' %}'>Create Account</a>&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'forum' %}'>Go to Forum</a>
-				&nbsp;&nbsp&nbsp;&nbsp<a href='{% url 'login' %}'>Log In</a></left>
+				<div class='dropdown'>
+					<button class='dropbutton'>Account Info</button>
+						<div class='dropdowncontent'>
+							<center><a class='links' href='{% url 'register' %}'>Create Account</a><center>
+							<br>
+							<center><a class='links' href='{% url 'login' %}'>Log In</a></center>
+						</div>
+				</div>
+			&nbsp;&nbsp&nbsp;&nbsp<a class='forumlink' href='{% url 'forum' %}'>Go to Forum</a>
+
 
 			</div>
 			{% endif %}
 
 			<table  class='tables' width=30% align='left'>
+			<caption class='tablecaption'><center>High School Resources</center></caption>
 				<tr>
 					<th><center>Section</center></th>
 					<th><center>Intended Grade</center></th>
@@ -165,41 +224,6 @@ th,tr,td {
 					<td><center><a href='{% url 'poly_quiz' %}'>Polynomial Functions Quiz</a></center></td>
 				</tr>
 			</table>
-
-			<p class='paragraphs'>On this page, you will find an index of mathematical content (the table on the left) 
-			that is intended for high school students in the Ontario school board. This site is a work in progress, so check back at a later 
-			time if you find that one of the sections you are looking for information on is not yet available. A few things you should 
-			note if you plan on utilizing this site:</p>
-			
-			
-				<ul class='lists'>
-					<li style=" margin-bottom: 10px;">The notes are purposely condensed (a TLDR version, so to speak) and are not 
-					intended to be a full lesson of the concepts covered in the quizzes.
-					</li>
-					<li style=" margin-bottom: 10px;">The quizzes are multiple choice only at the moment. However, this does not mean 
-					that every question is simply knowledge based. You are strongly recommended to <b>write out</b> your process work 
-					on a seperate sheet of paper before you select an answer to check if you are correct. Most tests are not multiple 
-					choice and require you to show your work.
-					</li>
-					<li>The questions also contain hints, but I strongly suggest you attempt the question first before looking at any of 
-					the hints.</li>
-					</ul>
-			
-	
-			<div class='paragraphs2'>
-				<br><br><br><br><br><br><br><br>
-				You can also <a href='{% url 'register' %}''>create an account</a> so you can make posts in the 
-				<a href='{% url 'forum' %}'>forum</a> where 
-				you can discuss the notes and quizzes with other users. Perhaps there is a question you cannot solve and need 
-				assistance. Or maybe you are confident in your solution, and the solution is not showing up in the multiple choice. 
-				In that case, you are certainly encouraged to post your finding on the forum and maybe you have found a mistake.
-				Do you have a question from your own homework that you are trying to get help with for an upcoming test? Post it 
-				and maybe someone can give you help. The forum is really meant for anything math related, be it from this site, your 
-				own school work, or something you were thinking about on your spare time and wanted to discuss!   
-				General feedback for the website is also appreciated.
-				<br><br>
-
-			</div>
 
 		</div>
 
