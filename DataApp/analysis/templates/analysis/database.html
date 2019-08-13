@@ -104,11 +104,13 @@ th,tr,td {
 
 {% load analysis_tags %}
 
-<table class='tables' width=30% align='left'>
+<table width=30% align='left'>
 	<tr>
 		<th>Function Type</th>
 		<th>Explicit Function</th>
 		<th>First Derivative</th>
+		<th>Critical Points</th>
+		<th>Inflection Points</th>
 		<th>Integral</th>
 		<th>View Function</th>
 	</tr>
@@ -117,11 +119,28 @@ th,tr,td {
 {% for function in functions %}
 	<tr>
 		<td>{{function.title}}</td>
-		<td>{{function.func}}</td>
+		{% latex_function function.func as prettyfunc %}
+		<td>
+		<div lang="latex" align='center'>
+		{{prettyfunc}}
+		</div>
+		</td>
 		{%  derivative function.func as fprime %}
-		<td>{{fprime}}</td>
+		<td>
+		<div lang="latex" align='center'>
+		{{fprime}}
+		</div>
+		</td>
+		{% critpoints function.func as cps %}
+		<td>{{cps}}</td>
+		{% infpoints function.func as ips %}
+		<td>{{ips}}</td>
 		{% integral function.func as F %}
-		<td>{{F}}</td>
+		<td>
+		<div lang="latex" align='center'>
+		{{F}}
+		</div>
+		</td>
 		<td><a class='' href='{% url 'function-detail' function.id %}'>View Function</a></td>
 	</tr>
 {% endfor %}
@@ -129,7 +148,6 @@ th,tr,td {
 <a class='paragraphs' href='{% url 'function-create' %}'>Create Function</a>
 
 </table>
-
 
 
 <!-- Optional JavaScript -->

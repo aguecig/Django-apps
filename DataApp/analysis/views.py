@@ -2,9 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Function
 from django.views.generic import CreateView, ListView, DetailView, DeleteView
 
-import sympy
-x = sympy.symbols('x')
-
 def home(request):
     pass
 
