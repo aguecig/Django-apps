@@ -135,6 +135,8 @@ th,tr,td {
   display: block;
 }
 
+
+
 .forumlink {
   background-color: #1e522c;
   color: white;
@@ -172,12 +174,12 @@ th,tr,td {
 			{% if user.is_authenticated %}
 			<div class='subtitles'>
 				<div class='dropdown'>
-				<button class='dropbutton'>Account Info</button>
-					<div class='dropdowncontent'>
-						<center><a class='links' href='{% url 'profile' %}'>View Profile</a></center>
-						<br>
-						<center><a class='links' href='{% url 'logout' %}'>Log Out</a></left></center>
-					</div>
+					<button class='dropbutton'>Account Info</button>
+						<div class='dropdowncontent'>
+							<center><a class='links' href='{% url 'profile' %}'>View Profile</a><center>
+							<br>
+							<center><a class='links' href='{% url 'logout' %}'>Log Out</a></center>
+						</div>
 				</div>
 			&nbsp;&nbsp&nbsp;&nbsp<a class='forumlink' href='{% url 'forum' %}'>Go to Forum</a>
 			&nbsp;&nbsp&nbsp;&nbsp<right class='loggedin'>Welcome {{user}}!</right>
