@@ -10,27 +10,47 @@ from ..models import Function
 
 x = sympy.symbols('x')
 
-# When we construct these custom tags for our templates, we have to be 
-# vigilant for the types of errors we might encounter that the default 
-# Django forms would otherwise not pick up
+# Each tag goes through the following:
+# (1) Handle user syntax so it is acceptable for sympy
+#       - eg  if user inputs x^2 this is changed to x**2
+# (2) Handle any exceptions for invalid input
+# (3) If input is valid, run the function, and output result in latex format
+#     which can then be passed into the HTML template for pretty printing
+# (4) If input is not valid, return a message in the HTML template stating this
 
 # take the user function input and convert to latex style
 @register.simple_tag
 def latex_function(function):
+# handle user syntax 
+    function = function.replace('^','**')
+    for char in [chr(i) for i in range(48,58)]:
+        function = function.replace('{}x'.format(char),'{}*x'.format(char))
+        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+            function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
+            function = function.replace('x{}'.format(f),'x*{}'.format(f))
+# check for invalid input        
     try:
-        latex(sympy.integrate(sympy.diff(function)))
+        latex(sympy.simplify(function))
         validate = True
     except:
         validate = False
         
     if validate == True:
-        return latex(sympy.integrate(sympy.diff(function)))
+        return latex(sympy.simplify(function))
     else:
         return 'Invalid Input'
 
 # find first derivative of user function input
 @register.simple_tag
 def derivative(function):
+# handle user syntax 
+    function = function.replace('^','**')
+    for char in [chr(i) for i in range(48,58)]:
+        function = function.replace('{}x'.format(char),'{}*x'.format(char))
+        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+            function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
+            function = function.replace('x{}'.format(f),'x*{}'.format(f))
+# check for invalid input            
     try:
         sympy.diff(function,x)
         validate = True
@@ -45,6 +65,15 @@ def derivative(function):
 # find integral of user function input if possible
 @register.simple_tag
 def integral(function):
+    # handle user syntax 
+    function = function.replace('^','**')
+    for char in [chr(i) for i in range(48,58)]:
+        function = function.replace('{}x'.format(char),'{}*x'.format(char))
+        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+            function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
+            function = function.replace('x{}'.format(f),'x*{}'.format(f))
+
+# check for invalid input            
     try:
         sympy.integrate(function,x)
         validate = True
@@ -59,9 +88,17 @@ def integral(function):
 # find critical points of user function input    
 @register.simple_tag
 def critpoints(function):
-# check for valid function input
+# handle user syntax 
+    function = function.replace('^','**')
+    for char in [chr(i) for i in range(48,58)]:
+        function = function.replace('{}x'.format(char),'{}*x'.format(char))
+        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+            function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
+            function = function.replace('x{}'.format(f),'x*{}'.format(f))
+        
+# check for invalid input    
     try:
-        sympy.integrate(function,x)
+        sympy.diff(function,x)
         validate = True
     except:
         validate = False
@@ -77,7 +114,10 @@ def critpoints(function):
             return 'Infinite Solutions'
 # condition set error, found when i used something like function = xexp(x) lack of *
         elif type(cpoints) == sympy.ConditionSet:
-            return 'Input Error'
+            return 'N/A'
+# complement error when i used something like 4xlog(1-x)
+        elif type(cpoints) == sympy.Complement:
+            return 'N/A'
 # check if all real numbers are critical points        
         elif cpoints == sympy.Reals:
             return 'All of R'
@@ -89,7 +129,7 @@ def critpoints(function):
             else:
                 points = ''
                 for point in cpoints:
-                    points += 'x = {} '.format(point)
+                    points += 'x = {} \n'.format(latex(sympy.simplify(point)))
                 return points
     else:
         return 'Invalid Input'
@@ -97,9 +137,17 @@ def critpoints(function):
 # find inflection points of user function input
 @register.simple_tag
 def infpoints(function):
-# check for valid function input
+# handle user syntax 
+    function = function.replace('^','**')
+    for char in [chr(i) for i in range(48,58)]:
+        function = function.replace('{}x'.format(char),'{}*x'.format(char))
+        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+            function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
+            function = function.replace('x{}'.format(f),'x*{}'.format(f))
+        
+# check for invalid input    
     try:
-        sympy.integrate(function,x)
+        sympy.diff(function,x)
         validate = True
     except:
         validate = False
@@ -115,7 +163,10 @@ def infpoints(function):
             return 'Infinite Solutions'
 # condition set error
         elif type(ipoints) == sympy.ConditionSet:
-            return 'Input Error'
+            return 'N/A'
+# complement error 
+        elif type(ipoints) == sympy.Complement:
+            return 'N/A'
 # check if all real numbers are critical points            
         elif ipoints == sympy.Reals:
             return 'All of R'
@@ -128,7 +179,7 @@ def infpoints(function):
             else:
                 points = ''
                 for point in ipoints:
-                    points += 'x = {} '.format(point)
+                    points += 'x = {} '.format(latex(sympy.simplify(point)))
                 return points
     else:
         return 'Invalid Input'

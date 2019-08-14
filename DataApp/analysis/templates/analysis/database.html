@@ -117,6 +117,9 @@ th,tr,td {
 
 
 {% for function in functions %}
+
+	{% if forloop.last %}
+
 	<tr>
 		<td>{{function.title}}</td>
 		{% latex_function function.func as prettyfunc %}
@@ -132,9 +135,17 @@ th,tr,td {
 		</div>
 		</td>
 		{% critpoints function.func as cps %}
-		<td>{{cps}}</td>
+		<td>
+		<div lang="latex" align='center'>
+		{{cps}}
+		</div>
+		</td>
 		{% infpoints function.func as ips %}
-		<td>{{ips}}</td>
+		<td>
+		<div lang="latex" align='center'>
+		{{ips}}
+		</div>
+		</td>
 		{% integral function.func as F %}
 		<td>
 		<div lang="latex" align='center'>
@@ -143,6 +154,9 @@ th,tr,td {
 		</td>
 		<td><a class='' href='{% url 'function-detail' function.id %}'>View Function</a></td>
 	</tr>
+
+	{% endif %}
+
 {% endfor %}
 
 <a class='paragraphs' href='{% url 'function-create' %}'>Create Function</a>
