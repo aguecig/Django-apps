@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Logarithms Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 150%;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 5px;
+}
+.links {
+ background-color: #1e3f2c;
+ color: white;
+ font-size: 120%;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.questions {
+ background-color:#1e522c;
+ color: #ffffff;
+ font-size:125%;
+}
+
+.graph {
+ background-color: #1e522c;
+
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #1e3f2c;
+ }
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px #000000;
+}
+
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#1e522c;
+  padding:10px;
+  box-shadow: 0px 10px 18px;
+}
+
+.ul { 
+display:table; 
+margin:0 auto;
+}
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: absolute;
+  right: 0px;
+  width: 880px;
+  padding: 10px;
+}
+
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+
+</style>
+
+
+<body>	
+
+	<div class="title">
+		<center>Logarithms Quiz</center>
+	</div>
+
+	<div class = subtitles>
+		<a href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp&nbsp&nbsp
+		<a  href='{% url 'forum' %}'>Stuck? Go to the forums!</a>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: What is the value of</p></center>
+			<div lang="latex" align='center'>
+				\log{_{3}27}^{5}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">8</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">15</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5/3</button>
+			
+	</div>
+
+	<div id="spoiler1" style="display:none">
+
+		Hint: Use the power rule for logarithms to help simplify the problem
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: Determine an equivalent expression for the following logarithmic expression</p></center>
+			<div lang="latex" align='center'>
+				\log{(x^{2}-5x+6)}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\log{x^{2}} -\log{(5x)} +\log{6}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\log{(x^{2}+6)}}{\log{(5x)}}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\log{(x-3)}\log{(x-2)}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\log{(x-3)} + \log{(x-2)}
+					</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler2" style="display:none">
+
+		Hint: Try factoring the arguement of the logarithm first, then apply the product law of logarithms
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: Which of the following equations is not valid?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\log{(2x - 7)} = \frac{\log{(2x)}}{\log{7}}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{1}{2}\log{(x-1)} = \log{\sqrt{x-1}}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\log{(6x)} = \log{2} + \log{3} + \log{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\log{x^{2}}}{\log{x}} = 2
+					</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler3" style="display:none">
+
+		Hint: Think about the quotient rule of logarithms
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: What is the domain of the logarithmic function given by</p></center>
+			<div lang="latex" align='center'>
+				f(x) = \log{(4-x)}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{x\epsilon R\}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{x\epsilon R | x > 4\}
+					</div>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{x\epsilon R | x \geq 4\}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\{x\epsilon R | x < 4\}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{x\epsilon R | x \leq 4\}
+					</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler4" style="display:none">
+
+		Hint: The arguement of a logarithmic function must always be strictly greater than zero
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: What is the range of the logarithmic function given by</p></center>
+			<div lang="latex" align='center'>
+				y = \log{_{2}x}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\{y\epsilon R\}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{y\epsilon R | y > 0\}
+					</div>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{y\epsilon R | y \geq 0\}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{y\epsilon R | y < 0\}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\{y\epsilon R | y \leq 0\}
+					</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler5" style="display:none">
+
+		Hint: Visualize any logaritmic graph and think of its vertical values
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: Determine the solution to the following logarithmic equation:</p></center>
+			<div lang="latex" align='center'>
+				\log{_{2}(x-2)} = 3 - \log{_{2}x}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')"> x = 0, 2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = -2, 4</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">x = 4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">No solutions</button>
+			
+	</div>
+
+	<div id="spoiler6" style="display:none">
+
+		Hint: Don't forget to exclude extraneous solutions
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: What is the inverse of the logarithmic function</p></center>
+			<div lang="latex" align='center'>
+				f(x) = \log{_{3}(2x-7)}^{-3}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f^{-1}(x) = \frac{1}{2}x + 7
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f^{-1}(x) = \frac{1}{2}(3)^{-\frac{x}{3}} + 7
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f^{-1}(x) = \frac{1}{2}(3)^{3x} + \frac{7}{2}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						f^{-1}(x) = \frac{1}{2}(3)^{-\frac{x}{3}} + \frac{7}{2}
+					</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler7" style="display:none">
+
+		Hint: Swap x and y, then solve for y.
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: What is the exact value of the expression</p></center>
+			<div lang="latex" align='center'>
+				\frac{1}{3}\log{_{4}(8)}^{-1}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						-\frac{2}{3}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						-\frac{1}{2}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{3}{2}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						-\frac{8}{3}
+					</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler8" style="display:none">
+
+		Hint: Use the power rule and then convert the logarithmic expression to an exponential one
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: Which set of transformations correctly describe the logarithmic function given by</p></center>
+			<div lang="latex" align='center'>
+				\log{[-2(x+4)]}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				Reflected in the y-axis, horizontally compressed by a factor of 2, translated 4 units left
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				Reflected in the x-axis, horizontally compressed by a factor of 2, translated 4 units left
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				Reflected in the y-axis, horizontally stretched by a factor of 2, translated 4 units left
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				Reflected in the x-axis, horizontally compressed by a factor of 2, translated 4 units right
+				</button>
+			
+	</div>
+
+	<div id="spoiler9" style="display:none">
+
+		Hint: Remember that horizontal tranformations are not as they appear.
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: What is the concentration of hydronium ions in a solution with a pH of 3.2?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">0.51</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">112,000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1584</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">0.00063</button>
+			
+	</div>
+
+	<div id="spoiler10" style="display:none">
+
+		Hint: pH is equal to the negative of the log of the concentration of the hydronium ions
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: Where is the y-intercept located for the following function:</p></center>
+			<div lang="latex" align='center'>
+				f(x) = \log{[2(x+50)]} + 6
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">0</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">6</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">8</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">There is no y-intercept</button>
+			
+	</div>
+
+	<div id="spoiler11" style="display:none">
+
+		Hint: Set x = 0 and simplify
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: Which of the following will a logarithmic function never have?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">An x-intercept</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">A horizontal asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">A veritcal asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">A y-intercept</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">It can have all of the above</button>		
+	
+	</div>
+
+	<div id="spoiler12" style="display:none">
+
+		Hint: Think of the domain and range of a logarithmic function
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: Which logarithmic function has no x-intercept?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = -\sqrt{\frac{3}{2}}\log{_{3}(5-x)} + 11
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \frac{1}{7}\log{_{7}(x-7)} - 7
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = 2^{3}\log{_{3}(2x+\sqrt{3})} - \frac{10}{3}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">They all have an x-intercept</button>
+			
+	</div>
+
+	<div id="spoiler13" style="display:none">
+
+		Hint: Think of the range of a logarithmic function
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: Which logarithmic function is the transformation of the base logarithmic function which has been 
+		reflected about the x-axis, vertically compressed by a factor of 1/3, horizontally compressed by a factor of 1/2 and 
+		translated 5 units down?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \frac{1}{3}\log{\left(-\frac{1}{2}x\right)} - 5
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \frac{1}{3}\log{\left(-2x\right)} - 5
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						f(x) = -\frac{1}{3}\log{\left(-2x\right)} - 5
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \frac{1}{3}\log{\left(-2x\right)} + 5
+					</div>
+				</button>
+			
+	</div>
+
+	<div id="spoiler14" style="display:none">
+
+		Hint: Just use basic transformation properties
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

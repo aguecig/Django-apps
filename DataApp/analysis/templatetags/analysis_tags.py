@@ -8,15 +8,20 @@ register = template.Library()
 
 from ..models import Function
 
-x = sympy.symbols('x')
+
+# =============================================================================
+# Start of calculus custom tags
 
 # Each tag goes through the following:
+
 # (1) Handle user syntax so it is acceptable for sympy
 #       - eg  if user inputs x^2 this is changed to x**2
 # (2) Handle any exceptions for invalid input
 # (3) If input is valid, run the function, and output result in latex format
 #     which can then be passed into the HTML template for pretty printing
 # (4) If input is not valid, return a message in the HTML template stating this
+# =============================================================================
+x = sympy.symbols('x')
 
 # take the user function input and convert to latex style
 @register.simple_tag
@@ -25,9 +30,10 @@ def latex_function(function):
     function = function.replace('^','**')
     for char in [chr(i) for i in range(48,58)]:
         function = function.replace('{}x'.format(char),'{}*x'.format(char))
-        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+        for f in ['sqrt','exp','ln','log','sin','cos','tan','sec','csc','cot','(']:
             function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
             function = function.replace('x{}'.format(f),'x*{}'.format(f))
+            function = function.replace('){}'.format(f),')*{}'.format(f))
 # check for invalid input        
     try:
         latex(sympy.simplify(function))
@@ -38,7 +44,7 @@ def latex_function(function):
     if validate == True:
         return latex(sympy.simplify(function))
     else:
-        return 'Invalid Input'
+        return 'Invalid-Input'
 
 # find first derivative of user function input
 @register.simple_tag
@@ -47,9 +53,10 @@ def derivative(function):
     function = function.replace('^','**')
     for char in [chr(i) for i in range(48,58)]:
         function = function.replace('{}x'.format(char),'{}*x'.format(char))
-        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+        for f in ['sqrt','exp','ln','log','sin','cos','tan','sec','csc','cot','(']:
             function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
             function = function.replace('x{}'.format(f),'x*{}'.format(f))
+            function = function.replace('){}'.format(f),')*{}'.format(f))
 # check for invalid input            
     try:
         sympy.diff(function,x)
@@ -60,7 +67,7 @@ def derivative(function):
     if validate == True:
         return(latex(sympy.diff(function,x)))
     else:
-        return 'Invalid Input'
+        return 'Invalid-Input'
  
 # find integral of user function input if possible
 @register.simple_tag
@@ -69,9 +76,10 @@ def integral(function):
     function = function.replace('^','**')
     for char in [chr(i) for i in range(48,58)]:
         function = function.replace('{}x'.format(char),'{}*x'.format(char))
-        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+        for f in ['sqrt','exp','ln','log','sin','cos','tan','sec','csc','cot','(']:
             function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
             function = function.replace('x{}'.format(f),'x*{}'.format(f))
+            function = function.replace('){}'.format(f),')*{}'.format(f))
 
 # check for invalid input            
     try:
@@ -83,7 +91,7 @@ def integral(function):
     if validate == True:
         return(latex(sympy.integrate(function,x)))
     else:
-        return 'Invalid Input'
+        return 'Invalid-Input'
 
 # find critical points of user function input    
 @register.simple_tag
@@ -92,18 +100,21 @@ def critpoints(function):
     function = function.replace('^','**')
     for char in [chr(i) for i in range(48,58)]:
         function = function.replace('{}x'.format(char),'{}*x'.format(char))
-        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+        for f in ['sqrt','exp','ln','log','sin','cos','tan','sec','csc','cot','(']:
             function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
             function = function.replace('x{}'.format(f),'x*{}'.format(f))
-        
+            function = function.replace('){}'.format(f),')*{}'.format(f))
 # check for invalid input    
     try:
         sympy.diff(function,x)
+        fprime = sympy.diff(function,x)
+        cpoints = sympy.solveset(fprime,x,domain=sympy.S.Reals)
         validate = True
     except:
         validate = False
         
     if validate == True:
+
         fprime = sympy.diff(function,x)
         cpoints = sympy.solveset(fprime,x,domain=sympy.S.Reals)
         
@@ -121,6 +132,7 @@ def critpoints(function):
 # check if all real numbers are critical points        
         elif cpoints == sympy.Reals:
             return 'All of R'
+
         
         else:
             # check if no solutions exist
@@ -132,7 +144,7 @@ def critpoints(function):
                     points += 'x = {} \n'.format(latex(sympy.simplify(point)))
                 return points
     else:
-        return 'Invalid Input'
+        return 'Invalid-Input'
 
 # find inflection points of user function input
 @register.simple_tag
@@ -141,18 +153,21 @@ def infpoints(function):
     function = function.replace('^','**')
     for char in [chr(i) for i in range(48,58)]:
         function = function.replace('{}x'.format(char),'{}*x'.format(char))
-        for f in ['exp','ln','log','sin','cos','tan','sec','csc','cot']:
+        for f in ['sqrt','exp','ln','log','sin','cos','tan','sec','csc','cot','(']:
             function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
             function = function.replace('x{}'.format(f),'x*{}'.format(f))
-        
+            function = function.replace('){}'.format(f),')*{}'.format(f))        
 # check for invalid input    
     try:
         sympy.diff(function,x)
+        f2prime = sympy.diff(function,x)
+        ipoints = sympy.solveset(f2prime,x,domain=sympy.S.Reals)
         validate = True
     except:
         validate = False
         
     if validate == True:
+        
         f2prime = sympy.diff(function,x,x)
         ipoints = sympy.solveset(f2prime,x,domain=sympy.S.Reals)
         
@@ -182,4 +197,8 @@ def infpoints(function):
                     points += 'x = {} '.format(latex(sympy.simplify(point)))
                 return points
     else:
-        return 'Invalid Input'
+        return 'Invalid-Input'
+    
+# =============================================================================
+# End of calculus custom tags
+# =============================================================================
