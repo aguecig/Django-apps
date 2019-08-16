@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 
 # we can set post formats in the models directory
-from .models import Post
+from .models import Post, Function
 
 # import post views
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -98,3 +98,31 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
     
     # return to forums upon deleting post
     success_url = '/forum'
+    
+def calculus_tool(request):
+    
+    context = {
+        'functions':Function.objects.all()
+        }
+
+    return render(request,'app1/calculus_tool.html',context)
+
+class FunctionListView(ListView):
+    model = Function
+    # change template
+    template_name = 'app1/calculus_tool.html' 
+    context_object_name = 'functions'        
+
+class FunctionCreateView(CreateView):
+    model = Function                      # <app>/<model>_<viewtype>.html path
+    fields = ['function']             # ie analysis/function_form.html
+
+    def form_valid(self,form):
+        return super().form_valid(form)
+    
+class FunctionDetailView(DetailView):
+    model = Function
+    
+class FunctionDeleteView(DeleteView):
+    model = Function
+    success_url = '/calculus_tool'

@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class Function(models.Model):
     title = models.CharField(max_length=100)
-    func = models.TextField()
+    func = models.CharField(max_length=100)
     
         
     def __str__(self):

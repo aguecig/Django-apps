@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Home</title>
+  </head>
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 200%;
+  text-shadow: 2px 2px 0px #000000;
+  margin:20px;
+}
+.links {
+ background-color: #1e522c;
+ color: white;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+ height: 100vh;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #ffffff;
+ font-size:100%;
+ margin: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+.loggedin {
+  color: #ff9600;
+}
+
+
+.lists {
+  color: #ffffff;
+  font-size:100%;
+  position: center;
+}
+
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #1e522c;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+.createfunction {
+  fontsize: 400%;
+  color: #ff9600;
+  padding: 5px;
+  margin: 20px;
+}
+
+.latstyle {
+  background-color: #ffffff;
+  width: 57px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px #000000;
+  align: center;
+}
+
+
+</style>
+
+<body style="background-color:#1e522c">
+
+<div class='title'><center>Calculus Analysis</center></div>
+
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+				</div>
+		</div>
+	</div>
+
+{% load calctool_tags %}
+
+
+{% if request.user.is_superuser %}
+
+
+<table style="background-color:#ffffff" width=30% align='center'>
+	<tr>
+		<th><center>Explicit Function</center></th>
+		<th><center>First Derivative</center></th>
+		<th><center>Critical Points</center></th>
+		<th><center>Inflection Points</center></th>
+		<th><center>Integral</center></th>
+		<th><center>View Function</center></th>
+	</tr>
+
+	{% for f in functions %}
+
+	<tr>
+		{% latex_function f.function as prettyfunc %}
+		<td>
+		<div lang="latex" align='center'>
+		{{prettyfunc}}
+		</div>
+		</td>
+		{%  derivative f.function as fprime %}
+		<td>
+		<div lang="latex" align='center'>
+		{{fprime}}
+		</div>
+		</td>
+		{% critpoints f.function as cps %}
+		<td>
+		<div lang="latex" align='center'>
+		{{cps}}
+		</div>
+		</td>
+		{% infpoints f.function as ips %}
+		<td>
+		<div lang="latex" align='center'>
+		{{ips}}
+		</div>
+		</td>
+		{% integral f.function as F %}
+		<td>
+		<div lang="latex" align='center'>
+		{{F}}
+		</div>
+		</td>
+		<td><a href='{% url 'function-detail' f.id %}'>View Function</a></td>
+	</tr>
+
+	{% endfor %}
+</table>
+
+{% else %}
+
+
+{% for f in functions %}
+	{% if forloop.last %}
+
+<table style="background-color:#ffffff" width=30% align='center'>
+	<tr>
+		<th><center>Explicit Function</center></th>
+		<th><center>First Derivative</center></th>
+		<th><center>Critical Points</center></th>
+		<th><center>Inflection Points</center></th>
+		<th><center>Integral</center></th>
+	</tr>
+
+	<tr>
+		{% latex_function f.function as prettyfunc %}
+		<td>
+		<div lang="latex" align='center'>
+		{{prettyfunc}}
+		</div>
+		</td>
+		{%  derivative f.function as fprime %}
+		<td>
+		<div lang="latex" align='center'>
+		{{fprime}}
+		</div>
+		</td>
+		{% critpoints f.function as cps %}
+		<td>
+		<div lang="latex" align='center'>
+		{{cps}}
+		</div>
+		</td>
+		{% infpoints f.function as ips %}
+		<td>
+		<div lang="latex" align='center'>
+		{{ips}}
+		</div>
+		</td>
+		{% integral f.function as F %}
+		<td>
+		<div lang="latex" align='center'>
+		{{F}}
+		</div>
+		</td>
+	</tr>
+
+	{% endif %}
+
+	{% endfor %}
+</table>
+
+{% endif %}
+
+<a class='btn btn-info' style='margin:10px;' href='{% url 'function-create' %}'>Create and Analyze Function</a>
+
+<div class='subtitles'>Notes on Creating a Function</div>
+
+		<ul class='lists'>
+			<li>Only functions of one variable as <b>x</b> are analyzed, though you can use symbols to represent constant values</li>
+				<ul class='lists'>
+					<li>EG - trying to differentiate y^2 will result in a derivative of 0, whereas x^2 will result in a derivative
+						of 2x</li>
+				</ul>
+			<br>
+			<li>Exponents can be entered using the <b>^</b> symbol</li>
+				<ul class='lists'>
+					<li>EG - to cube x, enter x^3</li>
+				</ul>
+			<br>
+			<li>When entering more than one number/variable as part of an exponent, be sure to enclose it in <b>( )</b> brackets</li>
+				<ul class='lists'>
+					<li>EG - if you want to raise 2 to the power of x + 3, enter 2^(x+3)</li>
+				</ul>
+			<br>
+			<li>The exponential function e must be entered as <b>exp( )</b> with the argument of the function in <b>( )</b> brackets</li>
+				<ul class='lists'>
+					<li>EG - exp(-3x + 4) is a valid input</li>
+					<li>EG - e^(-3x + 4) is an invalid input</li>
+					<li>EG - exp x is an invalid input</li>
+					<li>EG - exp^(x) is an invalid input</li>
+				</ul>
+			<br>
+			<li>Numerical values and functions can be juxtaposed to indicate multiplication, or you can use the <b>*</b> symbol to indicate 
+				multiplication</li>
+				<ul class='lists'>
+					<li>EG - 4*x is the same as entering 4x</li>
+					<li>EG - x*exp(x) is the same as entering xexp(x)</li>
+					<li>EG - sin(x)*cos(x) is the same as entering sin(x)cos(x)</li>
+				</ul>
+			<br>
+			<li>Special functions like the trigonometric functions, the exponential function, logarithmic functions, etc <b>must</b> have 
+				there arguments enclosed in <b>( )</b> brackets. Failure to do so will return <i>INVALID-INPUT</i> </li>
+				<ul class='lists'>
+					<li>EG - 3log(1-x) is a valid input</li>
+					<li>EG - 3logx is an invalid input</li>
+				</ul>
+			<br>
+			<li>Raising trigonometric functions to powers must be done by enclosing the entire trigonometric function in <b>( )</b> 
+				brackets, and the using the <b>^</b> character to indicate the power.</li>
+				<ul class='lists'>
+					<li>EG - (sin(x))^2 is equivalent to </li>
+						<div lang="latex" class='latstyle'>
+							\sin{^{2}x}
+						</div>
+				</ul>
+
+		</ul>
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

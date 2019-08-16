@@ -3,7 +3,7 @@ from . import views
 
 # import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
-
+from .views import FunctionCreateView, FunctionListView, FunctionDetailView, FunctionDeleteView
 
 urlpatterns = [
         path('',views.home,name='app-home'),
@@ -25,4 +25,9 @@ urlpatterns = [
         path('forum/post/<int:pk>/update/',PostUpdateView.as_view(),name='post-update'),
         # delete posts
         path('forum/post/<int:pk>/delete/',PostDeleteView.as_view(),name='post-delete'),
+        # calculus tool urls
+        path('calculus_tool/',FunctionListView.as_view(),name='calculus_tool'),
+        path('calculus_tool/function/',FunctionCreateView.as_view(),name='function-create'),
+        path('calculus_tool/<int:pk>/',FunctionDetailView.as_view(),name='function-detail'),
+        path('calculus_tool/<int:pk>/delete/',FunctionDeleteView.as_view(),name='function-delete'),
         ]

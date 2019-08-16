@@ -122,7 +122,7 @@ def critpoints(function):
         
 # check for infinite solutions
         if type(cpoints) == sympy.Union:
-            return 'Infinite Solutions'
+            return 'Infinite-Solutions'
 # condition set error, found when i used something like function = xexp(x) lack of *
         elif type(cpoints) == sympy.ConditionSet:
             return 'N/A'
@@ -131,7 +131,7 @@ def critpoints(function):
             return 'N/A'
 # check if all real numbers are critical points        
         elif cpoints == sympy.Reals:
-            return 'All of R'
+            return 'All-of-R'
 
         
         else:
@@ -175,7 +175,7 @@ def infpoints(function):
         
 # check for infinite solutions        
         if type(ipoints) == sympy.Union:
-            return 'Infinite Solutions'
+            return 'Infinite-Solutions'
 # condition set error
         elif type(ipoints) == sympy.ConditionSet:
             return 'N/A'
@@ -184,7 +184,7 @@ def infpoints(function):
             return 'N/A'
 # check if all real numbers are critical points            
         elif ipoints == sympy.Reals:
-            return 'All of R'
+            return 'All-of-R'
         
         
         else:
