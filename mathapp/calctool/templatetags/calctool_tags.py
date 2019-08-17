@@ -6,7 +6,7 @@ init_printing()
 
 register = template.Library()
 
-from ..models import Function
+#from ..models import Function
 
 
 # =============================================================================

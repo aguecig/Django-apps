@@ -1,9 +1,10 @@
 from django.urls import path
 from . import views
-
+import sys
+sys.path.append("..")
+from calctool.views import FunctionListView, FunctionCreateView, FunctionDeleteView, FunctionDetailView
 # import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
-from .views import FunctionCreateView, FunctionListView, FunctionDetailView, FunctionDeleteView
 
 urlpatterns = [
         path('',views.home,name='app-home'),

@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '95fe5dc234c19f0e172e494c4e4ab2fce626ec99ffb08d25'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # add hosts during production
 ALLOWED_HOSTS = [ 'gcmathsite.herokuapp.com' ]
@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [ 'gcmathsite.herokuapp.com' ]
 # Application definition
 
 INSTALLED_APPS = [
+    'calctool.apps.CalctoolConfig',
     'users.apps.UsersConfig',
     'app1.apps.App1Config',
     'django.contrib.admin',

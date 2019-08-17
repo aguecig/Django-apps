@@ -21,11 +21,3 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post-detail',kwargs={'pk':self.pk})
     
-
-class Function(models.Model):
-    function = models.CharField(max_length=100)
-        
-# return to the calculus tool after making new function
-    
-    def get_absolute_url(self):
-        return reverse('calculus_tool')

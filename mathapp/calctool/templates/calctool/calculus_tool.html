@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Home</title>
+    <title>Calculus Analysis</title>
   </head>
 
 <style>
@@ -174,34 +174,34 @@ th,tr,td {
 		<th><center>View Function</center></th>
 	</tr>
 
-	{% for f in functions %}
+	{% for f in equations %}
 
 	<tr>
-		{% latex_function f.function as prettyfunc %}
+		{% latex_function f.equation as prettyfunc %}
 		<td>
 		<div lang="latex" align='center'>
 		{{prettyfunc}}
 		</div>
 		</td>
-		{%  derivative f.function as fprime %}
+		{%  derivative f.equation as fprime %}
 		<td>
 		<div lang="latex" align='center'>
 		{{fprime}}
 		</div>
 		</td>
-		{% critpoints f.function as cps %}
+		{% critpoints f.equation as cps %}
 		<td>
 		<div lang="latex" align='center'>
 		{{cps}}
 		</div>
 		</td>
-		{% infpoints f.function as ips %}
+		{% infpoints f.equation as ips %}
 		<td>
 		<div lang="latex" align='center'>
 		{{ips}}
 		</div>
 		</td>
-		{% integral f.function as F %}
+		{% integral f.equation as F %}
 		<td>
 		<div lang="latex" align='center'>
 		{{F}}
@@ -216,7 +216,7 @@ th,tr,td {
 {% else %}
 
 
-{% for f in functions %}
+{% for f in equations %}
 	{% if forloop.last %}
 
 <table style="background-color:#ffffff" width=30% align='center'>
@@ -229,19 +229,19 @@ th,tr,td {
 	</tr>
 
 	<tr>
-		{% latex_function f.function as prettyfunc %}
+		{% latex_function f.equation as prettyfunc %}
 		<td>
 		<div lang="latex" align='center'>
 		{{prettyfunc}}
 		</div>
 		</td>
-		{%  derivative f.function as fprime %}
+		{%  derivative f.equation as fprime %}
 		<td>
 		<div lang="latex" align='center'>
 		{{fprime}}
 		</div>
 		</td>
-		{% critpoints f.function as cps %}
+		{% critpoints f.equation as cps %}
 		<td>
 		<div lang="latex" align='center'>
 		{{cps}}
@@ -253,7 +253,7 @@ th,tr,td {
 		{{ips}}
 		</div>
 		</td>
-		{% integral f.function as F %}
+		{% integral f.equation as F %}
 		<td>
 		<div lang="latex" align='center'>
 		{{F}}
