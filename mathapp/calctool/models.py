@@ -6,6 +6,7 @@ from django.urls import reverse
 
 class Function(models.Model):
     equation = models.CharField(max_length=100)
+    limit_point = models.CharField(max_length=10,blank=True)
         
 # return to the calculus tool after making new function
     

@@ -21,7 +21,7 @@ class FunctionListView(ListView):
 
 class FunctionCreateView(CreateView):
     model = Function                      # <app>/<model>_<viewtype>.html path
-    fields = ['title','func']             # ie analysis/function_form.html
+    fields = ['title','func','limit_point']             # ie analysis/function_form.html
 
     def form_valid(self,form):
         return super().form_valid(form)

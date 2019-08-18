@@ -5,6 +5,8 @@ from django.urls import reverse
 class Function(models.Model):
     title = models.CharField(max_length=100)
     func = models.CharField(max_length=100)
+    limit_point = models.CharField(max_length=100, blank=True)
+    
     
         
     def __str__(self):

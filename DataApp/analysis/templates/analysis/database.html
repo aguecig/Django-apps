@@ -112,6 +112,7 @@ th,tr,td {
 		<th>Critical Points</th>
 		<th>Inflection Points</th>
 		<th>Integral</th>
+		<th>Limit</th>
 		<th>View Function</th>
 	</tr>
 
@@ -123,35 +124,58 @@ th,tr,td {
 	<tr>
 		<td>{{function.title}}</td>
 		{% latex_function function.func as prettyfunc %}
+
 		<td>
 		<div lang="latex" align='center'>
 		{{prettyfunc}}
 		</div>
 		</td>
+
 		{%  derivative function.func as fprime %}
+
 		<td>
 		<div lang="latex" align='center'>
 		{{fprime}}
 		</div>
 		</td>
+
 		{% critpoints function.func as cps %}
+
 		<td>
 		<div lang="latex" align='center'>
 		{{cps}}
 		</div>
 		</td>
+
 		{% infpoints function.func as ips %}
+
 		<td>
 		<div lang="latex" align='center'>
 		{{ips}}
 		</div>
 		</td>
+
 		{% integral function.func as F %}
+
 		<td>
 		<div lang="latex" align='center'>
 		{{F}}
 		</div>
 		</td>
+
+		{% limit function.func function.limit_point as L %}
+
+		<td>
+		{% if function.limit_point == "" %}
+			N/A
+		</td>	
+		{% else %}
+		<div lang="latex" align='center'>
+		\lim_{ x\to {{function.limit_point}} }   {{prettyfunc}}  =  {{L}}
+		</div>
+		</td>
+		{% endif %}
+
 		<td><a class='' href='{% url 'function-detail' function.id %}'>View Function</a></td>
 	</tr>
 

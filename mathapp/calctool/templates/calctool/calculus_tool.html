@@ -211,6 +211,7 @@ th,tr,td {
 	</tr>
 
 	{% endfor %}
+
 </table>
 
 {% else %}
@@ -247,7 +248,7 @@ th,tr,td {
 		{{cps}}
 		</div>
 		</td>
-		{% infpoints f.function as ips %}
+		{% infpoints f.equation as ips %}
 		<td>
 		<div lang="latex" align='center'>
 		{{ips}}
@@ -260,13 +261,44 @@ th,tr,td {
 		</div>
 		</td>
 	</tr>
-
-	{% endif %}
-
-	{% endfor %}
 </table>
 
+<br>
+
+			{% latex_function f.equation as prettyfunc %}
+			{% limit f.equation f.limit_point as L %}
+
+			{% if f.limit_point == "" %}
+
+			{% else %}
+
+		<table style="background-color:#ffffff" width=30% align='center'>
+			<tr>
+				<th><center>Limit Evaluation</center></th>
+			</tr>
+
+			<tr>
+				<td><center> 
+					<div lang="latex" align='center'>
+					\lim_{x\to {{f.limit_point}} } {{prettyfunc}} = {{L}} 
+					</div>
+				</center></td>
+
+		</table>
+
+
+			{% endif %}
+		{% endif %}
+
+	{% endfor %}
+
 {% endif %}
+				
+		
+
+
+
+
 
 <a class='btn btn-info' style='margin:10px;' href='{% url 'function-create' %}'>Create and Analyze Function</a>
 
@@ -313,13 +345,15 @@ th,tr,td {
 				</ul>
 			<br>
 			<li>Raising trigonometric functions to powers must be done by enclosing the entire trigonometric function in <b>( )</b> 
-				brackets, and the using the <b>^</b> character to indicate the power.</li>
+				brackets, and the using the <b>^</b> character to indicate the power</li>
 				<ul class='lists'>
 					<li>EG - (sin(x))^2 is equivalent to </li>
 						<div lang="latex" class='latstyle'>
 							\sin{^{2}x}
 						</div>
 				</ul>
+			<br>
+			<li>If no <b>limit_point</b> is entered, then a limit will simply not be returned for the input function</li>
 
 		</ul>
 

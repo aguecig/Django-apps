@@ -45,6 +45,29 @@ def latex_function(function):
         return latex(sympy.simplify(function))
     else:
         return 'Invalid-Input'
+    
+# find limit of a function at a point
+@register.simple_tag
+def limit(function,point):
+# handle user syntax 
+    function = function.replace('^','**')
+    for char in [chr(i) for i in range(48,58)]:
+        function = function.replace('{}x'.format(char),'{}*x'.format(char))
+        for f in ['sqrt','exp','ln','log','sin','cos','tan','sec','csc','cot','(']:
+            function = function.replace('{}{}'.format(char,f),'{}*{}'.format(char,f))
+            function = function.replace('x{}'.format(f),'x*{}'.format(f))
+            function = function.replace('){}'.format(f),')*{}'.format(f))
+# check for invalid input            
+    try:
+        sympy.limit(function,x,point)
+        validate = True
+    except:
+        validate = False
+        
+    if validate == True:
+        return sympy.limit(function,x,point)
+    else:
+        return 'N/A'
 
 # find first derivative of user function input
 @register.simple_tag
