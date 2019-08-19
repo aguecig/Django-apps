@@ -3,6 +3,7 @@ from . import views
 import sys
 sys.path.append("..")
 from calctool.views import FunctionListView, FunctionCreateView, FunctionDeleteView, FunctionDetailView
+from matrixtool.views import MatrixView
 # import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
@@ -16,19 +17,17 @@ urlpatterns = [
         path('trigproofquiz/',views.trigonometric_proofs_quiz,name='trig_proof_quiz'),
         path('trigproofinfo/',views.trigonometric_proofs_info,name='trig_proof_info'),
         path('logarithmquiz/',views.logarithm_quiz,name='log_quiz'),
-        # forum page
+        # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
-        # go to specific posts in the forum
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),
-        # go to make new post page
         path('forum/post/new/',PostCreateView.as_view(),name='post-create'),
-        # update forum post
         path('forum/post/<int:pk>/update/',PostUpdateView.as_view(),name='post-update'),
-        # delete posts
         path('forum/post/<int:pk>/delete/',PostDeleteView.as_view(),name='post-delete'),
         # calculus tool urls
         path('calculus_tool/',FunctionListView.as_view(),name='calculus_tool'),
         path('calculus_tool/function/',FunctionCreateView.as_view(),name='function-create'),
         path('calculus_tool/<int:pk>/',FunctionDetailView.as_view(),name='function-detail'),
         path('calculus_tool/<int:pk>/delete/',FunctionDeleteView.as_view(),name='function-delete'),
+        # matrix tool urls
+        path('linear_systems/',MatrixView.as_view(),name='matrix-solutions'),
         ]

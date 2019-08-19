@@ -1,6 +1,7 @@
 from django import template
 import sympy
 from sympy import init_printing, latex
+import numpy
 # init pretty printing
 init_printing()
 
@@ -8,7 +9,38 @@ register = template.Library()
 
 from ..models import Function
 
-
+# =============================================================================
+# Start of matrix custom tags
+# =============================================================================
+@register.simple_tag
+def matrix_2D(a1,b1,d1,a2,b2,d2):
+    a1 = float(a1)
+    b1 = float(b1)
+    d1 = float(d1)
+    a2 = float(a2)
+    b2 = float(b2)
+    d2 = float(d2)
+# construct matrix 
+    matrix = numpy.array([[a1,b1],[a2,b2]])
+    constants = numpy.array([[d1],[d2]])
+# check for singular matrix possibilities
+    if numpy.linalg.det(matrix) == 0 and a2/a1 == b2/b1 == d2/d1:
+        return 'Infinite Solutions'
+    elif numpy.linalg.det(matrix) == 0 and a2/a1 != d2/d1:
+        return 'No Solutions'
+# if matrix is not singular
+    else:
+        try:
+            s = numpy.linalg.solve(matrix,constants)
+            validate = True
+        except:
+            validate = False
+        
+        if validate == True:
+            return '({},{})'.format(s[0][0],s[1][0])
+        else:
+            return 'Invalid Input'
+            
 # =============================================================================
 # Start of calculus custom tags
 

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Home</title>
+    <title>Linear Systems Analysis</title>
   </head>
 
 <style>
@@ -26,12 +26,12 @@
 .subtitles {
   background-color:#1e522c;
   color: #018268;
-  font-size: 100%;
+  font-size: 200%;
   text-shadow: 2px 2px 0px #000000;
   margin:20px;
 }
 .links {
- background-color: #1e3f2c;
+ background-color: #1e522c;
  color: white;
  font-size: 120%;
 }
@@ -57,9 +57,10 @@
 }
 
 .paragraphs {
- color: #000000;
+ color: #ffffff;
  font-size:100%;
  margin: 5px;
+ padding: 5px;
 }
 
 .paragraphs2 {
@@ -75,13 +76,11 @@
 
 
 .lists {
-  color: #000000;
+  color: #ffffff;
   font-size:100%;
-  position: absolute;
-  right: 0px;
-  width: 880px;
-  padding: 10px;
+  position: center;
 }
+
 .foot {
   background-color: #1e522c;
   color: #11112d;
@@ -97,104 +96,94 @@ th,tr,td {
   padding: 5px;
 }
 
+.dropbutton {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #1e522c;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+.createfunction {
+  fontsize: 400%;
+  color: #ff9600;
+  padding: 5px;
+  margin: 20px;
+}
+
+.latstyle {
+  background-color: #ffffff;
+  width: 57px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px #000000;
+  align: center;
+}
+
 
 </style>
 
-<body>
+<body style="background-color:#1e522c">
 
-{% load analysis_tags %}
-
-<table width=30% align='left'>
-	<tr>
-		<th>Function Type</th>
-		<th>Explicit Function</th>
-		<th>First Derivative</th>
-		<th>Critical Points</th>
-		<th>Inflection Points</th>
-		<th>Integral</th>
-		<th>Limit</th>
-		<th>View Function</th>
-	</tr>
+<div class='title'><center>Linear Systems Analysis</center></div>
 
 
-{% for function in functions %}
+{% load matrixtool_tags %}
 
-	{% if forloop.last %}
 
-	<tr>
-		<td>{{function.title}}</td>
-		{% latex_function function.func as prettyfunc %}
-
-		<td>
-		<div lang="latex" align='center'>
-		{{prettyfunc}}
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+				</div>
 		</div>
-		</td>
+	</div>
 
-		{%  derivative function.func as fprime %}
+<p class='paragraphs'>Solve a linear system of the form</p>
+<p class='paragraphs'>a1*x + b1*y = d1 <br> a2*x + b2*y = d2</p>
+<p class='paragraphs'>For example:</p>
+<p class='paragraphs'>2x + 3y = 5 <br> 3x - 4y = -1</p>
+<p class='paragraphs'>Which has solution (1.0,1.0)</p>
 
-		<td>
-		<div lang="latex" align='center'>
-		{{fprime}}
-		</div>
-		</td>
 
-		{% critpoints function.func as cps %}
+<form style="padding:5px;color: #ffffff" method='POST'>
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button style="padding:10px;" type='submit'>Solve</button>
+</form>
 
-		<td>
-		<div lang="latex" align='center'>
-		{{cps}}
-		</div>
-		</td>
 
-		{% infpoints function.func as ips %}
-
-		<td>
-		<div lang="latex" align='center'>
-		{{ips}}
-		</div>
-		</td>
-
-		{% integral function.func as F %}
-
-		<td>
-		<div lang="latex" align='center'>
-		{{F}}
-		</div>
-		</td>
-
-		{% limit function.func function.limit_point as L %}
-
-		<td>
-		{% if function.limit_point == "" %}
-			N/A
-		</td>	
-		{% else %}
-		<div lang="latex" align='center'>
-		\lim_{ x\to {{function.limit_point}} }   {{prettyfunc}}  =  {{L}}
-		</div>
-		</td>
-		{% endif %}
-
-		<td><a class='' href='{% url 'function-detail' function.id %}'>View Function</a></td>
-	</tr>
-
-	{% endif %}
-
-{% endfor %}
-
-<a class='paragraphs' href='{% url 'function-create' %}'>Create Function</a>
-
-</table>
-<br>
 
 {% matrix_2D a1 b1 d1 a2 b2 d2 as solution %}
 
-<div>
-<center>
-	<p>solution is {{solution}}</p>
-</center>
-</div>
+<p class='paragraphs'>Solution to two dimensional system: {{solution}}</p>
+
+<p class='paragraphs' style='font-size:80%;'>Note: values are rounded to 1 decimal place</p>
+
+
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

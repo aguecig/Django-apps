@@ -11,4 +11,5 @@ urlpatterns = [
         path('database/function/',FunctionCreateView.as_view(),name='function-create'),
         path('database/<int:pk>/',FunctionDetailView.as_view(),name='function-detail'),
         path('database/<int:pk>/delete/',FunctionDeleteView.as_view(),name='function-delete'),
+        path('database/matrix/',views.get_matrix,name='matrix'),
         ]

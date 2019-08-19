@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [ 'gcmathsite.herokuapp.com' ]
 # Application definition
 
 INSTALLED_APPS = [
+    'matrixtool.apps.MatrixtoolConfig',
     'calctool.apps.CalctoolConfig',
     'users.apps.UsersConfig',
     'app1.apps.App1Config',
