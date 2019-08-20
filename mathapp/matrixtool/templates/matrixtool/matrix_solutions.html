@@ -131,15 +131,12 @@ th,tr,td {
   margin: 20px;
 }
 
-.latstyle {
+.latex {
   background-color: #ffffff;
-  width: 57px;
-  margin: 5px;
+  margin: 30px;
   padding: 5px;
-  box-shadow: 0px 4px 8px #000000;
-  align: center;
+  box-shadow: 0px 4px 8px;
 }
-
 
 </style>
 
@@ -163,15 +160,23 @@ th,tr,td {
 	</div>
 
 <p class='paragraphs'>Solve a linear system of the form</p>
-<p class='paragraphs'>a1*x + b1*y = d1 <br> a2*x + b2*y = d2</p>
+<div lang="latex" align='left'>
+	a_{1}x + b_{1}y = d_{1} \\
+	\phantom{aaa} a_{2}x + b_{2}y = d_{2}
+</div>
 <p class='paragraphs'>For example:</p>
-<p class='paragraphs'>2x + 3y = 5 <br> 3x - 4y = -1</p>
+<div lang="latex" align='left'>
+	2x + 3y = 5  \\
+	\phantom{aaa} 3x - 4y = -1
+</div>
 <p class='paragraphs'>Which has solution (1.0,1.0)</p>
+
+<br>
 
 
 <form style="padding:5px;color: #ffffff" method='POST'>
 	{% csrf_token %}
-	{{ form.as_p }}
+	{{ form.as_table }}
 	<button style="padding:10px;" type='submit'>Solve</button>
 </form>
 
@@ -179,7 +184,7 @@ th,tr,td {
 
 {% matrix_2D a1 b1 d1 a2 b2 d2 as solution %}
 
-<p class='paragraphs'>Solution to two dimensional system: {{solution}}</p>
+<p class='paragraphs' style='font-size:150%;'>Solution to two dimensional system: {{solution}}</p>
 
 <p class='paragraphs' style='font-size:80%;'>Note: values are rounded to 1 decimal place</p>
 

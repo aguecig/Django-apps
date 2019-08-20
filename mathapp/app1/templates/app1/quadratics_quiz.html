@@ -35,7 +35,7 @@
   padding: 5px;
 }
 .links {
- background-color: #1e3f2c;
+ background-color: #1e522c;
  color: white;
  font-size: 120%;
 }
@@ -120,6 +120,34 @@ th,tr,td {
   padding: 5px;
 }
 
+.dropbutton {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #1e522c;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
 
 </style>
 
@@ -129,11 +157,15 @@ th,tr,td {
 	<div class="title">
 		<center>Quadratics Quiz</center>
 	</div>
-
-	<div class = subtitles>
-		<a href='{% url 'app-home' %}'>Return Home</a>
-		&nbsp&nbsp&nbsp
-		<a  href='{% url 'forum' %}'>Stuck? Go to the forums!</a>
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+				</div>
+		</div>
 	</div>
 
 	<div class="questions">

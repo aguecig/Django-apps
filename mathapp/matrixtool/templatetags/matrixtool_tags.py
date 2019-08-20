@@ -23,9 +23,13 @@ def matrix_2D(a1,b1,d1,a2,b2,d2):
         matrix = numpy.array([[a1,b1],[a2,b2]])
         constants = numpy.array([[d1],[d2]])
     # check for singular matrix possibilities
-        if numpy.linalg.det(matrix) == 0 and a2/a1 == b2/b1 == d2/d1:
+        if numpy.linalg.det(matrix) == 0 and a1 == 0 and b1 == 0:
+            return 'Infinte Solutions'
+        elif numpy.linalg.det(matrix) == 0 and a2/a1 == b2/b1 and d1 == d2 == 0:
             return 'Infinite Solutions'
-        elif numpy.linalg.det(matrix) == 0 and a2/a1 != d2/d1:
+        elif numpy.linalg.det(matrix) == 0 and a2/a1 == b2/b1 == d2/d1:
+            return 'Infinite Solutions'
+        elif numpy.linalg.det(matrix) == 0 and a2/a1 == b2/b1 != d2/d1:
             return 'No Solutions'
     # if matrix is not singular
         else:

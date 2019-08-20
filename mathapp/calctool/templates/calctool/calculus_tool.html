@@ -300,7 +300,7 @@ th,tr,td {
 
 
 
-<a class='btn btn-info' style='margin:10px;' href='{% url 'function-create' %}'>Create and Analyze Function</a>
+<center><a class='btn btn-info' style='margin:10px;' href='{% url 'function-create' %}'>Create and Analyze Function</a></center>
 
 <div class='subtitles'>Notes on Creating a Function</div>
 
@@ -353,8 +353,12 @@ th,tr,td {
 						</div>
 				</ul>
 			<br>
-			<li>If no <b>limit_point</b> is entered, then a limit will simply not be returned for the input function</li>
-
+			<li>If no <b>limit point</b> is entered, then a limit will simply not be returned for the input function</li>
+			<br>
+			<li>The analysis will automatically return a simplified version of the function/limit if possible.</li>
+				<ul class='lists'>
+					<li>EG - x^2/x will be returned as x</li>
+				</ul>
 		</ul>
 
 
