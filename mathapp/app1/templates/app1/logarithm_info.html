@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Logarithms Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 150%;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 5px;
+}
+
+.category {
+ background-color:#1e522c;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #1e3f2c;
+ color: white;
+ font-size: 120%;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#1e522c;
+ color: #ffffff;
+ font-size:80%;
+ margin: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px #000000;
+}
+
+.lists {
+  color: #ffffff;
+  font-size: 90%;
+}
+
+</style>
+
+<body style="background-color:#1e522c">
+
+	<div class='title'>
+
+		<center>Logarithms Information Sheet</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:80%;' href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'forum' %}'>Go to Forum</a>
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Identities of logarithms</h1>
+			<ul class='lists'>
+				<li>Product rule
+					<div lang="latex" align='center'>
+					\log{_{b}(xy)} = \log{_{b}x} + \log{_{b}y}
+					</div>
+				</li>
+				<li>Quotient rule
+					<div lang="latex" align='center'>
+					\log{_{b}\left( \frac{x}{y} \right)} = \log{_{b}x} - \log{_{b}y}
+					</div>
+				</li>
+				<li>Power rule
+					<div lang="latex" align='center'>
+					\log{_{b}x}^{n} = n\log{_{b}x}
+					</div>
+				</li>
+				<li>Log 1 of any base
+					<div lang="latex" align='center'>
+					\log{_{b}1} = 0
+					</div>
+				</li>
+				<li>Log b of base b
+					<div lang="latex" align='center'>
+					\log{_{b}b} = 1
+					</div>
+				</li>
+				<li>Log of any base
+					<div lang="latex" align='center'>
+					\log{_{b}a} = \frac{\log{a}}{\log{b}}
+					</div>
+				</li>
+			</ul>
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Transformations of logarithmic functions</h1>
+
+			<div lang="latex" align='center'>
+			y = a\log{_{b}([c(x-h)])+k
+			</div>
+
+		<center><table class='tables'>
+
+			<tr>
+				<th><center>Variable</center></th>
+				<th><center>Type of Transformation</center></th>
+				<th><center>Special Note</center></th>
+			</tr>
+
+			<tr>
+				<td><center>a</center></td>
+				<td><left>Vertical stretch/compression <br></left><left>Reflection in x-axis</left></td>
+				<td><left>Stretch occurs if | a | > 1<br></left><left>Compression occurs if | a | < 1<br></left>
+					<left>Reflection occurs if a < 0</left></td>
+			</tr>
+
+			<tr>
+				<td><center>c</center></td>
+				<td><left>Horizontal stretch/compression <br></left><left>Reflection in y-axis</left></td>
+				<td><left>Stretch occurs if | c | < 1<br></left><left>Compression occurs if | c | > 1<br></left>
+					<left>Reflection occurs if c < 0</left></td>
+			</tr>
+
+			<tr>
+				<td><center>h</center></td>
+				<td><left>Horizontal translation</left></td>
+				<td><left>Translation to the right occurs if h > 0<br></left>
+					<left>Translation to the left occurs if h < 0</left></td>
+			</tr>
+
+			<tr>
+				<td><center>k</center></td>
+				<td><left>Vertical translation</left></td>
+				<td><left>Translation upwards occurs if k > 0<br></left>
+					<left>Translation downwards occurs if k < 0</left></td>
+			</tr>
+
+		</table></center>
+
+	</div>
+
+
+
+
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

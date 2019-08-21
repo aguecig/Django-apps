@@ -17,6 +17,7 @@ urlpatterns = [
         path('trigproofquiz/',views.trigonometric_proofs_quiz,name='trig_proof_quiz'),
         path('trigproofinfo/',views.trigonometric_proofs_info,name='trig_proof_info'),
         path('logarithmquiz/',views.logarithm_quiz,name='log_quiz'),
+        path('logarithminfo/',views.logarithm_info,name='log_info'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),

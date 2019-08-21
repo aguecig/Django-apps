@@ -46,7 +46,8 @@
 
 .message {
   margin-left:20px;
-  color:#000000;
+  color:#ffffff;
+  font-size:125%;
 }
 
 .pg_btns {
@@ -68,9 +69,9 @@
 
 <body style="background-color:#1e522c;">
 <header class="site-header">
-  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark  fixed-top">
     <div class="container">
-      <a class='navbar-brand mr-4' style='font-size:200%;'>Discussion Forum</a>
+      <a class='navbar-brand mr-4' style='font-size:200%;color:#ff9600;'>Discussion Forum</a>
 	<br>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,21 +79,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarToggle">
         <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link" href='{% url 'app-home' %}'>Site-Home</a>
+          <a class="nav-item nav-link" href='{% url 'app-home' %}' style='color:#ff9600;'>Site-Home</a>
         </div>
         <!-- Navbar Right Side -->
         <div class="navbar-nav">
 
 
 	{% if user.is_authenticated %}
-	  <p class='"nav-item nav-link loggedin'>Welcome {{user}}!</p>
-	  <a class="nav-item nav-link" href='{% url 'post-create' %}'>New Post</a>
-	  <a class="nav-item nav-link" href='{% url 'logout' %}'>Logout</a>
+	  <p class='"nav-item nav-link loggedin' style='color:#ff9600;'>Welcome {{user}}!</p>
+	  <a class="nav-item nav-link" href='{% url 'post-create' %}' style='color:#ff9600;'>New Post</a>
+	  <a class="nav-item nav-link" href='{% url 'logout' %}' style='color:#ff9600;'>Logout</a>
 	 </div>
 	
 	{% else %}
-          <a class="nav-item nav-link" href='{% url 'login' %}'>Login</a>
-          <a class="nav-item nav-link" href='{% url 'register' %}'>Register</a>
+          <a class="nav-item nav-link" href='{% url 'login' %}' style='color:#ff9600;'>Login</a>
+          <a class="nav-item nav-link" href='{% url 'register' %}' style='color:#ff9600;'>Register</a>
         </div>
 	{% endif %}
 
@@ -125,7 +126,7 @@
 	{% if is_paginated %}
 
 		{% if page_obj.has_previous %}
-			<center><a class='btn-outline-info mb-4 pg_btns' href='/forum/?page=1'>First</a>
+			<center><a class='btn-outline-info mb-4 pg_btns' href='/forum/?page=1'>Newest Posts</a>
 			&nbsp;&nbsp&nbsp;&nbsp
 			<a class='btn-outline-info mb-4 pg_btns' href='/forum/?page={{page_obj.previous_page_number}}'>Prev</a></center>
 		{% endif %}

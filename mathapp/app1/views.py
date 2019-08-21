@@ -38,6 +38,9 @@ def trigonometric_proofs_info(request):
 def logarithm_quiz(request):
     return render(request,'app1/logarithm_quiz.html')
 
+def logarithm_info(request):
+    return render(request,'app1/logarithm_info.html')
+
 def forum(request):  
     context = {
                 'posts':Post.objects.all()
