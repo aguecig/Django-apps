@@ -47,6 +47,9 @@ def rational_functions_quiz(request):
 def rational_functions_info(request):
     return render(request,'app1/rational_functions_info.html')
 
+def trig12_quiz(request):
+    return render(request,'app1/trig12_quiz.html')
+
 # functioon based view for the forum
 
 def forum(request):  

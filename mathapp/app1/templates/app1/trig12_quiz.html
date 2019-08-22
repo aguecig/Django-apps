@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Trigonometry 12 Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 200%;
+  text-shadow: 2px 2px 0px #000000;
+  margin:20px;
+}
+.links {
+ background-color: #1e522c;
+ color: white;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+ height: 100vh;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #ffffff;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+.loggedin {
+  color: #ff9600;
+}
+
+.questions {
+ background-color:#1e522c;
+ color: #ffffff;
+ font-size:125%;
+}
+
+
+.lists {
+  color: #ffffff;
+  font-size:100%;
+  position: center;
+}
+
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #1e522c;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+.createfunction {
+  fontsize: 400%;
+  color: #ff9600;
+  padding: 5px;
+  margin: 20px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px #000000;
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#1e522c;
+  padding:10px;
+  box-shadow: 0px 10px 18px;
+}
+
+.hint {
+  color: #ffffff;
+}
+
+</style>
+
+
+<body style="background-color:#1e522c">	
+
+	<div class="title">
+		<center>Trigonometric Functions and Identites Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: Find all solutions to </p></center>
+			<div lang="latex" align='center'>
+				4 + 2\sin{x} = 3
+			</div>
+		<center><p>over the interval <div lang="latex"> 0 \leq x \leq 2\pi </div></p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x = \frac{\pi}{6}, \frac{5\pi}{6}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x = \frac{\pi}{3}, \frac{2\pi}{3}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						x = \frac{7\pi}{6}, \frac{11\pi}{6}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x = \frac{4\pi}{3}, \frac{5\pi}{3}
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: Use special triangles and the CAST rule
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: Which of the following is <b>not</b> a valid identity?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\sin{x} = \cos{\left(\frac{\pi}{2}-x\right)}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						1 + \sec{^{2}x} = \tan{^{2}x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\cos{(-x)} = \cos{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\sin{(x+y)} = \sin{x}\cos{y} + \cos{x}\sin{y}
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: Plug in values for x and see which proposed identity does not hold true
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: What are the locations of the vertical asymptotes for the trignometric function 
+		given by</p></center>
+					<div lang="latex" align='center'>
+						f(x) = \csc{x}
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						n\pi , n\epsilon Z
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{n\pi}{2}, n\epsilon Z
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{(2n+1)\pi}{2}, n\epsilon Z
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\pi, 2\pi
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: Sketch the graph of y = csc(x)
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: Find the solutions to the equation</p></center>
+					<div lang="latex" align='center'>
+						1 - 2\sin{^{2}x} = -\cos{x}
+					</div>
+		<center><p>over the interval <div lang='latex'> 0 \leq x \leq 2\pi</div></p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{6}, \frac{11\pi}{6}, \pi
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{3}, \frac{5\pi}{6}, \frac{\pi}{2}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{2\pi}{3}, \frac{4\pi}{3}, \pi
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{3}, \frac{5\pi}{6}, \pi
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: Rewrite the function in terms of just cosines and then factor as you would a quadratic
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: Determine the minimum value of the trigonometric function given by</p></center>
+					<div lang="latex" align='center'>
+						f(x) = -3\cos{[2(x-\pi)]} + 7
+					</div>
+		<center><p>over the interval <div lang='latex'> 0 \leq x \leq 2\pi</div></p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-10</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-4</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">10</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: Use the amplitude and the axis values
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: Solve the equation</p></center>
+			<div lang="latex" align='center'>
+				sec{3x} = \sqrt{2}
+			</div>
+		<center><p>over the interval <div lang="latex"> 0 \leq x \leq 2\pi </div></p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{4}, \frac{7\pi}{4}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{3}, \frac{5\pi}{3}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{12}, \frac{7\pi}{12}, \frac{\pi}{4}, \frac{7\pi}{12}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						0, \pi, 2\pi
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{12}, \frac{7\pi}{12}, \frac{\pi}{4}, \frac{7\pi}{12}, \frac{3\pi}{4}, \frac{5\pi}{4}
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: Change to cos(x) and note the period of the function
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: A wind mill is built so that its blades reach a maximum height of 24 metres above the ground and a 
+		minumum height of 18 metres. The blades make 3 rotations in 1 minute. Model the height of the blades in metres above the ground 
+		 as a function of time in seconds, beginning at the bottom of the windmill. Which of the following is a valid function that describes 
+		this situation?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						h(t) = 3\cos{\left( \frac{\pi}{10}t \right)} + 21
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						h(t) = 3\sin{\left[ \frac{\pi}{3} (t - 15)\right]} +21
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						h(t) = -3\cos{\left[ \frac{\pi}{10} (t + 15)\right]} + 21
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						h(t) = 3\sin{\left[ \frac{\pi}{10} (t - 5)\right]} + 21
+					</div>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: Sketch the graph to see which function fits best
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: A car wheel has an angular speed of 32 rad/s and a radius of 50 cm. How many metres will the car have travelled after 
+		2 minutes?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">13.3 </button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">1920 </button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3200 </button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">192 000 </button>
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: Make the proper unit conversions first
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: Which of the following <b>is</b> a correct identity?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\sin{\left(x - \frac{\pi}{2} \right)} = \cos{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\tan{(\pi-x)} = \tan{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\sin{2x} = 2\sin{x}\cos{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\cos{(-x)} = -\cos{x}
+					</div>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler9" style="display:none" >
+
+		Hint: Plug in values for x and see which proposed identity does hold true
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: At high tide the water level at a particular boat dock is 9 feet deep. At low tide the water 
+		is 3 feet deep. On a certain day the low tide occurs at 3 am and high tide occurs at 9 am.  What is the water level 
+		at 2 pm?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+						3.4 feet
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						7.5 feet
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						9 feet
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						10.3 feet
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: Make a graph/equation and use it to solve the problem
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: Find the solutions to</p></center>
+					<div lang="latex" align='center'>
+						\cot{^{2}x} = 1
+					</div>
+		<center><p>On the interval <div lang='latex'> 0 \leq x \leq \pi</div> </p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{4}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{4}, \frac{3\pi}{4}, \frac{5\pi}{4}, \frac{7\pi}{4},
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\frac{\pi}{4}, \frac{3\pi}{4},
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					There are no solutions
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Hint: Pay attention to the domain
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: What is the difference between a trigonometric <i>equation</i> and a trigonometric 
+		<i>identity</i> as a function of x?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						There is no difference, they mean the same thing
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						One never has any solutions, the other does
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						Equations are expressed in radians and identities in degrees
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+						Identites are true for all values of x, but equations are not.
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: Why do we prove identities?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: What is the correct co-function identity for</p></center>
+					<div lang="latex" align='center'>
+						\sin{\left(\frac{2\pi}{3}\right)}
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\cos{\left(\frac{2\pi}{3}\right)}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\cos{\left(\frac{\pi}{3}\right)}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						-\cos{\left(\frac{\pi}{3}\right)}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						-\cos{\left(\frac{2\pi}{3}\right)}
+					</div>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler13" style="display:none" >
+
+		Hint: Which of them is actually equal to the original expression?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: Which of the following trigonometric functions has <b>no</b> y-intercept?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						f(x) = \csc{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \sin{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \sec{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \tan{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					They all have a y-intercept
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler14" style="display:none" >
+
+		Hint: What value should you substitute for x to find the y-intercept?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 15: Which of the following trigonometric functions has <b>no</b> x-intercept?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \cot{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \cos{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						f(x) = \sec{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \tan{x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					They all have a x-intercept
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler15" style="display:none" >
+
+		Hint: Think of each function's graph; which never crosses the x-axis?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question15" type="button" onclick="if(document.getElementById('spoiler15') .style.display=='none')
+     		  {document.getElementById('spoiler15') .style.display=''}else{document.getElementById('spoiler15') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 16: A cosine function has the following transformations: A vertical stretch by a factor of 4, 
+		a period of 180 degrees and a phase shift of 30 degrees to the right. Which function below is equivalent to the one 
+		just described?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = 4\sin{\left[\frac{1}{2}(x-30^{o})\right]}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = 4\sin{\left[2(x-30^{o})\right]}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = -4\sin{\left[\frac{1}{2}(60^{o}-x)\right]}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						f(x) = 4\sin{\left[2(120^{o}-x)\right]}
+					</div>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler16" style="display:none" >
+
+		Hint: Use a cofunction identity
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question16" type="button" onclick="if(document.getElementById('spoiler16') .style.display=='none')
+     		  {document.getElementById('spoiler16') .style.display=''}else{document.getElementById('spoiler16') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>
