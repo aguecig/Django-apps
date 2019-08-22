@@ -12,7 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 
-# create function based views for webpages on the site
+# function based views for quizzes and info sheets
 
 def home(request):
     return render(request,'app1/home.html')
@@ -41,15 +41,22 @@ def logarithm_quiz(request):
 def logarithm_info(request):
     return render(request,'app1/logarithm_info.html')
 
+def rational_functions_quiz(request):
+    return render(request,'app1/rational_functions_quiz.html')
+
+def rational_functions_info(request):
+    return render(request,'app1/rational_functions_info.html')
+
+# functioon based view for the forum
+
 def forum(request):  
     context = {
                 'posts':Post.objects.all()
                 }
     return render(request,'app1/forum.html',context)
 
-
 # create class based views for making posts, updating
-# posts, deleting posts on the site forum
+# posts, deleting posts on the forum
     
 class PostListView(ListView):
     model = Post

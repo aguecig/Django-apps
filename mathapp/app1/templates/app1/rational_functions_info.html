@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Trig Proofs Information</title>
+    <title>Rational Functions Information</title>
   </head>
 
 <style>
@@ -71,18 +71,6 @@
  padding: 5px;
 }
 
-
-.lists {
-  color: #ffffff;
-  font-size:80%;
-  background-color:#1e522c;
-}
-.foot {
-  background-color: #1e522c;
-  color: #11112d;
-  font-size: 100%
-}
-
 table {
   border: 3px solid black;
 }
@@ -96,16 +84,21 @@ th,tr,td {
   background-color: #ffffff;
   margin: 5px;
   padding: 5px;
-    box-shadow: 0px 4px 8px;
+    box-shadow: 0px 4px 8px #000000;
+}
+
+.lists {
+  color: #ffffff;
+  font-size: 90%;
 }
 
 </style>
 
-<body>
+<body style="background-color:#1e522c">
 
 	<div class='title'>
 
-		<center>Trigonometric Proofs Information Sheet</center>
+		<center>Rational Functions Information Sheet</center>
 
 	</div>
 
@@ -118,48 +111,66 @@ th,tr,td {
 
 	<div class='category'>
 
-		<h1 class='subtitles'>List of Trigonometric Identities</h1>
+		<h1 class='subtitles'>How to analyze a rational function</h1>
+			<p class='paragraphs'>Using the example:</p>
+					<div lang="latex" align='center'>
+						f(x) = \frac{x^{2}-2x-24}{x^{2}-36}
+					</div>
+			<ul class='lists'>
+				<li>Factor the numerator and denominator if possible
+					<div lang="latex" align='center'>
+						f(x) = \frac{(x-6)(x+4)}{(x-6)(x+6)}
+					</div>
+				</li>
+				<li>Simplify and determine the location of any holes
+					<div lang="latex" align='center'>
+						f(x) = \frac{x+4}{x+6}
+					</div>
+				<p class='paragraph' align='center'>Hole at (6, 5/6)</p>
+				</li>
+				<p class='paragraph' align='center'>Use the simplified function for the rest of the algorithm</p>
+				<li>Use the denominator to find the location of any vertical asymptotes
+					<div lang="latex" align='center'>
+						x = -6
+					</div>
+				</li>
+				<li>Determine if there are any horizontal or vertical asymptotes
+					<ul>
+						<li>If deg(numerator) is 1 more than deg(denominator), there is an oblique asymptote</li>
+						<li>If deg(numerator) is less than deg(denominator), horizontal asymptote is y = 0</li>
+						<li>If deg(numerator) = deg(denominator), divide lead coefficients to find horizontal asymptote:</li>
+							<div lang="latex" align='center'>
+								y = \frac{1}{1} = 1
+							</div>
+					</ul>
+				</li>
+				<li>Use a chart to find the behaviour of the function as it approaches either side of all asymptotes
+					<div lang='latex' align='center'>
+						x \rightarrow -6^{-} \quad f(x)  \rightarrow \infty \\
+						\phantom{aa}x \rightarrow -6^{+} \quad f(x) \rightarrow -\infty \\ \\
+						\phantom{aa}x \rightarrow \infty \quad \quad f(x) \rightarrow 1^{-} \\
+						\phantom{aa}x \rightarrow -\infty \quad f(x) \rightarrow 1^{+} \\
+					</div>
+				</li>
+				<li>Use the numerator to locate any x-intercepts
+					<div lang='latex' align='center'>
+						x_{int} = -4
+					</div>
+				</li>
+				<li>Sub in x = 0 to locate the y-intercept
+					<div lang='latex' align='center'>
+						y_{int} = \frac{2}{3}
+					</div>	
+				</li>
+				<li>Graph the function</li>
+			</ul>
 
-			<div lang="latex" align='center'>
 
-				\tan{x} = \frac{ \sin{x} }{ \cos{x} }, \quad \cot {x} = \frac{ \cos{x} }{ \sin{x} } \\ \\
-				
-				\csc{x} = \frac{ 1 }{ \sin{x} }, \quad \sec{x} = \frac{ 1 }{ \cos{x} } \\ \\
-
-				\sin{^{2}x} + \cos{^{2}x} = 1 \\ \\
-
-				1 - \sin{^{2}x} = \cos{^{2}x}, \quad 1 - \cos{^{2}x} = \sin{^{2}x} \\ \\
-				
-
-			</div>
 
 
 	</div>
 
-	<div class='category'>
-
-		<h1 class='subtitles'>Useful Strategies for Trigonometric Proofs</h1>
-
-			<ol class='lists'>
-				<li>Decide which side of the equation looks easier to manipulate for yourself. This is often the 
-				side that has more trigonometric functions and terms, but not always. Keep in mind that there is no 
-				<i>correct</i> side, as they can both be manipulated to look like the other. But more often than 
-				not, once side is easier to work with than the other.</li>
-
-				<li>Re-write the side you chose (without the equal sign) when you begin your proof.</li>
-
-				<li>Look for trigonometric identities to use that will simplify the side you chose.</li>
-
-				<li>Look for any algebraic techniques you can use that may help create simplifications to the proof. This 
-				could be along the lines of factoring, creating common denominators, distributing, etc.</li>
-
-				<li>Continue to look for trig identities and algebraic techniques until the proof is completed. Remember 
-				there are many ways to prove a trig identity, and they will vary in length. There is no one correct way.</li>
-
-			</ol>
-
-
-	</div> 
+<center><iframe src="https://www.desmos.com/calculator/orvogoa9b5?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></center>
 
 
 		

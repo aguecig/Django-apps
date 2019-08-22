@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Rational Functions Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 200%;
+  text-shadow: 2px 2px 0px #000000;
+  margin:20px;
+}
+.links {
+ background-color: #1e522c;
+ color: white;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+ height: 100vh;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #ffffff;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+.loggedin {
+  color: #ff9600;
+}
+
+.questions {
+ background-color:#1e522c;
+ color: #ffffff;
+ font-size:125%;
+}
+
+
+.lists {
+  color: #ffffff;
+  font-size:100%;
+  position: center;
+}
+
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #1e522c;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+.createfunction {
+  fontsize: 400%;
+  color: #ff9600;
+  padding: 5px;
+  margin: 20px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px #000000;
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#1e522c;
+  padding:10px;
+  box-shadow: 0px 10px 18px;
+}
+
+.hint {
+  color: #ffffff;
+}
+
+
+
+</style>
+
+
+<body style="background-color:#1e522c">	
+
+	<div class="title">
+		<center>Rational Functions Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: Where are the locations of the vertical asymptotes for the rational function given by</p></center>
+			<div lang="latex" align='center'>
+				g(x) = \frac{x-3}{x^{2}+2x-15}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">x = -5</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = -5, x = 3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = 0</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = -3, 5</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">None Exist</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: Remember to factor and cancel out any common factors that would represent holes
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: When a the degree of the numerator is one more than the degree of the denominator, a rational 
+		function will never have which of the following?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">Vertical Asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">Horizontal Asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">Oblique Asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x-intercept</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">y-intercept</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: The key word is NEVER
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: For the rational function</p></center>
+			<div lang="latex" align='center'>
+				f(x) = -\frac{3}{(x+1)^{2}}
+			</div>
+		<center><p>Which of the following correctly describes the behaviour of f(x)?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+			<div lang="latex" align='center'>
+				x \rightarrow -1^{-} \\
+				\phantom{aa}f(x) \rightarrow \infty \\ \\
+				\phantom{aa}x \rightarrow -1^{+} \\
+				\phantom{aa}f(x) \rightarrow -\infty \\
+			</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+			<div lang="latex" align='center'>
+				x \rightarrow -1^{-} \\
+				\phantom{aa}f(x) \rightarrow -\infty \\ \\
+				\phantom{aa}x \rightarrow -1^{+} \\
+				\phantom{aa}f(x) \rightarrow \infty \\
+			</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+			<div lang="latex" align='center'>
+				x \rightarrow -1^{-} \\
+				\phantom{aa}f(x) \rightarrow \infty \\ \\
+				\phantom{aa}x \rightarrow -1^{+} \\
+				\phantom{aa}f(x) \rightarrow \infty \\
+			</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+			<div lang="latex" align='center'>
+				x \rightarrow -1^{-} \\
+				\phantom{aa}f(x) \rightarrow -\infty \\ \\
+				\phantom{aa}x \rightarrow -1^{+} \\
+				\phantom{aa}f(x) \rightarrow -\infty \\
+			</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: Test values close to -1 from the left and right and see what you get
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: What are the coordinates of the hole for the rational function given by</p></center>
+			<div lang="latex" align='center'>
+				f(x) = \frac{x^{2}-16}{x^{2}-4x -32}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">(-4, 2/3)</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">(4, 0)</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">(-4, 0)</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">(4, 2/3)</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">There is no hole</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: The factors that cancel will reveal the x-coordinate of the hole
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: What is the equation of the horizontal asymptote for the rational function given by</p></center>
+			<div lang="latex" align='center'>
+				f(x) = \frac{3 - 2x}{8x + 7}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">y = -7/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">y = 3/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">y = 3/7</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">y = -1/4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">There is none</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: How do you find the horizontal asymptote when the degree of the numerator is the same as the degree of the denominator?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: Determine the value of the x-intercetps of the rational function given by</p></center>
+			<div lang="latex" align='center'>
+				f(x) = -\frac{x}{6x - x^{2}}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = 0</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = 6</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = -6</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = 0, x = 6</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">There are no x-intercepts</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: Make sure to find any holes first
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: Which of the following can one rational function not have?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">A vertical and horizontal asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">A vertical and oblique asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">An oblique and horizontal asymptote</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">A y and x-intercept</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">An x-intercept and horizontal asymptote</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: Think about what you know of each type of asymptote and how they can happen in the same equation
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: Determine the domain of the following raitonal function</p></center>
+			<div lang="latex" align='center'>
+				f(x) = -\frac{2x + 1}{2x^{2}-7x-4}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						 x \epsilon R  
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						 x\epsilon R | x \neq -\frac{1}{2}, 4 
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						 x\epsilon R | x \neq 0 
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						 x\epsilon R | x \neq 4 
+					</div>
+				</button>
+
+
+			
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: Find vertical asymptotes and holes
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: What is a possible equation for the function given by the graph below?</p></center>
+
+<center><iframe src="https://www.desmos.com/calculator/u2cack8zjj?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						 f(x) = -\frac{x}{x+4}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						 f(x) = -\frac{1}{x+4}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						 f(x) = \frac{1}{x+4}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						 f(x) = -\frac{1}{x-4}
+					</div>
+				</button>
+
+
+			
+	</div>
+
+	<div class='hint' id="spoiler9" style="display:none" >
+
+		Hint: Use each function to test the behaviour of the vertical asymptote and see if it matches the graph
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: Which of the following is the correct equation of the oblique asymptote for the rational 
+		function given by</p></center>
+					<div lang="latex" align='center'>
+						 q(x) = \frac{x^{2} - 7x + 11}{x-3}
+					</div>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					y = x - 4
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					y = x + 4
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					y = 3
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					y = 1
+				</button>
+
+
+			
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: Use long division
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: For the rational function</p></center>
+			<div lang="latex" align='center'>
+				f(x) = \frac{3x + 4}{1-5x}
+			</div>
+		<center><p>Which of the following correctly describes the behaviour of f(x)?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+			<div lang="latex" align='center'>
+				x \rightarrow -\infty\\
+				\phantom{aa}f(x) \rightarrow 0^{-} \\ \\
+				\phantom{aa}x \rightarrow \infty \\
+				\phantom{aa}f(x) \rightarrow 0^{+} \\
+			</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+			<div lang="latex" align='center'>
+				x \rightarrow -\infty\\
+				\phantom{aa}f(x) \rightarrow 0^{+} \\ \\
+				\phantom{aa}x \rightarrow \infty \\
+				\phantom{aa}f(x) \rightarrow 0^{-} \\
+			</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+			<div lang="latex" align='center'>
+				x \rightarrow -\infty \\ 
+				\phantom{aa}f(x) \rightarrow -\frac{3}{5} ^{-} \\ \\
+				\phantom{aa}x \rightarrow \infty \\
+				\phantom{aa}f(x) \rightarrow -\frac{3}{5} ^{+} \\
+			</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+			<div lang="latex" align='center'>
+				x \rightarrow -\infty \\
+				\phantom{aa}f(x) \rightarrow -\frac{3}{5} ^{+} \\ \\
+				\phantom{aa}x \rightarrow \infty \\
+				\phantom{aa}f(x) \rightarrow -\frac{3}{5} ^{-} \\
+			</div>
+				</button>
+
+			
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Hint: Determine the horizontal asymptote first
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: How many asymptotes does the rational function below have?</p></center>
+					<div lang="latex" align='center'>
+						 f(x) = \frac{8}{x^{3} - 2x^{2} - 24x}
+					</div>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">4</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: Remember to find all types of asymptotes
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: The rational function given by</p></center>
+					<div lang="latex" align='center'>
+						 R(x) = \frac{3-x}{4x - 12}
+					</div>
+		<center><p>has which of the following</p></center>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">A hole at x = 3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">A vertical asymptote at x = 3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">A horizontal asymptote at x = -1/4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">All of the previous</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler13" style="display:none" >
+
+		Hint: Factor and simplify
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: What are the x-intercepts of the rational function given by</p></center>
+					<div lang="latex" align='center'>
+						 f(x) = \frac{x^{2}-3x-4}{x^{2}-4x}
+					</div>
+		<center><p>has which of the following</p></center>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = 0</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">x = -1</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = 4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = -1 and x = 4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">There are no x-intercepts</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler14" style="display:none" >
+
+		Hint: Remember to find any holes first
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 15: What are the equations of the vertical asymptotes for the rational function given by</p></center>
+					<div lang="latex" align='center'>
+						 g(x) = \frac{3}{(x^{2}+1)(x-7)}
+					</div>
+		<center><p>has which of the following</p></center>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">x = 7</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = -1 and 7</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = 1 and 7 </button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">x = -1, 1 and 7</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">There are no vertical asymptotes</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler15" style="display:none" >
+
+		Hint: How can you find out the locations of vertical asymptotes?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question15" type="button" onclick="if(document.getElementById('spoiler15') .style.display=='none')
+     		  {document.getElementById('spoiler15') .style.display=''}else{document.getElementById('spoiler15') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

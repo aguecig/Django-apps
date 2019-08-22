@@ -9,7 +9,7 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 
 urlpatterns = [
         path('',views.home,name='app-home'),
-        # static math pages
+        # Quizzes and info sheet urls
         path('quadinfo/',views.quadratics_info,name='quad_info'),
         path('quadquiz/',views.quadratics_quiz,name='quad_quiz'),
         path('polyquiz/',views.polynomial_functions_quiz,name='poly_quiz'),
@@ -18,6 +18,8 @@ urlpatterns = [
         path('trigproofinfo/',views.trigonometric_proofs_info,name='trig_proof_info'),
         path('logarithmquiz/',views.logarithm_quiz,name='log_quiz'),
         path('logarithminfo/',views.logarithm_info,name='log_info'),
+        path('rationalquiz/',views.rational_functions_quiz,name='rational_quiz'),
+        path('rationalinfo/',views.rational_functions_info,name='rational_info'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),
