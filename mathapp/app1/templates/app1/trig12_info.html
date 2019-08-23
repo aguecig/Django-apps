@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Trig Functions and Identities Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 150%;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 5px;
+}
+
+.subtitles2 {
+  background-color:#1e522c;
+  color: #ff9600;
+  font-size: 110%;
+  text-shadow: 2px 2px 0px #000000;
+  padding: 5px;
+}
+
+.category {
+ background-color:#1e522c;
+ font-size:150%;
+ padding: 50px;
+ float:left;
+}
+
+.links {
+ background-color: #1e3f2c;
+ color: white;
+ font-size: 120%;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+ font-size:80%;
+}
+
+.tablecaption {
+  caption-side:top; 
+  color: #ff9600;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.paragraphs {
+ background-color:#1e522c;
+ color: #ffffff;
+ font-size:80%;
+ margin: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px #000000;
+}
+
+.lists {
+  color: #ffffff;
+  font-size: 90%;
+}
+
+</style>
+
+<body style="background-color:#1e522c">
+
+	<div class='title'>
+
+		<center>Trig Functions and Identities Information Sheet</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:80%;' href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'forum' %}'>Go to Forum</a>
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Trigonometric Identities</h1>
+
+			<center><h2 class='subtitles2'>Reciprocal</h2></center>
+
+			<center><div lang='latex'>
+
+				\sin{x} = \frac{1}{\csc{x}} \quad
+				\cos{x} = \frac{1}{\sec{x}} \quad
+				\tan{x} = \frac{1}{\cot{x}} \quad \\ \\
+				\phantom{aaa}
+				\csc{x} = \frac{1}{\sin{x}} \quad
+				\sec{x} = \frac{1}{\cos{x}} \quad
+				\cot{x} = \frac{1}{\tan{x}} \quad
+
+			</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>Pythagorean</h2></center>
+
+				<center><div lang='latex'>
+
+					\sin{^{2}x} + \cos{^{2}x} = 1 \\ \\
+					\phantom{aaa}
+					1 + \tan{^{2}x} = \sec{^{2}x} \\ \\
+					\phantom{aaa}
+					1 + \cot{^{2}x} = \csc{^{2}x}
+			
+				</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>Cofunction</h2></center>
+
+				<center><div lang='latex'>
+					
+					\sin{x} = \cos{\left(\frac{\pi}{2}-x\right)} \quad \cos{x} = \sin{\left(\frac{\pi}{2}-x\right)} \\ \\
+					\phantom{aaa}
+					\csc{x} = \sec{\left(\frac{\pi}{2}-x\right)} \quad \sec{x} = \csc{\left(\frac{\pi}{2}-x\right)} \\ \\
+					\phantom{aaa}
+					\tan{x} = \cot{\left(\frac{\pi}{2}-x\right)} \quad \cot{x} = \tan{\left(\frac{\pi}{2}-x\right)} \\ \\
+			
+				</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>Quotient</h2></center>
+
+				<center><div lang='latex'>
+					
+					\tan{x} = \frac{\sin{x}}{\cos{x}} \quad \cot{x} = \frac{\cos{x}}{\sin{x}}
+					
+				</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>Double Angle</h2></center>
+
+				<center><div lang='latex'>
+					
+					\sin{(2x)} = 2\sin{x}\cos{x} \\ \\
+					\phantom{aaa}
+					\cos{(2x)} = \cos{^{2}x} - \sin{^{2}x} \\ \\
+					\phantom{aaa}
+					\cos{(2x)} = 2\cos{^{2}x} - 1 \\ \\
+					\phantom{aaa}
+					\cos{(2x)} = 1 - 2\sin{^{2}x} \\ \\
+					\phantom{aaa}
+					
+				</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>Sum/Difference</h2></center>
+
+				<center><div lang='latex'>
+					
+					\sin{(a+b)} = \sin{a}\cos{b} + \cos{a}\sin{b} \\ \\
+					\phantom{aaa}
+					\sin{(a-b)} = \sin{a}\cos{b} - \cos{a}\sin{b} \\ \\
+					\phantom{aaa}
+					\cos{(a+b)} = \cos{a}\cos{b} - \sin{a}\sin{b} \\ \\
+					\phantom{aaa}
+					\cos{(a-b)} = \cos{a}\cos{b} + \sin{a}\sin{b} \\ \\
+					\phantom{aaa}
+					\tan{(a+b)} = \frac{ \tan{a} + \tan{b} }{1 - \tan{a}\tan{b} } \\ \\
+					\phantom{aaa}
+					\tan{(a-b)} = \frac{ \tan{a} - \tan{b} }{1 + \tan{a}\tan{b} } \\ \\
+
+				</div></center>
+
+
+			<br>
+
+			<center><h2 class='subtitles2'>Product</h2></center>
+
+				<center><div lang='latex'>
+					
+					\sin{a}\cos{b} = \frac{1}{2}[ \sin{(a+b)} + \sin{(a-b)}] \\ \\
+					\phantom{aaa}
+					\cos{a}\cos{b} = \frac{1}{2}[ \cos{(a-b)} + \cos{(a+b)}]\\ \\
+					\phantom{aaa}
+					\sin{a}\sin{b} = \frac{1}{2}[ \cos{(a-b)} - \cos{(a+b)}]
+				</div></center>
+					
+			<br>
+
+
+	</div>
+
+
+
+	<div class='category'>
+
+		<div class='subtitles'>Basic Trig Functions</div>
+			<center><h2 class='subtitles2'>sin(x)</h2></center>
+
+			<center><div lang='latex'>
+
+				f(x) = \sin{x} \\ \\
+				\phantom{aaa}
+				\mathcal{D}: \{x\epsilon R\} \\ \\
+				\phantom{aaa}
+				\mathcal{R}: \{y\epsilon R | -1 \leq y \leq 1\} \\ \\
+				\phantom{aaa}
+				x-ints: \ x = n\pi, n\epsilon Z \\ \\
+				\phantom{aaa}
+				y-int: \ y = 0
+
+			</div></center>
+		
+			<br>
+
+			<center><h2 class='subtitles2'>cos(x)</h2></center>
+
+			<center><div lang='latex'>
+
+				f(x) = \cos{x} \\ \\
+				\phantom{aaa}
+				\mathcal{D}: \{x\epsilon R\} \\ \\
+				\phantom{aaa}
+				\mathcal{R}: \{y\epsilon R | -1 \leq y \leq 1\} \\ \\
+				\phantom{aaa}
+				x-ints: \ x = \frac{(2n+1)\pi}{2}, n\epsilon Z \\ \\
+				\phantom{aaa}
+				y-int: \ y = 1
+
+			</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>tan(x)</h2></center>
+
+			<center><div lang='latex'>
+
+				f(x) = \tan{x} \\ \\
+				\phantom{aaa}
+				\mathcal{D}: \{x\epsilon R | x \neq \frac{(2n+1)\pi}{2}, n\epsilon Z \} \\ \\
+				\phantom{aaa}
+				\mathcal{R}: \{y\epsilon R\} \\ \\
+				\phantom{aaa}
+				x-ints: \ x = n\pi, n\epsilon Z \\ \\
+				\phantom{aaa}
+				y-int: \ y = 0 \\ \\
+				\phantom{aaa}
+				HA: x = \frac{(2n+1)\pi}{2}, n\epsilon Z
+
+			</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>csc(x)</h2></center>
+
+			<center><div lang='latex'>
+
+				f(x) = \csc{x} \\ \\
+				\phantom{aaa}
+				\mathcal{D}: \{x\epsilon R | x \neq n\pi, n\epsilon Z \} \\ \\
+				\phantom{aaa}
+				\mathcal{R}: \{y\epsilon R | y\leq -1,\ y\geq 1\} \\ \\
+				\phantom{aaa}
+				x-ints: \ DNE \\ \\
+				\phantom{aaa}
+				y-int: \ DNE \\ \\
+				\phantom{aaa}
+				HA: x = n\pi, n\epsilon Z
+
+			</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>sec(x)</h2></center>
+
+			<center><div lang='latex'>
+
+				f(x) = \sec{x} \\ \\
+				\phantom{aaa}
+				\mathcal{D}: \{x\epsilon R | x \neq \frac{(2n+1)\pi}{2}, n\epsilon Z \} \\ \\
+				\phantom{aaa}
+				\mathcal{R}: \{y\epsilon R | y\leq -1,\ y\geq 1\} \\ \\
+				\phantom{aaa}
+				x-ints: \ DNE \\ \\
+				\phantom{aaa}
+				y-int: y = 1 \\ \\
+				\phantom{aaa}
+				HA: x = \frac{(2n+1)\pi}{2}, n\epsilon Z
+
+			</div></center>
+
+			<br>
+
+			<center><h2 class='subtitles2'>cot(x)</h2></center>
+
+			<center><div lang='latex'>
+
+				f(x) = \cot{x} \\ \\
+				\phantom{aaa}
+				\mathcal{D}: \{x\epsilon R | x \neq n\pi, n\epsilon Z \} \\ \\
+				\phantom{aaa}
+				\mathcal{R}: \{y\epsilon R\} \\ \\
+				\phantom{aaa}
+				x-ints: \ x = \frac{(2n+1)\pi}{2}, n\epsilon Z \\ \\
+				\phantom{aaa}
+				y-int: \ DNE \\ \\
+				\phantom{aaa}
+				HA: x = n\pi, n\epsilon Z
+
+			</div></center>
+
+	
+	</div>
+
+	<div class='category'>
+
+		<div class='subtitles'>Transformations</div>
+
+			<center><div lang='latex'>f(x) = A\sin{k(x-\theta)} + c</div></center>
+			<br>
+			<center><div lang='latex'>f(x) = A\cos{k(x-\theta)} + c</div></center>
+			<br>
+			<center><div lang='latex'>
+
+				A = \frac{max-min}{2} \\ \\
+				\phantom{aaa}
+				c = \frac{max+min}{2} \\ \\
+				\phantom{aaa}
+				period = \frac{2\pi}{k} \\ \\
+				\phantom{aaa}
+				\theta = phase \ shift
+
+			</div></center>
+
+	</div>
+
+
+
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

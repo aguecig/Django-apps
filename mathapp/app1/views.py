@@ -50,6 +50,9 @@ def rational_functions_info(request):
 def trig12_quiz(request):
     return render(request,'app1/trig12_quiz.html')
 
+def trig12_info(request):
+    return render(request,'app1/trig12_info.html')
+
 # functioon based view for the forum
 
 def forum(request):  

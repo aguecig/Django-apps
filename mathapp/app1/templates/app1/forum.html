@@ -69,7 +69,7 @@
 
 <body style="background-color:#1e522c;">
 <header class="site-header">
-  <nav class="navbar navbar-expand-md navbar-dark  fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container">
       <a class='navbar-brand mr-4' style='font-size:200%;color:#ff9600;'>Discussion Forum</a>
 	<br>
@@ -116,7 +116,7 @@
 		<br>
 		<a class='' href='{% url 'post-detail' post.id %}'><center>Topic: {{post.title}}</center></a>
 		<br><br><br>
-		<p class='message'>{{post.content}}</p>
+		<p class='message'>{{post.content|linebreaksbr}}</p>
 	<div class='hline'></div>
 
 	{% endfor %}

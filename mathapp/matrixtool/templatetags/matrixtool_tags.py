@@ -40,6 +40,6 @@ def matrix_2D(a1,b1,d1,a2,b2,d2):
                 validate = False
             
             if validate == True:
-                return '({},{})'.format(numpy.around(s[0][0],decimals=1),numpy.around(s[1][0],decimals=1))
+                return '({},{})'.format(numpy.around(s[0][0],decimals=5),numpy.around(s[1][0],decimals=1))
             else:
                 return 'Invalid Input'
