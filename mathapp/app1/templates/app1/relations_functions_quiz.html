@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Relations and Functions Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+.title {
+  background-color:#1e3f2c;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.subtitles {
+  background-color:#1e522c;
+  color: #018268;
+  font-size: 200%;
+  text-shadow: 2px 2px 0px #000000;
+  margin:20px;
+}
+.links {
+ background-color: #1e522c;
+ color: white;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #1e522c;
+}
+
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #1e522c;
+ background-position: center;
+ height: 100vh;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #ffffff;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+.loggedin {
+  color: #ff9600;
+}
+
+.questions {
+ background-color:#1e522c;
+ color: #ffffff;
+ font-size:125%;
+}
+
+
+.lists {
+  color: #ffffff;
+  font-size:100%;
+  position: center;
+}
+
+.foot {
+  background-color: #1e522c;
+  color: #11112d;
+  font-size: 100%
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #1e522c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #1e522c;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+.createfunction {
+  fontsize: 400%;
+  color: #ff9600;
+  padding: 5px;
+  margin: 20px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 4px 8px #000000;
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#1e522c;
+  padding:10px;
+  box-shadow: 0px 10px 18px;
+}
+
+.hint {
+  color: #ffffff;
+}
+
+</style>
+
+
+<body style="background-color:#1e522c">	
+
+	<div class="title">
+		<center>Relations and Functions Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: Which of the following relations is <b>not</b> function?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y = \frac{2}{3}x - 11
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y = -6(x-4)(2x+7)
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						x^{2} + y^{2} = 81
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y = 3
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: Think of the type of graph each of these functions would produce and apply the vertical line test
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: For the function given by</p></center>
+					<div lang="latex" align='center'>
+						f(x) = -2x - 7
+					</div>
+		<center><p>What is the value of x when f(x) = -3?</p></center>
+				<br>
+
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">-2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-13</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-1</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: Remember we are solving for x
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: What is the <b>range</b> of the quadratic function</p></center>
+					<div lang="latex" align='center'>
+						f(x) = -\frac{7}{6}(x-9)^{2} + 8
+					</div>
+				<br>
+
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y \epsilon R
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y \epsilon R | y \geq 9
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y \epsilon R | y \leq 9
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y \epsilon R | y \geq 8
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						y \epsilon R | y \leq 8
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: What is the vertex and direction of opening of this parabola?
+
+	</div>
+
+	<div class='hintbutton'>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: Which of the following is true about <b>any</b> function?</p></center>
+				<br>
+
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					It must have at least one x-intercept
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Each y value can only have one corresponding x value
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					There can be at most 1 y-intercept
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					The independent variable cannot be in the denominator
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: Try to draw a graph that would contradict each statement
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: What is the domain of the function given by</p></center>
+					<div lang="latex" align='center'>
+						s(x) = -\sqrt{1-x} + 2
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x \epsilon R
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						x \epsilon R | x \leq 1
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x \epsilon R | x \geq 1
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x \epsilon R | x \leq 2
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Inorrect')">
+					<div lang="latex" align='center'>
+						x \epsilon R | x \geq 2
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: Set the argument of the root greater than or equal to zero and solve for x
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: What is the correct form of f(x) that has undergone the following transformations:</p></center>
+			<center><ul class='lists'>
+					<li>Reflected in the y-axis</li>
+					<li>Translated 3 units left</li>
+					<li>Vertically stretched by a factor of 7</li>
+				</ul></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						-7f(x-3)
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f\left[ -\frac{1}{7}(x+3) \right]
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						7f[-(x+3)]
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						7f[-(x-3)]
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: Reflection in the y-axis is a horizontal transformation
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: The inverse of a quadratic function is a</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Quadratic function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					Root function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Linear function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Reciprocal function
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: What is the inverse of x^2?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: The inverse of a quadratic function is a</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Quadratic function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					Root function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Linear function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Reciprocal function
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: What is the inverse of x^2?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: Consider the following two functions</p></center>
+				
+					<div lang="latex" align='center'>
+						g(x) = 2x - 8 \\ \\
+						\phantom{aaa}
+						h(x) = \frac{x+8}{2}
+					</div>
+		<center><p>If g(h(x)) = x, which of the following is true?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					h is not a function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					g is not a function
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+						h and g are inverses of each other
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					All the previous are not true
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: Perhaps find the inverse of g?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: What is the <b>domain</b> of the function given by</p></center>
+				
+					<div lang="latex" align='center'>
+						f(x) = -\frac{3}{x-1} + 13
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x \epsilon R
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x \epsilon R | x \neq 13
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						x \epsilon R | x \geq 1
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						x \epsilon R | x \neq 1
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: What number can you never divide by?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: Determine the x-intercepts of the quadratic function given by:</p></center>
+				
+					<div lang="latex" align='center'>
+						y = -2x^{2}  + 10x - 12
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					x = 2, 3
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					x = -12 
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					x = -2, -3
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					No x-intercepts exist
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Hint: Factor first
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: Determine the equation of the function from the graph below</p></center>
+<center><iframe src="https://www.desmos.com/calculator/4mpjn7muvf?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></center>			
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = (x-3)^{2} + 4
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						f(x) = -(x+3)^{2} + 4
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = -(x+4)^{2} - 3
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = 2(x+3)^{2} + 4
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: Apply transformations to x^2
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: What is the range of the <b>inverse</b> of the function given by</p></center>
+				
+					<div lang="latex" align='center'>
+						h(x) = -\sqrt{4-x} - 1
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y \epsilon R
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y \epsilon R | y \neq -1
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						y \epsilon R | y \leq -1
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						y \epsilon R | y \leq 4
+					</div>
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler13" style="display:none" >
+
+		Hint: Swap x and y and solve for y to get the inverse
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: Which of the following points is <b>invariant</b> between the function</p></center>
+				
+					<div lang="latex" align='center'>
+						g(x) = 4x - 3
+					</div>
+		<center><p>and its inverse?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					There are no invariant points
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						All points are invariant
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+						(1, 1)
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						(0, -3)
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						(0, 3/4)
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler14" style="display:none" >
+
+		Hint: Invariant is a point that both functions have in common
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 15: What is the value of f(h(-2)) if f and h are given by</p></center>
+				
+					<div lang="latex" align='center'>
+						f(x) = x^{2} + 3x \\ \\
+						\phantom{aaa}
+						h(x) = 2x - 5
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					-9
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+						75
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						-87
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						-2
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						0
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler15" style="display:none" >
+
+		Hint: Use the value of h(-2) as input for f(x)
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question15" type="button" onclick="if(document.getElementById('spoiler15') .style.display=='none')
+     		  {document.getElementById('spoiler15') .style.display=''}else{document.getElementById('spoiler15') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

@@ -12,7 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 
-# function based views for quizzes and info sheets
+# function based views for quizzes and info sheets on high school material
 
 def home(request):
     return render(request,'app1/home.html')
@@ -52,6 +52,9 @@ def trig12_quiz(request):
 
 def trig12_info(request):
     return render(request,'app1/trig12_info.html')
+
+def relations_functions_quiz(request):
+    return render(request,'app1/relations_functions_quiz.html')
 
 # functioon based view for the forum
 

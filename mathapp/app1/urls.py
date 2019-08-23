@@ -22,6 +22,7 @@ urlpatterns = [
         path('rationalinfo/',views.rational_functions_info,name='rational_info'),
         path('trig12quiz/',views.trig12_quiz,name='trig12_quiz'),
         path('trig12info/',views.trig12_info,name='trig12_info'),
+        path('relfuncquiz/',views.relations_functions_quiz,name='relations_functions_quiz'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),
