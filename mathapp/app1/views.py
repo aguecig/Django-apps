@@ -64,6 +64,11 @@ def forum(request):
                 }
     return render(request,'app1/forum.html',context)
 
+# function based views for advanced topics
+    
+def calc_manifolds_notes(request):
+    return render(request,'app1/calc_manifolds_notes.html')
+
 # create class based views for making posts, updating
 # posts, deleting posts on the forum
     

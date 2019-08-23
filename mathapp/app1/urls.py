@@ -9,7 +9,7 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 
 urlpatterns = [
         path('',views.home,name='app-home'),
-        # Quizzes and info sheet urls
+        # Quizzes and info sheet high school urls
         path('quadinfo/',views.quadratics_info,name='quad_info'),
         path('quadquiz/',views.quadratics_quiz,name='quad_quiz'),
         path('polyquiz/',views.polynomial_functions_quiz,name='poly_quiz'),
@@ -29,6 +29,8 @@ urlpatterns = [
         path('forum/post/new/',PostCreateView.as_view(),name='post-create'),
         path('forum/post/<int:pk>/update/',PostUpdateView.as_view(),name='post-update'),
         path('forum/post/<int:pk>/delete/',PostDeleteView.as_view(),name='post-delete'),
+        # advanced topics urls
+        path('calc_manifolds_notes/',views.calc_manifolds_notes,name='calc-manifolds-notes'),
         # calculus tool urls
         path('calculus_tool/',FunctionListView.as_view(),name='calculus_tool'),
         path('calculus_tool/function/',FunctionCreateView.as_view(),name='function-create'),
