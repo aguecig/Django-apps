@@ -66,8 +66,17 @@ def forum(request):
 
 # function based views for advanced topics
     
+def graph_theory_notes(request):
+    return render(request,'app1/graph_theory_notes.html')
+
+def abstract_algebra_notes(request):
+    return render(request,'app1/abstract_algebra_notes.html')
+    
 def calc_manifolds_notes(request):
     return render(request,'app1/calc_manifolds_notes.html')
+
+def prob_stats_notes(request):
+    return render(request,'app1/prob_stats_notes.html')
 
 # create class based views for making posts, updating
 # posts, deleting posts on the forum
