@@ -56,6 +56,9 @@ def trig12_info(request):
 def relations_functions_quiz(request):
     return render(request,'app1/relations_functions_quiz.html')
 
+def limits_quiz(request):
+    return render(request,'app1/limits_quiz.html')
+
 # functioon based view for the forum
 
 def forum(request):  

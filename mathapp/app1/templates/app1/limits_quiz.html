@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Limits and Continuity Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 200%;
+  margin:20px;
+}
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #b4d09a;
+}
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #000000;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.questions {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:100%;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: center;
+}
+
+
+.dropbutton {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #b4d09a;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#b4d09a;
+  padding:10px;
+
+}
+
+.hint {
+  color: #000000;
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #b4d09a;
+ }
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+
+	<div class="title">
+		<center>Limits and Continuity Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: Determine the value of the following limit</p></center>
+			<div lang="latex" align='center'>
+				\lim_{x\to 3} \frac{45 - 5x^{2}}{8x^{2} - 14x -30}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">6/17</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-5/2</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">-15/17</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">DNE</button>	
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: Try factoring first
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: For which values of a does the following limit <b>not</b> exist?</p></center>
+			<div lang="latex" align='center'>
+				\lim_{x\to a} \frac{\sqrt{x+9}-3}{x}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">a = 0</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">a = 3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">a= 0 and a < -9 </button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">a < -9</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">The limit will always exist</button>	
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: Remember that for real numbers, a square root of a negative number does not exist
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: What value of k makes the following function continuous for all real numbers?</p></center>
+			<div lang="latex" align='center'>
+				f(x) = \left\{
+					\begin{array}{ll}
+    						 4 - 7x & x\leq -3 \\
+    						 x^{2} - k & x > -3 \\
+					\end{array} 
+					\right.
+				
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">k = -16</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">k = -3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">k = 3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">k = 16</button>	
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: For a piecewise function to be continuous, it must not have any jumps or holes where the pieces are seperated
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: For the function given by</p></center>
+			<div lang="latex" align='center'>
+				L(x) = \left\{
+					\begin{array}{ll}
+    						 x+2 & x < 4 \\
+    						 \sqrt{x} & x > 4 \\
+						-11 & x = 4
+					\end{array} 
+					\right.
+				
+			</div>
+		<center><p>Determine the value of</p></center>
+			<div lang="latex" align='center'>
+				\lim_{x\to 4^{+}} L(x)
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-11</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">6</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">DNE</button>	
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: This is the limit as we approach x = 4 from the right hand side of the function
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: For the function given by</p></center>
+			<div lang="latex" align='center'>
+				s(x) = \left\{
+					\begin{array}{ll}
+    						 x^{3} - 1 & x < 7 \\ \\
+    						 \frac{1}{x} & x > 7 \\ \\
+						25 & x = 7
+					\end{array} 
+					\right.
+				
+			</div>
+		<center><p>Determine the value of</p></center>
+			<div lang="latex" align='center'>
+				s(7)
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/7</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">25</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">342</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">DNE</button>	
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: This is the actual value of the function at x = 7
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: Evaluate the following limit</p></center>
+			<div lang="latex" align='center'>
+				\lim_{x\to -2} \frac{x^{3}-8}{x^{2}-4}
+			</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">DNE</button>	
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: Is this limit of the form 0/0?
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: Which of the following conditions does <b>not</b> need to be satisfied for a function h(x) to be 
+		continuous at a point x = L?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\lim_{x\to L^{-}}h(x) = \lim_{x\to L^{+}}h(x)
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\lim_{x\to L}h(x) = L
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\lim_{x\to L^{-}}h(x) = h(L)
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\lim_{x\to L^{+}}h(x) = h(L)
+					</div>
+				</button>	
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					All of the above need to be satisfied
+				</button>	
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: Review the definition of continuity
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: Which of the following conditions <b>must</b> be satisfied for the limit</p></center>
+					<div lang="latex" align='center'>
+						\lim_{x\to L}h(x)
+					</div>
+		<center><p>to exist?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						\lim_{x\to L^{-}}h(x) = \lim_{x\to L^{+}}h(x)
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						h(L) must exist
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						\lim_{x\to L}h(x) = h(L)
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					h(x) must be 0 somewhere
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: Limits say nothing about the actual value of the function at the point in question
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: Which of the following functions is not continuous for all values of x?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = 1 - \frac{4}{3+x^{4}}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						g(x) = \left\{
+							\begin{array}{ll}
+    								 2x - 1 & x < -1 \\ 
+    								 x^{2} - 4 & x > -1 \\ 
+								 -3 & x = -1
+							\end{array} 
+							\right.
+				
+					</div>
+				</button>				
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						h(x) = \left\{
+							\begin{array}{ll}
+    								 5 & x \leq 0 \\ \\
+    								 -(x-5)(x+1) & x > 0 \\ \\
+							\end{array} 
+							\right.
+				
+					</div>
+				</button>				
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<div lang="latex" align='center'>
+						m(x) = (\sqrt{x})^{2}				
+					</div>
+				</button>	
+	</div>
+
+	<div class='hint' id="spoiler9" style="display:none" >
+
+		Hint: To be continuous for all values of x, a function must exist for all values of x
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: Evaluate the limit given by</p></center>
+					<div lang="latex" align='center'>
+						\lim_{x\to 4} \frac{x^{\frac{1}{2}} - 2}{12 - 3x}
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						-6
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						-1/18
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						0
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					-1/54
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					DNE
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: Try making a substitution
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: Evaluate the limit given by</p></center>
+					<div lang="latex" align='center'>
+						\lim_{x\to 1} \frac{|x-1|}{x-1}
+					</div>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						-1
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						0
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						1
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					DNE
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Hint: Evaluate the left hand side and right hand side limits and see if they are identical
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: Which of the following is <b>not</b> and example of a discontinuity?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						Hole
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+						Cusp
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+						Jump
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					Vertical Asymptote
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: A function is continuous if you can draw it without lifting your pencil off the paper
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: Which of the following is <b>True</b>?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					A function with no x-intercepts must be discontinuous somewhere
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					A function with no y-intercepts must be discontinuous somewhere
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					For a function to be continous everywhere, its limit need not exist everywhere
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					All root functions are continuous everywhere
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					All of the above are true
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler13" style="display:none" >
+
+		Hint: Can you find a counter example to each of the above statements?
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: Which of the following functions is not continuous at the point x = 0?</p></center>
+
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						f(x) = \frac{x^{3} + 2x}{7x}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						g(x) = -\frac{x^{\frac{3}{2}}}{\sqrt{x}}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						h(x) = \frac{x^{-\frac{1}{2}}}{x^{-2}}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<div lang="latex" align='center'>
+						k(x) = \frac{2^{2x} - 2^{x}}{2^{x} - 1}
+					</div>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					Each limit exists at x = 0
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler14" style="display:none" >
+
+		Hint: Is each limit of the form 0/0?
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class='hline'></div>
+
+
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>
