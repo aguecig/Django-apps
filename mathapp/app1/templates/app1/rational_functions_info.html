@@ -17,36 +17,35 @@
 
 <style>
 .title {
-  background-color:#1e3f2c;
+  background-color:#b4d09a;
   color: #018268;
   font-size: 300%;
-  text-shadow: 2px 2px 0px #000000;
+  text-shadow: 1px 1px 0px #000000;
 }
 
 .subtitles {
-  background-color:#1e522c;
+  background-color:#b4d09a;
   color: #018268;
   font-size: 150%;
-  text-shadow: 2px 2px 0px #000000;
   padding: 5px;
 }
 
 .category {
- background-color:#1e522c;
+ background-color:#b4d09a;
  font-size:150%;
  padding: 10px;
 }
 
 .links {
- background-color: #1e3f2c;
- color: white;
+ background-color: #b4d09a;
+ color: black;
  font-size: 120%;
 }
 
 .bigbanner {
  background-image: 
  background-repeat: no-repeat;
- background-color: #1e522c;
+ background-color: #b4d09a;
  background-position: center;
 
 }
@@ -58,17 +57,27 @@
 }
 
 .paragraphs {
- background-color:#1e522c;
- color: #ffffff;
- font-size:80%;
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:100%;
  margin: 5px;
 }
 
 .paragraphs2 {
  color: #000000;
- background-color: #1e522c;
+ background-color: #b4d09a;
  font-size: 100%;
  padding: 5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  right: 0px;
+  width: 880px;
+  padding: 10px;
+  margin: 10px;
 }
 
 table {
@@ -84,17 +93,48 @@ th,tr,td {
   background-color: #ffffff;
   margin: 5px;
   padding: 5px;
-    box-shadow: 0px 4px 8px #000000;
+    box-shadow: 0px 4px 8px;
 }
 
-.lists {
-  color: #ffffff;
-  font-size: 90%;
+.border {
+	padding: 40px;
+	overflow-x: hidden;
+	-webkit-box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+	-moz-box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+	box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
 }
+
 
 </style>
 
-<body style="background-color:#1e522c">
+
+<body style="background-color:#b4d09a;">
+
+<div class='border'>
 
 	<div class='title'>
 
@@ -113,7 +153,7 @@ th,tr,td {
 
 		<h1 class='subtitles'>How to analyze a rational function</h1>
 			<p class='paragraphs'>Using the example:</p>
-					<div lang="latex" align='center'>
+					<div lang="latex" align='left'>
 						f(x) = \frac{x^{2}-2x-24}{x^{2}-36}
 					</div>
 			<ul class='lists'>
@@ -128,7 +168,7 @@ th,tr,td {
 					</div>
 				<p class='paragraph' align='center'>Hole at (6, 5/6)</p>
 				</li>
-				<p class='paragraph' align='center'>Use the simplified function for the rest of the algorithm</p>
+				<p class='paragraph'>Use the simplified function for the rest of the algorithm</p>
 				<li>Use the denominator to find the location of any vertical asymptotes
 					<div lang="latex" align='center'>
 						x = -6
@@ -170,10 +210,11 @@ th,tr,td {
 
 	</div>
 
+
 <center><iframe src="https://www.desmos.com/calculator/orvogoa9b5?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></center>
 
 
-		
+</div>
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

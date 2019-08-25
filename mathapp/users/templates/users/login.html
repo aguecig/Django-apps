@@ -16,27 +16,167 @@
   </head>
 
 <style>
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 100%;
+  margin:20px;
+}
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
 
 .banner {
   height: 100vh;
-  background-color: #1e522c;
+  background-color: #b4d09a;
 }
 
-.title {
-  background-color:#1e3f2c;
+.bigbanner {
+ background-image: 
+ background-repeat: no-repeat;
+ background-color: #b4d09a;
+ background-position: center;
+ height: 100vh;
+
+}
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #000000;
+ font-size:100%;
+ margin: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+.loggedin {
   color: #018268;
-  font-size: 300%;
-  text-shadow: 2px 2px 0px #000000;
 }
 
-.info {
+
+.lists {
   color: #000000;
+  font-size:100%;
+  position: absolute;
+  right: 0px;
+  width: 880px;
+  padding: 10px;
+}
+
+
+table {
+  border: 3px solid black;
+  float: left
+}
+
+.tablecaption {
+  caption-side:top; 
+  color: #018268;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+
+th,tr,td {
+  border: 1px solid black;
   padding: 5px;
 }
 
+.dropbutton {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #b4d09a;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+
+
+.forumlink {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border-bottom: 5px solid #000000;
+  caption-side: top;
+}
+
+.border {
+	padding: 40px;
+	overflow-x: hidden;
+	-webkit-box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+	-moz-box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+	box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+}
+
+
 </style>
 
-<body>
+
+<body style='background-color:#b4d09a;'>
+
+<div class='border'>
 
 	<div class='banner'>
 
@@ -60,6 +200,8 @@
 			</small>
 		</div>
 	</div>
+
+</div>
 
 </div>
 
