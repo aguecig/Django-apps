@@ -62,6 +62,9 @@ def relations_functions_info(request):
 def limits_quiz(request):
     return render(request,'app1/limits_quiz.html')
 
+def limits_info(request):
+    return render(request,'app1/limits_info.html')
+
 # functioon based view for the forum
 
 def forum(request):  

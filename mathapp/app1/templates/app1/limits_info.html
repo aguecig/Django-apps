@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Limits Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 150%;
+  padding: 5px;
+}
+
+.category {
+ background-color:#b4d09a;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:80%;
+ margin: 5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:80%;
+  margin: 10px;
+}
+
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px #000000;
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+	<div class='title'>
+
+		<center>Limits Information Sheet</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:80%;' href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'forum' %}'>Go to Forum</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'limits_quiz' %}'>Go to Quiz</a>
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Definitions</h1>
+
+			<p class='paragraphs'>The <b>limit</b> of a function f(x) is the value of f(x) as x approaches some number c. This is written as follows:</p>
+
+				<div lang='latex'>
+					\lim_{x\to c} f(x)
+				</div>
+
+			<p class='paragraphs'>This is read as <i>"The limit of f(x) as x approaches c."</i></p>
+
+			<p class='paragraphs'>The limit is said to exist if the value of f(x) as x approaches c from the left hand side is equivalent to the 
+			value of f(x) as x approaches c from the right hand side. We write this as</p>
+
+				<div lang='latex'>
+					\lim_{x\to c^{-}} f(x) = \lim_{x\to c^{+}} f(x)
+				</div>
+
+			<p class='paragraphs'>Suppose these limits are equal to some number L. Then the limit is written as</p>
+
+				<div lang='latex'>
+					\lim_{x\to c} f(x) = L
+				</div>
+
+			<p class='paragraphs'>If the left hand side limit does not equal the right hand side limit, then the limit does not exist:</p>
+
+				<div lang='latex'>
+					\lim_{x\to c^{-}} f(x) \neq \lim_{x\to c^{+}} f(x) \\ \\
+					\phantom{aaa} \lim_{x\to c} f(x) = DNE
+				</div>
+
+			<p class='paragraphs'>A function f(x) is said to be <b>continuous</b> at a point x = c if the following two conditions are met:</p>
+
+				<ol class='lists'>
+					<li>The limit exists at x = c</li>
+					<li>The value of the function at x = c is the same value as the limit at x = c</li>
+				</ol>
+			
+			<p class='paragraphs'>Mathematically, these two conditions can be written as</p>
+
+				<div lang='latex'>
+					\lim_{x\to c^{-}} f(x) = \lim_{x\to c^{+}} f(x) = L \\ \\
+					\phantom{aaa} f(c) = L
+				</div>
+
+			<p class='paragraphs'>If these conditions are not meant, f(x) is said to be <b>discontinuous</b> at x = c.</p>
+
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Techniques for Limit Evaluation</h1>
+
+			<p class='paragraphs'>The first thing one should do is simply evaluate the function f(x) at the limit point c. If the function 
+			is one that is obviously continuous everywhere (such as a linear equation), then the limit value will always just be equal to 
+			the function value. Consider the following example:</p>
+
+				<div lang='latex'>
+					\lim_{x\to 4} 3x - 4
+				</div>
+			<p class='paragraphs'>This function is quite obviously going to be continuous everywhere, so we know that as we approach 4 from 
+			both the left hand side and the right hand side, we will be approaching the exact value of the function at x = 4.<p>
+
+				<div lang='latex'>
+					\lim_{x\to 4} 3x - 4 = 3(4)-4 = 8
+				</div>
+
+			<p class='paragraphs'>If however, we have division by 0, then we are dealing with a discontinuity (the function is not continuous at 
+			the point in question since f(c) does not even exist). If we have something of the form a/0, where a is non-zero, then we simply 
+			conclude that the limit does not exist. For instance:</p>
+
+				<div lang='latex'>
+					\lim_{x\to 1} \frac{2}{x-1} \\ \\
+					\phantom{aaa} \frac{2}{1-1} = \frac{2}{0}
+				</div>
+			
+			<p class='paragraphs'>Therefore we can conclude that the left hand side limit does not equal the right hand side limit, so the limit 
+			does not exist. Indeed, if you recall your rational functions studies from your other math class, you will recognize that the funtion in 
+			the above example has the following graphical representation</p>
+
+<div><iframe src="https://www.desmos.com/calculator/62vpmtgdoj?embed" width="250px" height="250px" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+
+			<p class='paragraphs'>From this graph we can clearly see that as x approaches 1 from the left, the value of the function 
+			approaches negative infinity. However as x approaches 1 from the right, the value of the function approaches positive 
+			infinity. Thus, the limit does not exist.</p>
+
+			<p class='paragraphs'>If we come across something of the form 0/0, we can be assured that the limit does in fact exist. This 
+			is because the discontinuity resulting from 0/0 represents a hole, and you can imagine how a hole will still have the same 
+			left hand and right hand limits. Take the following example:</p>
+
+				<div lang='latex'>
+					\lim_{x\to 3} \frac{x^{2}-9}{x-3} \\ \\
+					\phantom{aaa} \frac{3^{2}-9}{3-3} = \frac{0}{0}
+				</div>
+
+			<p class='paragraphs'>To find limits of the form 0/0, we can try the following strategies:</p>
+
+			<ul class='lists'>
+				<li>Factoring</li>
+				<li>Radical conjugation</li>
+				<li>Common denominators</li>
+			</ul>
+
+			<p class='paragraphs'>In the above example, we can factor and simplify to the point where we are no longer dividing by 0 and then 
+			we can evaluate the limit directly:</p>
+
+				<div lang='latex'>
+					\lim_{x\to 3} \frac{x^{2}-9}{x-3} \\ \\
+					\phantom{aaa} =\lim_{x\to 3} \frac{(x-3)(x+3)}{x-3} \\ \\
+					\phantom{aaa} =\lim_{x\to 3} x+3 \\ \\
+					\phantom{aaa} = 6
+				</div>				
+
+	</div>
+
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
