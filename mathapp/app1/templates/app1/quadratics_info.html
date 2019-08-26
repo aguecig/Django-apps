@@ -59,7 +59,7 @@
 .paragraphs {
  background-color:#b4d09a;
  color: #000000;
- font-size:100%;
+ font-size:80%;
  margin: 5px;
 }
 
@@ -73,11 +73,8 @@
 
 .lists {
   color: #000000;
-  font-size:100%;
-  position: absolute;
-  right: 0px;
-  width: 880px;
-  padding: 10px;
+  font-size:80%;
+  margin: 10px;
 }
 
 
@@ -95,38 +92,6 @@ th,tr,td {
   margin: 5px;
   padding: 5px;
     box-shadow: 0px 4px 8px #000000;
-
-.border {
-	padding: 40px;
-	overflow-x: hidden;
-	-webkit-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	-moz-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-}
 
 
 </style>
@@ -151,43 +116,50 @@ th,tr,td {
 
 		<h1 class='subtitles'>Forms of Quadratic Functions</h1>
 
-		<center><table class='tables'>
-			<tr>
-				<th><center>Form</center></th>
-				<th><center>Equation</center></th>
-				<th><center>Info Given</center></th>
-			</tr>
+			<p class='paragraphs'>Standard Form: c is the y-intercept</p>
+			<div lang='latex'>
+				f(x) = ax^{2} + bx + c
+			</div>
 
-			<tr>
-				<td><center>Standard</center></td>
-				<td><center>
-					<div lang="latex" align='center'>
-					y = ax^{2}+bx+c
-					</div>
-				</td></center>
-				<td><left>a: Direction of opening</left> <br><left>c: y-intercept</left></td>
-			</tr>
+			<p class='paragraphs' >Factored Form: s and t are the x-intercepts</p>
 
-			<tr>
-				<td><center>Factored</center></td>
-				<td><center>
-					<div lang="latex" align='center'>
-					y = a(x-s)(x-t)
-					</div>
-				</td></center>
-				<td><left>a: Direction of opening</left> <br><left>s, t: x-intercepts</left></td>
-			</tr>
+			<div lang='latex'>
+				f(x) = a(x-s)(x-t)
+			</div>
 
-			<tr>
-				<td><center>Vertex</center></td>
-				<td><center>
-					<div lang="latex" align='center'>
-					y = a(x-h)^{2}+k
-					</div>
-				</td></center>
-				<td><left>a: Direction of opening</left> <br><left>(h,k): vertex</left></td>
-			</tr>
-		</table></center>
+			<p class='paragraphs' >Vertex Form: (h,k) is the coordinates of the vertex</p>
+
+			<div lang='latex'>
+				f(x) = a(x-h)^{2} + k
+			</div>
+
+			<p class='paragraphs'>In each case, a represents the direction of opening. If a is positive, the parabola 
+			will open up. If a is negative, the parabola will open down.</p>
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Quadratic Formula and the Discriminant</h1>
+	
+			<p class='paragraphs'>The quadratic formula can be used to solve an equation in the following form:</p>
+				<div lang='latex'>
+					ax^{2} + bx + c = 0
+				</div>
+
+			<p class='paragraphs'>In which case the solutions are given by the quadratic formula</p>
+				<div lang='latex'>
+					x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}
+				</div>
+
+			<p class='paragraphs'>It is possible to know how many real roots there are by evaluating the discriminant, which 
+			is given by</p>
+				<div lang='latex'>
+					b^{2}-4ac
+				</div>
+
+			<p class='paragraphs'> If the discriminant is less than 0, there are <b>no</b> real roots. If it is equal to 0, there 
+			is <b>exactly one</b> real root. Finally, if the discriminant is larger than 0, there are <b>exactly two</b> real roots.</p>
 
 	</div>
 
@@ -195,114 +167,76 @@ th,tr,td {
 
 		<h1 class='subtitles'>Transformations of Quadratic Functions</h1>
 
-			<div lang="latex" align='center'>
-			y = a[c(x-h)]^{2}+k
-			</div>
+			<p class='paragraphs'>The general formula for a quadratic transformation is given by</p>
 
-		<center><table class='tables'>
-
-			<tr>
-				<th><center>Variable</center></th>
-				<th><center>Type of Transformation</center></th>
-				<th><center>Special Note</center></th>
-			</tr>
-
-			<tr>
-				<td><center>a</center></td>
-				<td><left>Vertical stretch/compression <br></left><left>Reflection in x-axis</left></td>
-				<td><left>Stretch occurs if | a | > 1<br></left><left>Compression occurs if | a | < 1<br></left>
-					<left>Reflection occurs if a < 0</left></td>
-			</tr>
-
-			<tr>
-				<td><center>c</center></td>
-				<td><left>Horizontal stretch/compression <br></left><left>Reflection in y-axis</left></td>
-				<td><left>Stretch occurs if | c | < 1<br></left><left>Compression occurs if | c | > 1<br></left>
-					<left>Reflection occurs if c < 0</left></td>
-			</tr>
-
-			<tr>
-				<td><center>h</center></td>
-				<td><left>Horizontal translation</left></td>
-				<td><left>Translation to the right occurs if h > 0<br></left>
-					<left>Translation to the left occurs if h < 0</left></td>
-			</tr>
-
-			<tr>
-				<td><center>k</center></td>
-				<td><left>Vertical translation</left></td>
-				<td><left>Translation upwards occurs if k > 0<br></left>
-					<left>Translation downwards occurs if k < 0</left></td>
-			</tr>
-
-		</table></center>
-
-	</div>
-
-	<div class='category'>
-
-		<h1 class='subtitles'>Quadratic Formula</h1>
-
-			<p class='paragraphs'>Use when trying to solve equation of the form</p>
-				<div lang="latex" align='center'>
-					ax^{2}+bx+c=0
-				</div>
-			<p class='paragraphs'>Then the solutions are given by</p>
-
-				<div lang="latex" align='center'>
-					x = \frac{-b \pm \sqrt{b^{2}-4ac}}{2a}
+				<div lang='latex'>
+					f(x) = a[c(x-h)]^{2} + k
 				</div>
 
-			<p class='paragraphs'>The discriminant is</p>
-
-				<div lang="latex" align='center'>
-					b^{2}-4ac
-				</div>
-			<p class='paragraphs'>And can be used to determine the number of real roots:</p>
-				<ul class='paragraphs'>
-					<li>No real roots if less than 0</li>
-					<li>Exactly one real root if equal to 0</li>
-					<li>Exactly two real roots if greater than 0</li>
+			<ul class='lists'>
+				<li>a</li>
+				<ul>
+					<li>If negative, a reflection in the x-axis</li>
+					<li>If larger than 1, a vertical stretch</li>
+					<li>If between 0 and 1, a vertical compression</li>
 				</ul>
+				<li>c</li>
+				<ul>
+					<li>If negative, a reflection in the y-axis</li>
+					<li>If larger than 1, a horizontal compression</li>
+					<li>If between 0 and 1, a horizontal stretch</li>
+				</ul>
+				<li>h</li>
+				<ul>
+					<li>If negative, a translation left</li>
+					<li>If positive, a translation right</li>
+				</ul>
+				<li>k</li>
+				<ul>
+					<li>If negative, a translation down</li>
+					<li>If positive, a translation up</li>
+				</ul>
+			</ul>
 
 	</div>
 
-	<div class='category'>
-		<h1 class='subtitles'>Problem Solving</h1>
+		<div class='category'>
 
-			<center><table class='tables'>
+		<h1 class='subtitles'>Guidelines for Solving a Quadratic Equation</h1>
 
-				<tr>
-					<th><center>Quadratics Concept</center></th>
-					<th><center>Associated Phrases</center></th>
-				</tr>
+			<p class='paragraphs'>Take the following example</p>
 
-				<tr>
-					<td><center>Vertex</center></td>
-					<td><left>Greatest possible area<br></left>
-					    <left>Highest point of object<br></left>
-					    <left>Least possible product of two integers<br></left>
-					    <left>Other max/min related concepts . . .</left></td>
-				</tr>
+				<div lang='latex'>
+					x(x+2) = 2x + 5 + 2(x-1)
+				</div>
 
-				<tr>
-					<td><center>Y-intercept</center></td>
-					<td><left>Initial height of object<br></left>
-					    <left>Intial profits/revenue<br></left>
-					    <left>Other initial value related concept . . .</td>
-				</tr>
+			<p class='paragraphs'>Expand and simplify as needed</p>
 
-				<tr>
-					<td><center>X-intercepts</center></td>
-					<td><left>When object hits ground<br></left>
-					    <left>Revenue breaks even<br></left>
-					    <left>Solving quadratic equations in general</td>
-				</tr>
+				<div lang='latex'>
+					x^{2} + 2x = 2x + 5 + 2x - 2 \\
+					\phantom{aaa} x^{2} + 2x = 4x + 3
+				</div>
 
-			</table></center>
+			<p class='paragraphs'>Collect all terms on one side of the equation to have it all equal to 0. When doing this, you 
+			want the squared term to have a positive coefficient.</p>
 
-	</div>
+				<div lang='latex'>
+					x^{2} - 2x - 3 = 0
+				</div>
 
+			<p class='paragraphs'>Factor if possible, or else use the quadratic formula to solve.</p>
+
+				<div lang='latex'>
+					(x-3)(x+1) = 0
+				</div>
+
+			<p class='paragraphs'>Finally, write out the solution(s)</p>
+
+				<div lang='latex'>
+					x = -1, \  \ x = 3
+				</div>
+
+		</div>
 
 		
 

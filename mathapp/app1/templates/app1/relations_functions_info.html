@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Functions and Relations Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 150%;
+  padding: 5px;
+}
+
+.category {
+ background-color:#b4d09a;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:80%;
+ margin: 5px;
+ padding; 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #b4d09a;
+ font-size: 100%;
+ padding: 5px;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px #000000;
+}
+
+.lists {
+  color: #000000;
+  font-size: 90%;
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #1e3f2c;
+ }
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+
+
+	<div class='title'>
+
+		<center>Relations and Functions Information Sheet</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:80%;' href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'forum' %}'>Go to Forum</a>
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Definitions</h1>
+
+			<p class='paragraphs'>A <b>relation</b> is a relationship between sets of values. In math, the relation is between 
+			the x-values and y-values of ordered pairs. The set of all x-values is called the domain, and the set of all 
+			y-values is called the range.</p>
+
+			<br>
+
+			<p class='paragraphs'>A <b>function</b> f from a set of numbers in a domain D to a set of numbers in a range R is defined such 
+			that every element of the domain D corresponds to exactly one element in the range R.</p> 
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>How to determine if a relation is a function</h1>
+
+			<p class='paragraphs'>If we are given a table of values, so long as no x-values repeat themselves, the table will 
+			represent a function</p>
+			<p class='paragraphs'>If we are given an algebraic equation, then we must determine if the graphical representation 
+			of the relation would pass the <b>vertical line test</b>.</p>
+			<p class='paragraphs'>The vertical line test works as follows: if you can pass a vertical line through every point of the 
+			graph of a relation and the line never crosses the graph in more than one location, then the graph represents a function.</p>
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Examples of functions</h1>
+
+		<p class='paragraphs'>The following are examples of functions</p>
+
+		<div>
+
+		<table style='margin:10px;float:left;'>
+			<tr>
+				<th><center>x</center></th>
+				<th><center>y</center></th>
+			</tr>
+			<tr>
+				<td><center>-2</center></td>
+				<td><center>6</center></td>
+			</tr>
+			<tr>
+				<td><center>0</center></td>
+				<td><center>0</center></td>
+			</tr>
+			<tr>
+				<td><center>7</center></td>
+				<td><center>0</center></td>
+			</tr>
+			<tr>
+				<td><center>15</center></td>
+				<td><center>21</center></td>
+			</tr>
+			<tr>
+				<td><center>16</center></td>
+				<td><center>-9.5</center></td>
+			</tr>
+		</table>
+		
+		</div>
+
+		<div lang='latex' style='margin:10px;float:left'>
+
+			f(x) = -3(x-4)^{2} + 11
+
+		</div>
+
+		<div style='margin:10px;float:left'>
+<iframe src="https://www.desmos.com/calculator/jmqmoavk79?embed" width="250px" height="250px" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+		</div>
+
+
+	</div>
+
+	<div>
+
+	<p style='font-size:100%'>The table of values is a function because we can see that the x-values never repeat themselves. Note however, that it is 
+	perfectley fine for y-values to repeat, which we see in this example as (0,0) and (7,0). The algebraic equation is a quadratic which has the 
+	shape of a parabola. All parabolas will pass the veritcal line test. Finally, the graph clearly passes the vertical line test.</p>
+
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br>	
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Examples of relations that are not functions</h1>
+
+		<p class='paragraphs'>The following are examples of relations that <b>are not</b> functions</p>
+
+		<div>
+
+		<table style='margin:10px;float:left;'>
+			<tr>
+				<th><center>x</center></th>
+				<th><center>y</center></th>
+			</tr>
+			<tr>
+				<td><center>-20</center></td>
+				<td><center>10</center></td>
+			</tr>
+			<tr>
+				<td><center>-13</center></td>
+				<td><center>4</center></td>
+			</tr>
+			<tr>
+				<td><center>3</center></td>
+				<td><center>0</center></td>
+			</tr>
+			<tr>
+				<td><center>3</center></td>
+				<td><center>8</center></td>
+			</tr>
+			<tr>
+				<td><center>5</center></td>
+				<td><center>-5</center></td>
+			</tr>
+		</table>
+		
+		</div>
+
+		<div lang='latex' style='margin:10px;float:left'>
+
+			x^{2} + y^{2} = 49
+
+		</div>
+
+		<div style='margin:10px;float:left'>
+<iframe src="https://www.desmos.com/calculator/bnhyg86jua?embed" width="250px" height="250px" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+		</div>
+
+		<div>
+
+		<p style='font-size:80%'>The table of values is not a function because we can see that the x-value of 3 has two different y-values. The algebraic equation 
+		is a circle, which if drawn out on a grid will not pass the vertical line test. Finally, the graph clearly does not pass the vertical line test.</p>
+
+		</div>
+
+	</div>
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

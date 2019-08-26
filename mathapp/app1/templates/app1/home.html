@@ -140,39 +140,6 @@ th,tr,td {
   caption-side: top;
 }
 
-.border {
-	padding: 40px;
-	overflow-x: hidden;
-	-webkit-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	-moz-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-}
-
-
 </style>
 
 
@@ -192,6 +159,7 @@ th,tr,td {
 		
 
 		<div>
+
 
 			<div class='title'><center>Math Resources</center></div>
 
@@ -225,7 +193,8 @@ th,tr,td {
 			</div>
 			{% endif %}
 
-			<table  class='tables' width=30% align='left'>
+
+			<table class='tables' width=30% align='left'>
 			<caption class='tablecaption'><center>High School Resources</center></caption>
 				<tr>
 					<th><center>Section</center></th>
@@ -236,7 +205,7 @@ th,tr,td {
 				<tr>
 					<td><center>Relations and Functions</center></td>
 					<td><center>11</center>
-					<td><center><a href='#'>F11</a></center></td>
+					<td><center><a href='{% url 'relations_functions_info' %}'>F11</a></center></td>
 					<td><center><a href='{% url 'relations_functions_quiz' %}'>Relations and Functions Quiz</a></center></td>
 				</tr>
 				<tr>
@@ -282,7 +251,6 @@ th,tr,td {
 					<td><center><a href='{% url 'limits_quiz' %}'>Limits and Continuity Quiz</a></center></td>
 				</tr>
 			</table> 
-
 
 
 
@@ -334,7 +302,7 @@ th,tr,td {
 					<td><center>23/08/2019</center></td>
 			</table>
 
-		</div>
+	</div>
 
 
 <!-- Optional JavaScript -->
@@ -342,6 +310,17 @@ th,tr,td {
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+	function hideTable() {
+	  var x = document.getElementById("tableID");
+ 	 if (x.style.display === "none") {
+  	  x.style.display = "block";
+ 	 } else {
+    x.style.display = "none";
+ 	 }
+} 
+</script>
 </body>
 
 </html>
