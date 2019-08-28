@@ -26,6 +26,7 @@ urlpatterns = [
         path('relfuncinfo/',views.relations_functions_info,name='relations_functions_info'),
         path('limitsquiz/',views.limits_quiz,name='limits_quiz'),
         path('limitsinfo/',views.limits_info,name='limits_info'),
+        path('derivquiz/',views.deriv_quiz,name='deriv_quiz'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),

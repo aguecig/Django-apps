@@ -65,7 +65,10 @@ def limits_quiz(request):
 def limits_info(request):
     return render(request,'app1/limits_info.html')
 
-# functioon based view for the forum
+def deriv_quiz(request):
+    return render(request,'app1/deriv_quiz.html')
+
+# function based view for the forum
 
 def forum(request):  
     context = {
