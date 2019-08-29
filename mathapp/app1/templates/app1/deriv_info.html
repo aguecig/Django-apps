@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Introductory Derivatives Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 150%;
+  padding: 5px;
+}
+
+.category {
+ background-color:#b4d09a;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:80%;
+ margin: 5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:80%;
+  margin: 10px;
+}
+
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px #000000;
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+	<div class='title'>
+
+		<center>Introductory Derivatives Information</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:80%;' href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'forum' %}'>Go to Forum</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'deriv_quiz' %}'>Go to Quiz</a>
+	</div>
+
+	<a class='btn btn-info' style='margin:10px;' href='{% url 'calculus_tool' %}'>Calculate Derivatives</a></center>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Definitions</h1>
+
+			<p class='paragraphs'>In your functions courses you will recall the concept of the <b>average rate of change</b> of some function 
+			f(x). In that context, we refer to the average rate of change between two point on the function, and compute it 
+			as the slope of the secant line connecting those two points:</p>
+
+				<div lang='latex'>
+					AROC = \frac{f(x_{2}) - f(x_{1})}{x_{2}-x_{1}}
+				</div>
+
+			<p class='paragraphs'>Now let h = x2 - x1. Making this substitution, the above formula can be re written as</p>
+
+				<div lang='latex'>
+					AROC = \frac{f(x_{1} + h) - f(x_{1})}{h}
+				</div>
+
+			<p class='paragraphs'>Below is a visual representation of the secant line for the function</p>
+
+
+				<div lang='latex'>
+					f(x) = x^{3} - 2x + 5
+				</div>
+
+			<p class='paragraphs'>from the point x = -1 to x = 1<p>
+
+<center><iframe src="https://www.desmos.com/calculator/qvb3zbdj7f?embed" width="300px" height="300px" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+
+			<p class='paragraphs'>As we make x1 closer and closer to x2, we are making their difference approach 0. Or in other words, we are taking 
+			the limit of the slope of the secant as h goes to 0. Visually, this looks like</p>
+
+<center><iframe src="https://www.desmos.com/calculator/cqsrsow0y9?embed" width="300px" height="300px" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+
+			<p class='paragraphs'>The closer x1 gets to x2 (in this case, x = 1), the more the secant line begins to look like a <b>tangent</b> 
+			line. In fact, if we take the limit as h goes to 0 in our previous formula, we precisely obtain the slope of the tangent line 
+			at x1. This is the definition of the <b>derivative</b> of f(x) at the point x1:</p>
+
+				<div lang='latex'>
+					f ' (x_{1}) = \lim_{h \to 0} \frac{f(x_{1} + h) - f(x_{1})}{h}
+				</div>
+
+			<p class='paragraphs'>Where f'(x) is the notation that means "the derivative of f at x". Using this formula to calculate derivatives 
+			is sometimes referred to as finding the derivative by "first principles".</p>
+
+
+	</div>
+
+	<div class='category'>
+
+		<h1 class='subtitles'>Derivative Shortcuts</h1>
+
+			<p class='paragraphs'>Below are a list of rules that can be used to quickly evaluate certain types of derivatives</p>
+			<br>
+			<p class='paragraphs'>Power Rule</p>
+
+				<div lang='latex'>
+
+					f(x) = x^{n} \\
+					\phantom{aaa} f \ ' (x) = nx^{n-1}
+					
+
+				</div>
+
+			<p class='paragraphs'>Product Rule</p>
+
+				<div lang='latex'>
+
+					h(x) = f(x)g(x) \\
+					\phantom{aaa} h \ ' (x) = f \ '(x)g(x) + f(x)g \ '(x)
+
+				</div>
+
+			<p class='paragraphs'>Quotient Rule</p>
+
+				<div lang='latex'>
+
+					h(x) = \frac{f(x)}{g(x)} \\ \\
+					\phantom{aaa} h \ ' (x) = \frac{f \ '(x)g(x) - f(x)g \ '(x)}{[g(x)]^{2}}
+
+				</div>
+
+			<p class='paragraphs'>Chain Rule</p>
+
+				<div lang='latex'>
+		
+					h(x) = f[g(x)] \\
+					\phantom{aaa} h \ '(x) = f \ '[g(x)]g \ '(x)
+
+				</div>
+
+			<br>
+
+			<p class='paragraphs'>As an example of the chain rule, consider the following function</p>
+
+				<div lang='latex'>
+		
+					h(x) = \sqrt{x^{3} - 2x + 5}
+
+				</div>
+
+			<p class='paragraphs'>The functions f and g are</p>
+
+				<div lang='latex'>
+		
+					f(x) = \sqrt{x} \\
+					\phantom{aaa} g(x) = x^{3} - 2x + 5
+
+				</div>
+
+			<p class='paragraphs'>Since indeed, f[g(x)] = h(x) by composition of functions. The derivatives of f and g are given by</p>
+
+				<div lang='latex'>
+		
+					f \ '(x) = \frac{1}{2}x^{-\frac{1}{2}} = \frac{1}{2\sqrt{x}} \\ \\
+					\phantom{aaa} g \ '(x) = 3x^{2} - 2
+
+				</div>
+
+			<p class='paragraphs'>And so, the derivative of h(x) is</p>
+
+				<div lang='latex'>
+		
+					h \ '(x) = \frac{1}{2\sqrt{x^{3} - 2x + 5}} (3x^{2} - 2) \\ \\
+					\phantom{aaa} \ \ \ \ \ \ \ \ = \frac{3x^{2} - 2}{2\sqrt{x^{3} - 2x + 5}}
+
+				</div>
+
+	</div>
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

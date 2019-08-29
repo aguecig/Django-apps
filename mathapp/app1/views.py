@@ -68,6 +68,9 @@ def limits_info(request):
 def deriv_quiz(request):
     return render(request,'app1/deriv_quiz.html')
 
+def deriv_info(request):
+    return render(request,'app1/deriv_info.html')
+
 # function based view for the forum
 
 def forum(request):  
