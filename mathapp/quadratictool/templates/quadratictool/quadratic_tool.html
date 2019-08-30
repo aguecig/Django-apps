@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <title>Linear Systems Analysis</title>
+    <title>Quadratics Analysis</title>
   </head>
 
 <style>
@@ -131,11 +131,9 @@ th,tr,td {
 
 <body style="background-color:#b4d09a;">
 
-<div class='title'><center>Linear Systems Analysis</center></div>
+{% load quadratictool_tags %}
 
-
-{% load matrixtool_tags %}
-
+<div class='title'><center>Quadratics Analysis</center></div>
 
 	<div class='subtitles' style='font-size:100%;'>
 		<div class='dropdown'>
@@ -148,34 +146,34 @@ th,tr,td {
 		</div>
 	</div>
 
-<p class='paragraphs'>Solve a linear system of the form</p>
-<div lang="latex" align='left'>
-	a_{1}x + b_{1}y = d_{1} \\
-	\phantom{aaa} a_{2}x + b_{2}y = d_{2}
-</div>
-<p class='paragraphs'>For example:</p>
-<div lang="latex" align='left'>
-	2x + 3y = 5  \\
-	\phantom{aaa} 3x - 4y = -1
-</div>
-<p class='paragraphs'>Which has solution (1.0,1.0)</p>
-
-<br>
-
+	<p class='paragraphs'>Enter the values for a, b and c for a quadratic in <b>standard form</b>. Then hit analyze to get data for that quadratic function.</p>
 
 <form style="padding:5px;color: #000000" method='POST'>
 	{% csrf_token %}
 	{{ form.as_table }}
-	<button style="padding:10px;" type='submit'>Solve</button>
-</form>	
+	<button style="padding:10px;" type='submit'>Analyze</button>
+</form>
 
+{% roots a b c as xints %}
 
+<p class='paragraphs'>{{ xints }}</p>
 
-{% matrix_2D a1 b1 d1 a2 b2 d2 as solution %}
+{% vertex a b c as V %}
 
-<p class='paragraphs' style='font-size:150%; color: #018268;'>Solution to two dimensional system: {{solution}}</p>
+<p class='paragraphs'>{{V}}</p>
+
+{% aos a b c as axis_of_symmetry %}
+
+<p class='paragraphs'>{{ axis_of_symmetry }}</p>
+
+{% optimum a b c as max_min %}
+
+<p class='paragraphs'>{{ max_min }}</p>
+
+<br>
 
 <p class='paragraphs' style='font-size:80%;'>Note: values are rounded to 5 decimal places</p>
+
 
 
 <!-- Optional JavaScript -->

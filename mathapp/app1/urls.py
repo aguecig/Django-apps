@@ -4,6 +4,7 @@ import sys
 sys.path.append("..")
 from calctool.views import FunctionListView, FunctionCreateView, FunctionDeleteView, FunctionDetailView
 from matrixtool.views import MatrixView
+from quadratictool.views import QuadraticView
 # import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
@@ -46,4 +47,6 @@ urlpatterns = [
         path('calculus_tool/<int:pk>/delete/',FunctionDeleteView.as_view(),name='function-delete'),
         # matrix tool urls
         path('linear_systems/',MatrixView.as_view(),name='matrix-solutions'),
+        # quadratic tool urls
+        path('quadratic_analysis/',QuadraticView.as_view(),name='quad-analysis'),
         ]
