@@ -148,11 +148,13 @@ th,tr,td {
 
 	<p class='paragraphs'>Enter the values for a, b and c for a quadratic in <b>standard form</b>. Then hit analyze to get data for that quadratic function.</p>
 
-<form style="padding:5px;color: #000000" method='POST'>
+<form style="padding:5px;color: #000000;float:left" method='POST'>
 	{% csrf_token %}
-	{{ form.as_table }}
+	{{ form.as_p }}
 	<button style="padding:10px;" type='submit'>Analyze</button>
 </form>
+
+<div style='float:left;'>
 
 {% roots a b c as xints %}
 
@@ -172,7 +174,9 @@ th,tr,td {
 
 <br>
 
-<p class='paragraphs' style='font-size:80%;'>Note: values are rounded to 5 decimal places</p>
+<p class='paragraphs' style='font-size:80%;margin:20px;'>Note: values are rounded to 5 decimal places</p>
+
+</div>
 
 
 

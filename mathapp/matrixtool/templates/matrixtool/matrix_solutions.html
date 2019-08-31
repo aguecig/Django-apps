@@ -148,6 +148,8 @@ th,tr,td {
 		</div>
 	</div>
 
+<div style='float:left;margin:10px;'>
+
 <p class='paragraphs'>Solve a linear system of the form</p>
 <div lang="latex" align='left'>
 	a_{1}x + b_{1}y = d_{1} \\
@@ -160,22 +162,25 @@ th,tr,td {
 </div>
 <p class='paragraphs'>Which has solution (1.0,1.0)</p>
 
+</div>
+
 <br>
 
 
-<form style="padding:5px;color: #000000" method='POST'>
+<form style="padding:5px;color: #000000;float:left; " method='POST'>
 	{% csrf_token %}
-	{{ form.as_table }}
+	{{ form.as_p }}
 	<button style="padding:10px;" type='submit'>Solve</button>
 </form>	
 
 
-
+<div style='float:left;margin:20px;'>
 {% matrix_2D a1 b1 d1 a2 b2 d2 as solution %}
 
 <p class='paragraphs' style='font-size:150%; color: #018268;'>Solution to two dimensional system: {{solution}}</p>
 
 <p class='paragraphs' style='font-size:80%;'>Note: values are rounded to 5 decimal places</p>
+</div>
 
 
 <!-- Optional JavaScript -->

@@ -29,6 +29,7 @@ urlpatterns = [
         path('limitsinfo/',views.limits_info,name='limits_info'),
         path('derivquiz/',views.deriv_quiz,name='deriv_quiz'),
         path('derivinfo/',views.deriv_info,name='deriv_info'),
+        path('optquiz/',views.opt_quiz,name='opt_quiz'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),

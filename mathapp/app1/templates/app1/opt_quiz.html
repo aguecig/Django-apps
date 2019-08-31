@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Optimization Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 200%;
+  margin:20px;
+}
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #b4d09a;
+}
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #000000;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+
+.questions {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:100%;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: center;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #b4d09a;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#b4d09a;
+  padding:10px;
+
+}
+
+.hint {
+  color: #000000;
+}
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+	<div class="title">
+		<center>Calculus Optimization Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+						<br>
+					<center><a class='links' href='#'>Info Sheet</a></center>
+				</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="questions">
+
+
+	<p class='paragraphs'>This section provides you with long form questions dealing with <b>optimization problems</b>. You can click 
+	the show solution button to see one type of way to solve each problem, although there may be other ways too.</p>
+
+
+<br>
+
+
+
+		<p class='paragraphs'><b>Question 1</b>: A farmer has 750 metres of fencing that he will use to make an enclosure for his sheep. He will make a 
+		rectangular enclosure that has a river as one side of its border, so that his sheep might have somewhere to freely drink. What 
+		dimensions should the farmer use for his enclosure in order to maximize the space created for his sheep?</p>
+
+	<div id="spoiler1" style="display:none">
+		<p class='paragraphs'>We let L represent the length and W represent the width of the enclosure and A represent its area. Set up two 
+		equations: a constraint for the perimeter of the fencing and the area of the enclosure which is to be optimized.</p>
+		<div lang="latex">
+			750 = L + 2W \\
+			\phantom{aaa} A = LW
+		</div>
+		<p class='paragraphs'>Notice how the perimeter has only one length accounted for. This is because one of the sides is bordered by 
+		the river, so no fencing is required. Now we isolate for L in the constraint equation and substitute that expression into the 
+		area equation.</p>
+		<div lang="latex">
+			L = 750 - 2W \\
+			\phantom{aaa} A = (750 - 2W)(W) \\
+			\phantom{aaa} A = 750W - 2W^{2}
+		</div>
+		<p class='paragraphs'>To optimize the area, we take the derivative with respect to W, set A' to zero and solve for W.</p>
+		<div lang="latex">
+			A' = 750 - 4W \\
+			\phantom{aaa} 0 = 750 - 4W \\
+			\phantom{aaa} W = 187.5
+		</div>
+		<p class='paragraphs'>Finally, use this value of W to find the value of L that will maximize the area of the enclosure.</p>
+		<div lang="latex">
+			L = 750 - 2W \\
+			\phantom{aaa} L = 750 - 2(187.5) \\
+			\phantom{aaa} L = 375
+		</div>
+		<p class='paragraphs'>The dimensions of the pen that will maximize the area of the enclosure are 375m x 187.5m. Notice that 
+		375 + 187.5 + 187.5 = 750, exactly the amount of fencing we had to use.</p>
+
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Solution</button>
+
+	</div>
+
+
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+
+		<p class='paragraphs'><b>Question 2</b>: A storage container is to be constructed with a rectangular base and an open top. The width of the container needs  
+		to be set at 4 metres, while the volume must be exactly 36 cubic metres. The material used for the base of the container is $10 per square 
+		metre and the material used for the sides is $5 per square metre. What dimensions for the length and height should be used in order to 
+		minimize the cost of the storage container?</p>
+
+	<div id="spoiler2" style="display:none">
+		<p class='paragraphs'>We will let L, and H represent the length and height of the container, respectively and let C reprsent the 
+		cost of the container. Now we make two equations. The first is the volume, which is our constraint. The second is the cost, which is to be 
+		minimized.</p>
+		<div lang="latex">
+			V = WLH \\
+			\phantom{aaa} 36 = 4LH \\
+			\phantom{aaa} 9 = LH \\ \\
+			\phantom{aaa} C = 5(2WH) + 5(2LH) + 10(WL) \\
+			\phantom{aaa} C = 40H + 10LH + 40L
+		</div>
+		<p class='paragraphs'>Notice in the cost equation that the base dimension is only accounted for once because our container has an open top. 
+		Now we isolate for L in the constraint equation and substitute it into the cost equation.</p>
+		<div lang="latex">
+			9 = LH \\ \\
+			\phantom{aaa} L = \frac{9}{H} \\ \\
+			\phantom{aaa} C = 40H + 10\left(\frac{9}{H}\right)H + 40\left(\frac{9}{H}\right) \\ \\
+			\phantom{aaa} C = 40H + 90 + \frac{360}{H}
+		</div>
+		<p class='paragraphs'>Now we differentiate C with respect to H, set C' to 0 and solve for H.</p>
+		<div lang="latex">
+			C' = 40 - \frac{360}{H^{2}} \\ \\
+			\phantom{aaa} 0 = 40 - \frac{360}{H^{2}} \\ \\
+			\phantom{aaa} 0 = 40H^{2} - 360 \\
+			\phantom{aaa} H = 3
+		</div>
+		<p class='paragraphs'>Use this value to obtain L = 3, and we have the dimensions that minimize the cost for the container are L = 3m, W = 4m and 
+		H = 3m.</p>
+
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Solution</button>
+
+	</div>
+
+
+
+	</div>
+
+
+
+
+
+
+	<div class="questions">
+
+		<p class='paragraphs'><b>Question 3</b>: A sheet of cardboard 3 m. by 4 m. will be made into a box by cutting equal-sized squares from each corner 
+		and folding up the four edges. What will be the dimensions of the box with largest volume ? </p>
+
+	<div id="spoiler3" style="display:none">
+		<p class='paragraphs'>Let L and W represent the length and width of the cardboard box, respectively and let H represent the length of the 
+		square cut out. Then the dimensions of the box are given by</p>
+		<div lang="latex">
+			L = 4 - 2H \\
+			\phantom{aaa} W = 3 - 2H \\ 
+			\Phantom{aaa} H
+		</div>
+		<p class='paragraphs'>The volume, represented by V, is given by</p>
+		<div lang='latex'>
+			V = (4-2H)(3-2H)H \\
+			\phantom{aaa} V = 4H^{3} - 14H^{2} + 12H
+		</div>
+		<p class='paragraphs'>Now we differentiate V with respect to H, set V' to 0 and solve for H.</p>
+		<div lang='latex'>
+			V' = 12H^{2} - 28H + 12 \\ 
+			\phantom{aaa} 0 = 3H^{2} - 7H + 3 \\ \\
+			\phantom{aaa} H = \frac{7 \pm \sqrt{(-7)^{2} - 4(3)(3)}}{2(3)} \\ \\
+			\phantom{aaa} H = \frac{7 \pm \sqrt{13}}{6}
+		</div>
+		<p class='paragraphs'>Which gives solutions of 0.57 and 1.77. 1.77 is too large as it will result in a negative dimension for the width. Using 
+		H = 0.57, we also get L = 2.86 and W = 1.86. These are the dimensions which will maximize the volume of the box.</p>
+
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Solution</button>
+
+	</div>
+
+
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+
+		<p class='paragraphs'><b>Question 4</b>: There are 50 apple trees in an orchard. Each tree produces 800 apples. 
+		For each additional tree planted in the orchard, the output per tree drops by 10 apples. How many trees should be 
+		added to the existing orchard in order to maximize the total output of trees ? </p>
+
+	<div id="spoiler4" style="display:none">
+		<p class='paragraphs'>Let A represent the total apples produced, and let T represent the number of additional trees 
+		planted. Then the equation for the number of apples produced is given by A = (#of trees)(#of apples pre tree):</p>
+		<div lang="latex">
+			A = (50 + T)(800 - 10T)
+		</div>
+		<p class='paragraphs'>Differentiating A with respect to T, setting A' to 0 and solving for T gives</p>
+		<div lang='latex'>
+			A' = (1)(800-10T) + (50+T)(-10) \\
+			\phantom{aaa} A' = 300 - 20T \\
+			\phantom{aaa} 0 = 300 - 20T \\
+			\phantom{aaa} T = 15
+		</div>
+		<p class='paragraphs'>So in order to maximize the number of apples produced, 15 additional apple trees should be planted.</p>
+
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Solution</button>
+
+	</div>
+
+
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+
+		<p class='paragraphs'><b>Question 5</b>:  Find the length of the shortest ladder that will reach over an 8m 
+		high fence to a large wall which is 3 m. behind the fence. 
+		<a href='https://i.imgur.com/JZ3MQN5.png'>(See diagram)</a> </p>
+
+	<div id="spoiler5" style="display:none">
+		<p class='paragraphs'>For this question, we only give a hint. Use the fact that the overall largest right angled triangle in 
+		the diagram is similar to the triangle with a height of 8. This will be the constraint. For the optimization equation, what 
+		formula relates 3 sides of a right angled triangle?</p>
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Solution</button>
+
+	</div>
+
+
+
+	</div>
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>
