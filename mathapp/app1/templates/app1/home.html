@@ -175,7 +175,19 @@ th,tr,td {
 						</div>
 				</div>
 			&nbsp;&nbsp&nbsp;&nbsp<a class='forumlink' href='{% url 'forum' %}'>Go to Forum</a>
+
+
+			&nbsp;&nbsp&nbsp;&nbsp <div class='dropdown'>
+							<button class='dropbutton'>Other Content</button>
+							<div class='dropdowncontent'>
+								<center><a class='links' href='{% url 'model-images' %}'>3D Modelling</a><center>
+							</div>
+						</div>
+
 			&nbsp;&nbsp&nbsp;&nbsp<right class='loggedin'>Welcome {{user}}!</right>
+
+
+						
 			</div>
 			{% else %}
 			<div class='subtitles'>
@@ -190,8 +202,22 @@ th,tr,td {
 			&nbsp;&nbsp&nbsp;&nbsp<a class='forumlink' href='{% url 'forum' %}'>Go to Forum</a>
 
 
+			&nbsp;&nbsp&nbsp;&nbsp <div class='dropdown'>
+							<button class='dropbutton'>Other Content</button>
+							<div class='dropdowncontent'>
+								<center><a class='links' href='{% url 'model-images' %}'>3D Modelling</a><center>
+							</div>
+
+
+						</div>
+
 			</div>
+
+
 			{% endif %}
+
+
+
 
 
 			<table class='tables' width=30% align='left'>

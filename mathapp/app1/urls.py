@@ -5,6 +5,7 @@ sys.path.append("..")
 from calctool.views import FunctionListView, FunctionCreateView, FunctionDeleteView, FunctionDetailView
 from matrixtool.views import MatrixView
 from quadratictool.views import QuadraticView
+from modelling3D.views import Model3dView
 # import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
@@ -50,4 +51,6 @@ urlpatterns = [
         path('linear_systems/',MatrixView.as_view(),name='matrix-solutions'),
         # quadratic tool urls
         path('quadratic_analysis/',QuadraticView.as_view(),name='quad-analysis'),
+        # 3d model urls
+        path('model_images/',Model3dView.as_view(),name='model-images'),
         ]
