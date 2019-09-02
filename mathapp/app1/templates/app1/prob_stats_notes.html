@@ -52,12 +52,14 @@
 .toplinks {
 	float:right;
 	padding:10px;
+	margin:8px;
 }
 
 .maintitle {
 	font-size:200%;
-	float:left;
+	text-align:left;
 	padding:8px;
+	margin:8px;
 }
 
 #toc_container {
@@ -68,7 +70,7 @@
         margin-bottom: 1em;
         padding: 15px;
         width: auto;
-	float:left;
+	margin:8px;
 }
 
 .toc_title {
@@ -81,19 +83,18 @@
 }
 
 .introduction {
-	float:left;
-	margin: 8px;
+	margin: 10px;
+	overflow-wrap: break-word;
 }
 
 .content {
-	float:left;
 	margin: 8px;
 }
 
 hr {
     border: 0;
     height: 2px;
-    margin:18px 0;
+    margin:2px;
     position:relative;
     background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(10%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
@@ -110,7 +111,6 @@ hr:before {
     border-top: solid 1px #b4d09a;
     width: 100%;
     height: 1px;
-    position: absolute;
     top: 50%;
     z-index: 1;
 }
@@ -121,20 +121,24 @@ hr:before {
   padding: 5px;
 }
 
+.paragraphs {
+	font-size:100%;
+	margin:8px;
+	padding:8px;
+	overflow-wrap: break-word;
+}
+
 </style>
 
 <body style='background-color:#b4d09a;'>
 
-<div class='border'>
 
 	<a class='toplinks' href='{% url 'app-home' %}'>Return Home</a>
 	<a class='toplinks' href='{% url 'forum' %}'>Go to Forum</a>
 
 	<h1 class='maintitle'>Probability and Statistics</h1>
-	<br>
-	<br>
+
 	<hr>
-	<br>
 
 	<div id="toc_container">
 		<p class="toc_title">Contents</p>
@@ -145,7 +149,7 @@ hr:before {
 	</div>
 
 	<div class='introduction'>
-		<p>This is the introduction paragraph</p>
+		<p class='paragraphs'>This is the introduction paragraph</p>
 	</div>
 
 	<div class='content'>
@@ -154,13 +158,12 @@ hr:before {
 
 			<hr>
 
-			<p>This is a test <div lang='latex'> x^{2} </div> test continued. Now that the test has been continued, i would like to try 
+			<p class='paragraphs'>This is a test  test continued. Now that the test has been continued, i would like to try 
 			starting a new paragraph:</p>
 
 			<div lang='latex'> \sin{\theta}</div>
 
-			<p>This is a new paragraph. Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.
-			Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.</p>
+			<p class='paragraphs'>This is a new paragraph. Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.Now i will copy paste this.zaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozaozao</p>
 
 	</div>
 
@@ -170,13 +173,9 @@ hr:before {
 
 			<hr>
 
-			<p>1</p>
+			<p class='paragraphs'></p>
 
 	</div>
-
-
-</div>
-		
 
 
 
