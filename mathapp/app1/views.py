@@ -74,6 +74,9 @@ def deriv_info(request):
 def opt_quiz(request):
     return render(request,'app1/opt_quiz.html')
 
+def opt_info(request):
+    return render(request,'app1/opt_info.html')
+
 # function based view for the forum
 
 def forum(request):  

@@ -31,6 +31,7 @@ urlpatterns = [
         path('derivquiz/',views.deriv_quiz,name='deriv_quiz'),
         path('derivinfo/',views.deriv_info,name='deriv_info'),
         path('optquiz/',views.opt_quiz,name='opt_quiz'),
+        path('optinfo/',views.opt_info,name='opt_info'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),

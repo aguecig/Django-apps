@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Optimization Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 150%;
+  padding: 5px;
+}
+
+.category {
+ background-color:#b4d09a;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:80%;
+ margin: 8px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:80%;
+  margin: 10px;
+}
+
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px #000000;
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+	<div class='title'>
+
+		<center>Calculus Optimization Information</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:80%;' href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'forum' %}'>Go to Forum</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'opt_quiz' %}'>Go to Quiz</a>
+	</div>
+
+	<div class='subtitles'>
+
+		<h1 class='subtitles'>What is optimization?</h1>
+
+			<p class='paragraphs'>Often it is the case when we are trying to solve some sort of problem, be it mathematical or 
+			otherwise, that there tends to be multiple solutions. <b>Optimization</b> is the process in which one tries to find 
+			the best possible (most efficient) solution to a given problem. A typical optimization problem will contain the following:</p>
+
+			<ul class='lists'>
+				<li>A set of <b>constraints</b>, or the given quantities of the problem</li>
+				<li>An unknown quantity that is to be either maximized or minimized (ie optimized)</li>
+			</ul>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<h1 class='subtitles'>An Example</h1>
+
+			<p class='paragraphs'>Take the following example: given 240 cm of string, you are to design a rectangle. What are the  dimensions 
+			of the rectangle that has the largest possible area? Let us list out our constraint and the quantity to be optimized:</p>
+
+			<ul class='lists'>
+				<li>Constraint: 240 cm of string, which will be used to construct the <b>perimeter</b> of the rectangle</li>
+				<li>Optimize: The area of the rectangle, which is to be <b>maximized</b></li>
+			</ul>
+
+			<p class='paragraphs'>We begin by defining our variables. Let L represent the length of the rectangle, W represent the width and A 
+			represent the area. Now we write out the two formulas that represent the constraint and the quantity to be optimized.</p>
+
+			<center><div lang='latex'>
+				240 = 2L + 2W \\ \\
+				\phantom{aaa} A = LW
+			</div></center>
+			
+			<p class='paragraphs'>We are interested in optimizing the second equation. There is a slight problem: it contains three unknown 
+			variables. Fortunately, these problems are designed so that you can reduce the equation to two variables. How do we do this? First, 
+			we isolate for one of the variables in the constraint equation. Let's isolate for L:</p>
+
+			<center><div lang='latex'>
+				240 = 2L + 2W \\ \\
+				\phantom{aaa} 120 = L + W \\ \\
+				\phantom{aaa} L = 120 - W
+			</div></center>
+
+			<p class='paragraphs'>Now we can substitute this expression into the equation that is to be optimized (in this case, the area equation).</p>
+
+			<center><div lang='latex'>
+				A = LW \\ \\
+				\phantom{aaa} A = (120-W)W \\ \\
+				\phantom{aaa} A = -W^{2} + 120W
+			</div></center>		
+
+			<p class='paragraphs'>The area is now exclusively a function of the width and is a quadratic function. If we were to plot this function 
+			with W along the horizontal axis and A along the vertical axis, we would find something like this:</p>
+
+<center><iframe src="https://www.desmos.com/calculator/dhg9lied5d?embed" width="250px" height="250px" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+
+			<p class='paragraphs'>From this it is obvious that the maximum area will occur at precisely the vertex. Furthermore, we know that if we 
+			were to draw a tangent line at the vertex, it would be horizontal. In calculus, this means that the derivative at the location of the 
+			vertex is equal to <b>zero</b>. So we compute the derivative of the area function with respect to W, set it equal to zero and solve 
+			for W.</p>
+
+			<center><div lang='latex'>
+				A = -W^{2} + 120W \\ \\
+				\phantom{aaa} A ' = -2W + 120 \\ \\
+				\phantom{aaa} 0 = -2W + 120 \\ \\
+				\phantom{aaa} W = 60
+			</div></center>		
+
+			<p class='paragraphs'>Finally, use this value of W to find L from the constraint equation.</p>
+
+			<center><div lang='latex'>
+				240 = 2L + 2W \\ \\
+				\phantom{aaa} 240 = 2L + 120 \\ \\
+				\phantom{aaa} L = 60
+			</div></center>
+
+			<p class='paragraphs'>The dimensions of the rectangle that maximize the area are 60 cm x 60 cm. Indeed, this is a square, which verifies 
+			the concepts we were taught in elementary school: a square always gives the maximum area of a four sided polygon with a fixed 
+			perimeter, only now we have used calculus to prove it. The maximum area is 3600 square centimeters.</p>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<h1 class='subtitles'>Generalized Approach</h1>
+
+		<p class='paragraphs'>Use the following algorithm to solve optimization problems:</p>
+
+		<ol class='lists'>
+			<li>Determine what constraint(s) you are given and what quantity you are asked to optimize. Draw a diagram if you think it will help</li>
+			<li>State the variables you will use and what each one represents</li>
+			<li>Write out a constraint equation (or equations if more than one is needed) and an equation that needs to be optimized</li>
+			<li>Isolate for one of the variables in the constraint equation so that you can substitute it into the equation that needs to be 
+			optimized</li>
+			<li>Differentiate the equation to be optimized</li>
+			<li>Set the differentiated equation equal to zero and solve for the independent variable</li>
+			<li>Determine any other information you would need to answer the problem</li>
+		</ol>
+
+		<p class='paragraphs'>Keep in mind that this algorithm is just a general guideline to solving optimization problems. Sometimes you may require 
+		different strategies.</p>
+
+	</div>
+
+
+
+
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
