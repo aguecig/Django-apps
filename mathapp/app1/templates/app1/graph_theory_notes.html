@@ -116,9 +116,9 @@ hr:before {
 }
 
 .latex {
-  background-color: #b4d09a;
-  margin: 5px;
-  padding: 5px;
+  background-color: #ffffff;
+  margin: 8px;
+  padding: 8px;
 }
 
 .paragraphs {
@@ -142,8 +142,8 @@ hr:before {
 	<div id="toc_container">
 		<p class="toc_title">Contents</p>
 			<ul class="toc_list">
-  				<li><a href="#topic1">First Topic</a></li>
-				<li><a href="#topic2">Second Topic</a></li>
+  				<li><a href="#topic1">1. History of Graph Theory</a></li>
+				<li><a href="#topic2">2. Terminology of Graphs</a></li>
 			</ul>
 	</div>
 
@@ -153,21 +153,85 @@ hr:before {
 
 	<div class='content'>
 
-		<h4 id='topic1'><center>Topic 1</center></h4>
+		<h4 id='topic1'><center>History of Graph Theory</center></h4>
 
 			<hr>
 
-			<p class='paragraphs'></p>
+			<p class='paragraphs'>Consider the 18th century problem of 
+			<a href='https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg'>the seven bridges of Konigsberg</a>. In one of 
+			the areas of the city lie a network of rivers and bridges, as seen in the diagram below.</p>
+
+			<center><img src='https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png' width=250 height=250 /></center>
+
+			<p class='paragraphs'>The problem is outlined as follows: Is there a way for a person to travel along each bridge, but only 
+			exactly once? In the year 1736, Euler was able to prove that the answer is a definitive no. Given a few trial runs, we may be 
+			able to convince ourselves that Euler's conclusion is indeed correct. Only by developing a new form of mathematical analysis, 
+			<b>graph theory</b>, was Euler able to show with absolute certainty that indeed there is no solution to this problem, as well as 
+			solving a whole host of related problems.</p>
+
+			<p class='paragraphs'>In the map above, we can consider the city of Konisberg to be a planar space. We can think of each land mass as a vertex and the 
+			bridges connecting the land masses as edges connecting the vertices:</p>
+
+			<center><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/K%C3%B6nigsberg_graph.svg/180px-K%C3%B6nigsberg_graph.svg.png'width=250 height=250 /></center>
+
+			<p class='paragraphs'>In this way, we are only keeping information relevant to the problem in the diagram and removing all the other 
+			details. These schematics like the one above are known as <b>graphs</b>.
 
 	</div>
 
 	<div class='content'>
 
-		<h4 id='topic2'><center>Topic 2</center></h4>
+		<h4 id='topic2'><center>Terminology of Graphs</center></h4>
 
 			<hr>
 
-			<p class='paragraphs'></p>
+			<p class='paragraphs'><b>Vertices</b> are points on a graph that represent some kind of data. These vertices can be connected 
+			by <b>edges</b>. <b>Faces</b> are parts of the plane that are enclosed by edges. If we can draw these vertices and edges such 
+			that no edges intersect each other, the graph is called a <b>planar graph</b>.</p>
+
+<center><a href="https://ibb.co/bQWbnqq"><img src="https://i.ibb.co/YPR0GYY/graph-theory1.png" width=400 height=250 alt="graph-theory1" border="0"></a><br /><br /></center>
+
+			<p class='paragraphs'>In the example shown above, the vertices are A, B, C and D. The edges are AB, AC, BC and CD as they connect 
+			these vertices. There are two faces: the one enclosed by ABC, and the rest of the plane. The graph above is planar because the edges 
+			do not intersect eachother.</p>
+
+			<p class='paragraphs'>The <b>degree of a vertex</b> is equivalent to the number of edges that extrude from it. In the example above, 
+			the degree of vertex C is 3, while the degree of vertex D is 1. The <b>order</b> of the graph is just the number of vertices it 
+			contains. The above example has order 4. Two vertices are said to be <b>adjacent</b> if there is an edge that connects them. 
+			Below is an example of another planar graph as well as a graph that is not planar.</p>
+
+<center><a href="https://ibb.co/pbzm5wh"><img src="https://i.ibb.co/gmTnh94/graph-theory2.png" width=400 height=250 alt="graph-theory2" border="0"></a></center>
+
+			<p class='paragraphs'>Let V be any finite set. Then we denote</p>
+
+			<div lang='latex'>[V]^{k}</div>
+
+			<p class='paragraphs'>to be the set of all subsets of V of size k. For our purposes, we will only be focusing on the case k = 2. 
+			For example:</p>
+			
+			<div lang='latex'>
+				V = \{a,b,c,d\} \\
+				\phantom{aaa} [V]^{2} = \{ \{a,b\}, \{a,c\},\{a,d\},\{b,c\},\{b,d\},\{c,d\}\}
+			</div>
+
+			<p class='paragraphs'>A <b>finite simple graph</b> G is given by</p>
+
+			<div lang='latex'>
+				G = (V,E) \\
+				\phantom{aaa} E \subseteq [V]^{2}
+			</div>
+
+			<p class='paragraphs'>Take the following example:</p>
+
+			<div lang='latex'>
+				V = \{a,b,c,d\} \\
+				\phantom{aaa} E = \{ \{a,b\}, \{a,c\},\{b,c\},\{c,d\}\}
+			</div>
+
+			<p class='paragraphs'>This can be visually represented by the image below.</p>
+
+<center><a href="https://ibb.co/Xp6wcz8"><img src="https://i.ibb.co/92BMQqt/graph-theory3.png" width=400 height=250 alt="graph-theory3" border="0"></a></center>
+			
 
 	</div>
 
