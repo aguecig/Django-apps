@@ -116,7 +116,7 @@ hr:before {
 }
 
 .latex {
-  background-color: #b4d09a;
+  background-color: #ffffff;
   margin: 5px;
   padding: 5px;
 }
@@ -142,32 +142,73 @@ hr:before {
 	<div id="toc_container">
 		<p class="toc_title">Contents</p>
 			<ul class="toc_list">
-  				<li><a href="#topic1">First Topic</a></li>
-				<li><a href="#topic2">Second Topic</a></li>
+  				<li><a href="#topic1">Norms and Inner Products</a></li>
+				<li><a href="#topic2">Linear Transformations</a></li>
 			</ul>
 	</div>
 
 	<div class='introduction'>
-		<p class='paragraphs'>this is the intro</p>
+		
 	</div>
 
 	<div class='content'>
 
-		<h4 id='topic1'><center>Topic 1</center></h4>
+		<h4 id='topic1'><center>Norms and Inner Products</center></h4>
 
 			<hr>
 
-			<p class='paragraphs'></p>
+			<p class='paragraphs'>Let x and y be elements of an n-dimensional euclidean space and a be a real number. Then we define the 
+			<b>norm</b> of x as</p>
+
+				<center><div lang='latex'>
+					|x| = \sqrt{\sum_{i=1}^{n} (x^{i})^{2}}
+				</div></center>
+
+			<p class='paragraphs'>Theorem 1.1</p>
+
+				<center><div lang='latex'>
+					(i) \ \ |x| \geq 0 \\ \\
+					\phantom{aaa} (ii) \ \ | \sum_{i=1}^{n} x^{i}y^{i} | \leq |x||y| \\ \\
+					\phantom{aaa} (iii) \ \|x + y| \leq |x| + |y| \\ \\
+					\phantom{aaa} (iv) \ \ |ax| = |a||x|
+				</div></center>
+
+			<p class='paragraphs'>The <b>inner product</b> of x and y is defined as</p>
+
+				<center><div lang='latex'>
+					\triangleleft x,y \triangleright = \sum_{i=1}^{n} x^{i}y^{i}
+				</div></center>
+
+			<p class='paragraphs'>Theorem 1.2</p>
+
+				<center><div lang='latex'>
+					(i) \ \ \triangleleft x,y \triangleright = \triangleleft y,x \triangleright \\ \\
+					\phantom{aaa} (ii) \ \ \triangleleft ax,y \triangleright = \triangleleft x,ay \triangleright = a \triangleleft x,y \triangleright \\ \\ 
+					\phantom{aaa} (iii) \ \ \triangleleft x_{1}+x_{2},y \triangleright = \triangleleft x_{1},y \triangleright + \triangleleft x_{2},y \triangleright \\ \\
+					\phantom{aaa} (iv) \ \ \triangleleft x,x \triangleright \geq 0 \\ \\
+					\phantom{aaa} (v) \ \ \ |x| = \sqrt{\triangleleft x,x \triangleright} \\ \\
+					\phantom{aaa} (vi) \ \ \ \triangleleft x,y \triangleright = \frac{|x+y|^{2} - |x-y|^{2}}{4}
+				</div></center>
+
 
 	</div>
 
 	<div class='content'>
 
-		<h4 id='topic2'><center>Topic 2</center></h4>
+		<h4 id='topic2'><center>Linear Transformations</center></h4>
 
 			<hr>
 
-			<p class='paragraphs'></p>
+			<p class='paragraphs'>Using the standard basis for the n dimensional euclidean space, we have the following properties for a linear 
+			transformation T:</p>
+
+				<center><div lang='latex'>
+					if \ \ T(e_{i}) = \sum_{j=1}^{m} a_{ij}e_{j} \\ \\
+				\phantom{aaa}	then \ \ T(x) = y = Ax \\ \\
+				\phantom{aaa}	where \ \ A = (a_{ij})_{mxn}
+				</div></center>
+
+			<p class='paragraphs'>Note here that x and y are column vectors n and m components, respectively.</p>
 
 	</div>
 

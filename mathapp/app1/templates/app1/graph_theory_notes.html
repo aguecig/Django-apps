@@ -144,11 +144,12 @@ hr:before {
 			<ul class="toc_list">
   				<li><a href="#topic1">1. History of Graph Theory</a></li>
 				<li><a href="#topic2">2. Terminology of Graphs</a></li>
+				<li><a href="#topic3">3. Graphs and their Degree Sequences</a></li>
 			</ul>
 	</div>
 
 	<div class='introduction'>
-		<p class='paragraphs'>This is the introduction paragraph</p>
+		
 	</div>
 
 	<div class='content'>
@@ -176,6 +177,8 @@ hr:before {
 
 			<p class='paragraphs'>In this way, we are only keeping information relevant to the problem in the diagram and removing all the other 
 			details. These schematics like the one above are known as <b>graphs</b>.
+
+<br>
 
 	</div>
 
@@ -232,6 +235,72 @@ hr:before {
 
 <center><a href="https://ibb.co/Xp6wcz8"><img src="https://i.ibb.co/92BMQqt/graph-theory3.png" width=400 height=250 alt="graph-theory3" border="0"></a></center>
 			
+<br>
+
+	</div>
+
+	<div class='content'>
+
+		<h4 id='topic3'><center>Graphs and their Degree Sequences</center></h4>
+
+		<hr>
+
+		<p class='paragraphs'>We begin this section with the following theorem. Let G = (V,E) be a finite simple graph. Then</p>
+
+			<div lang='latex'>
+				\sum_{v \epsilon V} deg(v) = 2|E|
+			</div>
+
+		<p class='paragraphs'>This is known as the <b>degree sum theorem</b>. In words: the sum of the degrees of all vertices is twice the number 
+		of edges. The proof for this is rather trivial: every edge must be connected to two and only two vertices. QED </p>
+
+		<p class='paragraphs'>A <b>degree sequence</b> of G = (V,E) is the sequence of degrees of vertices of G in decreasing order. A sequence of 
+		non-negative integers in decreasing order is <b>graphic</b> if it is the degree sequence of some graph. Let's look at some examples.</p>
+
+		<p class='paragraphs'><b>Ex.</b> The degree sequence given by 1, 1, 1 is not graphic because it cannot represent a graph. In this case, the 
+		graph would have to contain three vertices, and each vertice would have to be adjacent to exactly one other vertice. This is impossible.</p>
+
+		<p class='paragraphs'><b>Ex.</b> The degree sequence given by 1, 1, 1, 1 is graphic. See the diagram below for an example of a graph with 
+		this degree sequence.</p>
+
+<center><a href="https://ibb.co/9Hp9zQR"><img src="https://i.ibb.co/hFgRh3p/graph-theory4.png" height=250 width=400 alt="graph-theory4" border="0"></a></center>
+
+		<p class='paragraphs'>We now come to the <b>hand shaking lemma</b>. Let G = (V,E) be a finite simple graph. Then the number of vertices in 
+		G with odd degree must be an even amount. Stated otherwise:</p>
+
+			<div lang='latex'>
+				V = (V_{even}) U (V_{odd}) \\ \\
+				\phantom{aaa} V_{odd} \ mod(2) = 0
+			</div>
+
+		<p class='paragraphs'>So, for example, we know that the degree sequence given by 5, 4, 3, 2, 2, 2, 1 is not graphic. A degree sequence like 
+		4, 3, 2, 2, 2, 1, 1, 1, 0 could be graphic, but we do not know from the hand shaking lemma. We simply cannot rule out the possibility that it 
+		is graphic from the lemma. A better tool for this is theorem by Hakimi, which we now state.</p>
+
+		<p class='paragraphs'>Consider sequences given by</p>
+
+			<div lang='latex'>
+				(1)  s_{1}, t_{1}, ... , t_{s}, d_{1},...,d_{n} \\ \\
+				\phantom{aaa} (2) t_{1}-1, ... , t_{s}-1, d_{1},...,d_{n}
+			</div>
+
+		<p class='paragraphs'>Where both sequences are decreasing. Then (1) is graphic if and only if (2) is graphic. Take the following 
+		sequence: 6, 6, 6, 6, 4, 3, 3, 0. We begin by observing that we cannot dismiss this sequence as not graphical from the hand shakeing 
+		lemma. However, we can see that the sequence takes the form of (1) in the above theorem. Applying the theorem, we get</p>
+
+			<div lang='latex'>
+				 6, 6, 6, 6, 4, 3, 3, 0 \\ 
+				\phantom{aaa} \ \ \ 5, 5, 5, 3, 2, 2, 0 \\
+				\phantom{aaa} \ \ \ \ \ \4, 4, 2, 1, 1, 0 \\
+				\phantom{aaa} \ \ \ \ \ \ \ \ \ 3, 1, 0, 0, 0 \\
+			</div>
+
+		<p class='paragraphs'>The last sequence is clearly not graphic, as show below:</p>
+
+<center><a href="https://ibb.co/wMNCxMd"><img src="https://i.ibb.co/jgvG1g8/graph-theory5.png" height=250 width=400 alt="graph-theory5" border="0"></a></center>
+
+
+		<p class='paragraphs'>So then we know the original sequence cannot be graphic either.</p>
 
 	</div>
 
