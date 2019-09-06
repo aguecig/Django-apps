@@ -145,6 +145,7 @@ hr:before {
   				<li><a href="#topic1">1. History of Graph Theory</a></li>
 				<li><a href="#topic2">2. Terminology of Graphs</a></li>
 				<li><a href="#topic3">3. Graphs and their Degree Sequences</a></li>
+				<li><a href="#topic4">4. Graph Isomorphisms and Subgraphs</a></li>
 			</ul>
 	</div>
 
@@ -301,6 +302,48 @@ hr:before {
 
 
 		<p class='paragraphs'>So then we know the original sequence cannot be graphic either.</p>
+
+	</div>
+
+	<div class='content'>
+
+		<h4 id='topic4'><center>Graph Isomorphisms and Subgraphs</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>In considering graphs, we are especially interested in the structure of each graph (ex its degree, its degree sequence, 
+		etc.) rather than how it can be drawn. Take the following two graphs:</p>
+
+<center><a href="https://ibb.co/MgWxs7d"><img src="https://i.ibb.co/51tg6LZ/graph-isomorphic.png" height=250 width=400 alt="graph-isomorphic" border="0"></a></center>
+
+		<p class='paragraphs'>Though they have been drawn differently, the two graphs have the same number of edges, degree and degree 
+		sequence. The overall structure of the graphs are identical. This is is contrast to the two graphs given by:</p>
+
+<center><a href="https://ibb.co/CwsCXwq"><img src="https://i.ibb.co/fXG6KXb/graph-noniso.png" height=250 width=400 alt="graph-noniso" border="0"></a></center>
+
+		<p class='paragraphs'>Though these two graphs have the same number of degree and edges, they differ in degree sequence. The first graph has 
+		a degree sequence of 3, 1, 1, 1 while the second graph has a degree sequence of 2, 2, 1, 1. These two graphs are structurally different. This 
+		leads us to the following definition.</p>
+
+		<p class='paragraphs'>Two finite simple graphs</p>
+
+			<div lang='latex'>
+				G_{1} = (V_{1},E_{1}) \ \ \ G_{2} = (V_{2},E_{2})
+			</div>
+
+		<p class='paragraphs'>are said to be <b>isomorphic</b> if there exist a bijection</p>
+
+			<div lang='latex'>
+				f: \ V_{1} \ \longrightarrow \ V_{2}
+			</div>
+
+		<p class='paragraphs'>that satisfies the following condition: For and u and v in V1 that are adjacent in G1, f(u) and f(v) 
+		are in V2 and are adjacent in G2.</p>
+
+		<p class='paragraphs'>The diagram below shows all graphs of degree 3 up to isomorphism.</p>
+
+<center><a href="https://ibb.co/QKGhHrm"><img src="https://i.ibb.co/CHF49h0/graph-theory-iso3.png" height=250 width=400 alt="graph-theory-iso3" border="0"></a></center>
+
 
 	</div>
 

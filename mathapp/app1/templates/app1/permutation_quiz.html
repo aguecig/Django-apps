@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Permutations Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 200%;
+  margin:20px;
+}
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #b4d09a;
+}
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #000000;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+
+.questions {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:100%;
+ margin:5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: center;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #b4d09a;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#b4d09a;
+  padding:10px;
+
+}
+
+.hint {
+  color: #000000;
+  margin: 5px;
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #b4d09a;
+ }
+
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+
+	<div class="title">
+		<center>Permutations Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+						<br>
+					<center><a class='links' href='#'>Info Sheet</a></center>
+
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: There are five people walking to the gates of an amusement park. How many ways can they pass through 
+		the front gate, one person at a time?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">25</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">120</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">720</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: Use a factorial
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: In how many ways can a 7 digit phone number be created if the phone number cannot start with a 0?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">70</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">10 000 000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1 000 000</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">9 000 000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5040</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: How many possibilites are there for each digit in the number?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: There are six people on the student council and the council is to select a president and vice president. 
+		Alexis and Sofia refuse to serve together as either president or vice president. In how many ways can the council select the two 
+		members to lead?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">28</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">30</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">32</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">12</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">6</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: Try using the indirect method
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: A particular lock combination has 3 numbers that range from 0 to 39. How many combinations are possible 
+		if two consecutive numbers in the combination cannot be identical?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">56 316</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">59 280</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">59 319</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct')">60 840</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: The first number in the combination is unrestricted
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: How many ways can a group of 8 people be lined up if Justin and Zack must be side by side in the line?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5040</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">10 080</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">40 320</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">80 640</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: Consider Zack and Justin to be one person in the line up
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: In how many ways can a club and an ace be selected from a standard deck of cards without replacement?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">17</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">51</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">52</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">62</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">63</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: What happens if the club chosen is an ace?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: How many 5 digit odd numbers are there that can neither start with a 3 nor end with a 1?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">17 496</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">26 244</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct')">32 000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">36 000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">81 000</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: Use the slot method and determine how many possibilities there are for each digit
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: How many 3 digit numbers can begin with a 2 or end with a 5?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">90</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">910</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">81 000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">90 000</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: Remember that <b>or</b> means to add the two cases together
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: In how many different ways can the letters in the wird <b>mississippi</b> be arranged?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">11</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">352</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">34 650</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">831 600</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">39 916 800</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler9" style="display:none" >
+
+		Hint: How do we acccount for repeated characters?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: How many numbers are there in the thirteenth row of Pascal's triangle?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">144</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">169</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">4096</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">8192</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">Impossible to determine</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: Draw out the first few rows and see if you can find the pattern
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: For the image below, how many ways are there to begin from the top left vertex and arrive at the bottom 
+		right vertex if you may only move down or to the right?</p></center>
+
+<center><a href="https://ibb.co/fQ2YYCt"><img src="https://i.ibb.co/st2vvFQ/pascal-paths.png" height=250 width=250 alt="pascal-paths" border="0"></a></center>
+			
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Answer: 20
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Answer</button>
+
+	</div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: Which of the following is equivalent to 8P3?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">8!/3!</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3!/8!</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">8!/5!</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">5!/3!</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: You could just calculate each one, or use the permutation formula
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: In how many ways can 4 people arrive at a party if Alice must show up before Bob and Charlie must show up either 
+		first or last?</p></center>
+				<br>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">4</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">6</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">8</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler13" style="display:none" >
+
+		Hint: Do it case by case
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: In how many different ways can the letters A, A, B, B, B, C, D, E be arranged 
+		if the letter C must be to the right of the letter D? </p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">420</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">1680</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2160</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2520</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3360</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler14" style="display:none" >
+
+		Hint: You need to consider repeated elements, as well as the cases where C does not follow D.
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 15: If you have 9 books, in how many ways can you pick out 8 books in alphabetical order?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">9</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">72</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5040</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">40 320</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">362 880</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler15" style="display:none" >
+
+		Hint: Once you pick 8 books, how many ways can you arrange them to meet the criteria?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question15" type="button" onclick="if(document.getElementById('spoiler15') .style.display=='none')
+     		  {document.getElementById('spoiler15') .style.display=''}else{document.getElementById('spoiler15') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

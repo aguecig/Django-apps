@@ -77,6 +77,9 @@ def opt_quiz(request):
 def opt_info(request):
     return render(request,'app1/opt_info.html')
 
+def permutation_quiz(request):
+    return render(request,'app1/permutation_quiz.html')
+
 # function based view for the forum
 
 def forum(request):  

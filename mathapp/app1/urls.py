@@ -32,6 +32,7 @@ urlpatterns = [
         path('derivinfo/',views.deriv_info,name='deriv_info'),
         path('optquiz/',views.opt_quiz,name='opt_quiz'),
         path('optinfo/',views.opt_info,name='opt_info'),
+        path('permutationquiz/',views.permutation_quiz,name='permutation_quiz'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
         path('forum/post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),
