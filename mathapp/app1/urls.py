@@ -42,6 +42,7 @@ urlpatterns = [
         path('graph_theory_notes/',views.graph_theory_notes,name='graph-theory-notes'),
         path('abstract_algebra_notes/',views.abstract_algebra_notes,name='abstract-algebra-notes'),
         path('calc_manifolds_notes/',views.calc_manifolds_notes,name='calc-manifolds-notes'),
+        path('calc_manifolds_problems/',views.calc_manifolds_problems,name='calc-manifolds-problems'),
         path('prob_stats_notes/',views.prob_stats_notes,name='prob-stats-notes'),
         # calculus tool urls
         path('calculus_tool/',FunctionListView.as_view(),name='calculus_tool'),

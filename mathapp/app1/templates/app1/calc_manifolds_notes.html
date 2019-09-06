@@ -143,7 +143,7 @@ hr:before {
 		<p class="toc_title">Contents</p>
 			<ul class="toc_list">
   				<li><a href="#topic1">Norms and Inner Products</a></li>
-				<li><a href="#topic2">temp</a></li>
+				<li><a href="#topic2">Compact Sets</a></li>
 			</ul>
 	</div>
 
@@ -160,11 +160,11 @@ hr:before {
 			<p class='paragraphs'>Let x and y be elements of an n-dimensional euclidean space and a be a real number. Then we define the 
 			<b>norm</b> of x as</p>
 
-				<center><div lang='latex'>
+				<div lang='latex'>
 					|x| = \sqrt{\sum_{i=1}^{n} (x^{i})^{2}}
-				</div></center>
+				</div>
 
-			<p class='paragraphs'>Theorem 1.1</p>
+			<p class='paragraphs'><b>Theorem 1.1</b></p>
 
 				<center><div lang='latex'>
 					(i) \ \ |x| \geq 0 \\ \\
@@ -175,11 +175,11 @@ hr:before {
 
 			<p class='paragraphs'>The <b>inner product</b> of x and y is defined as</p>
 
-				<center><div lang='latex'>
+				<div lang='latex'>
 					\triangleleft x,y \triangleright = \sum_{i=1}^{n} x^{i}y^{i}
-				</div></center>
+				</div>
 
-			<p class='paragraphs'>Theorem 1.2</p>
+			<p class='paragraphs'><b>Theorem 1.2</b></p>
 
 				<center><div lang='latex'>
 					(i) \ \ \triangleleft x,y \triangleright = \triangleleft y,x \triangleright \\ \\
@@ -193,11 +193,101 @@ hr:before {
 
 	</div>
 
+<br>
+
 	<div class='content'>
 
-		<h4 id='topic2'><center>temp</center></h4>
+		<h4 id='topic2'><center>Compact Sets</center></h4>
 
 			<hr>
+
+		<p class='paragraphs'>In the n dimensional real space, we define closed and open rectangles, respectively, by</p>
+
+			<div lang='latex'>
+				[a_{1},b_{1}] \ \times \ ... \ \times \ [a_{n},b_{n}] \\
+				\phantom{aaa} (a_{1},b_{1}) \ \times \ ... \ \times \ (a_{n},b_{n})
+			</div>
+
+		<p class='paragraphs'>Now we define U to be an open set if, given an open rectangle A, we have</p>
+
+			<div lang='latex'>
+				U \ \subset \ \mathbb{R}^{n} \\
+				\phantom{aaa} \forall \ x \ \epsilon \ U \ \exists \ A: \\
+				\phantom{aaa} x \ \epsilon \ A \ \subset \ U
+			</div>
+
+		<p class='paragraphs'>Conversely, a set C is <b>closed</b> if its compliment is open.</p>
+
+		<p class='paragraphs'>Given a set A that is a proper subset of the n dimensional real space, we define the following terms.</p>
+
+		<p class='paragraphs'><b>Interior of A</b>: Given an open rectangle B</p>
+
+			<div lang='latex'>
+				\exists \ B \ : \ x \ \epsilon \ B \ \subset \ A
+			</div>
+
+		<p class='paragraph'>We can visualize the interior of A in the diagram below.</p>
+
+<a href="https://ibb.co/1ZT2YLM"><img src="https://i.ibb.co/xh65KDY/interior-of-A.png" height=250 width=400 margin=5px alt="interior-of-A" border="0"></a>
+
+		<p class='paragraphs'><b>Exterior of A</b>: Given an open rectangle B</p>
+
+			<div lang='latex'>
+				\exists \ B \ : \ x \ \epsilon \ B \ \subset \ \overline{A}
+			</div>
+
+		<p class='paragraph'>We can visualize the exterior of A in the diagram below.</p>
+
+<a href="https://ibb.co/ZWFTvh9"><img src="https://i.ibb.co/vZTzfJ9/exterior-of-A.png"  height=250 width=400 margin=5px alt="exterior-of-A" border="0"></a>
+
+		<p class='paragraphs'><b>Boundary of A</b>: Given an open rectangle B</p>
+
+			<div lang='latex'>
+				\exists \ B \ : \ x \ \epsilon \ B \\
+				\phantom{aaa} B \ \cap \ A \neq \varnothing, \ \ B \ \cap \ \overline{A} \ \neq \ \varnothing
+			</div>
+
+		<p class='paragraph'>We can visualize the boundary of A in the diagram below.</p>
+
+<a href="https://ibb.co/g9wpSST"><img src="https://i.ibb.co/qj9fNNs/boundary-of-A.png" height=250 width=400 margin=5px alt="boundary-of-A" border="0"></a>
+
+		<p class='paragraphs'>You can imagine how given some set A, it would be possible to cover it using a union of open sets, where each element in 
+		A is conatined in at least one of the open sets in that cover.</p>
+
+		<p class='paragraphs'>A collection O of open sets is an <b>open cover</b> of A if for every element x in 
+		A, there exists an open set o in O such that x is in o. An example of an open cover of the real numbers is</p>
+
+			<div lang='latex'>
+				O = \{(a,a+1) \ | \ a \ \epsilon \ \mathbb{R} \}
+			</div>
+
+		<p class='paragraphs'>We now arrive at the definition of compactness.</p>
+
+		<p class='paragraphs'>A set A is called <b>compact</b> if for every open cover of A, say O, there is a finite subcollection of open sets in O 
+		which also covers A.</p>
+
+		<p class='paragraphs'>Ex. The empty set is compact. Any open cover that contains the empty set has a finite number of open sets that also contain 
+		the empty set.</p>
+
+		<p class='paragraphs'>The open interval (0,1) is not compact. Why? Well, to show this we only need find one open cover that does not have a finite 
+		number of open sets that does not cover (0,1). Consider the open cover defined by</p>
+
+			<div lang='latex'>
+				\left(\frac{1}{n},1-\frac{1}{n}\right), \ \ n = 3,4,5,...
+			</div>
+
+		<p class='paragraphs'>This completely covers (0,1), however it is clear that any finite subcollection will fall short of covering (0,1). Hence, 
+		(0,1) is not compact. We now come to an important theorem.</p>
+
+		<p class='paragraphs'><b>Theorem 1.3</b> (Heine-Barel): For a subset S of the n dimensional Euclidean space, the following  statements are equivalent:</p>
+
+			<ol>
+				<li>S is closed and bounded</li>
+				<li>S is compact</li>
+			</ol>
+
+		<p class='paragraphs'>Ie - [a,b] is compact</p>
+
 
 
 	</div>

@@ -96,6 +96,9 @@ def abstract_algebra_notes(request):
 def calc_manifolds_notes(request):
     return render(request,'app1/calc_manifolds_notes.html')
 
+def calc_manifolds_problems(request):
+    return render(request,'app1/calc_manifolds_problems.html')
+
 def prob_stats_notes(request):
     return render(request,'app1/prob_stats_notes.html')
 

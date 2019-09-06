@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Calculus on Manifolds</title>
+  </head>
+
+<style>
+
+.border {
+	padding: 40px;
+	overflow-x: hidden;
+	-webkit-box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+	-moz-box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+	box-shadow:
+		inset #b4b29a 0 0 0 5px,
+		inset #9fb29a 0 0 0 1px,
+		inset #9f9f88 0 0 0 10px,
+		inset #9f8d88 0 0 0 11px,
+		inset #7e8d88 0 0 0 16px,
+		inset #59725f 0 0 0 17px,
+		inset #41635f 0 0 0 22px,
+		inset #000000 0 0 0 23px;
+}
+
+.toplinks {
+	float:right;
+	padding:10px;
+	margin:8px;
+}
+
+.maintitle {
+	font-size:200%;
+	text-align:left;
+	padding:8px;
+	margin:8px;
+}
+
+#toc_container {
+	background: #b4cb9a none repeat scroll 0 0;
+	border: 1px solid #000000;
+        display: table;
+        font-size: 95%;
+        margin-bottom: 1em;
+        padding: 15px;
+        width: auto;
+	margin:8px;
+}
+
+.toc_title {
+        font-weight: 700;
+        text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+        list-style: outside none none !important;
+}
+
+.introduction {
+	margin: 10px;
+	overflow-wrap: break-word;
+}
+
+.content {
+	margin: 8px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    margin:2px;
+    position:relative;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(10%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4d09a', endColorstr='#b4d09a;',GradientType=1 ); /* IE6-9 */
+}
+
+hr:before {
+    content: "";
+    display: block;
+    border-top: solid 1px #b4d09a;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    z-index: 1;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+}
+
+.paragraphs {
+	font-size:100%;
+	margin:8px;
+	padding:8px;
+	overflow-wrap: break-word;
+}
+
+</style> 
+
+<body style='background-color:#b4d09a;'>
+
+	<a class='toplinks' href='{% url 'app-home' %}'>Return Home</a>
+	<a class='toplinks' href='{% url 'forum' %}'>Go to Forum</a>
+
+	<h1 class='maintitle'>Calculus on Manifolds: Problem Set</h1>
+
+	<hr>
+
+	<div class='content'>
+
+	<p class='paragraphs'><b>Question 1:</b> The quantity |y - x| is called the <b>distance</b> between x and y. Prove and interpret geometrically the 
+	"triangle inequality":</p>
+
+		<div lang='latex'>
+			|z - x| \leq |z - y| + |y - x|
+		</div>
+
+<br>
+<br>
+
+	<p class='paragraphs'><b>Question 2:</b></p>
+	<p class='paragraphs'>a) Given a closed set A and an element x such that x does not belong to A, prove there exists a number d with the following 
+	property:</p>
+
+		<div lang='latex'>
+			d > 0 \ : \ |y - x| \geq d \ \forall \ y \ \epsilon \ A
+		</div>
+
+	<p class='paragraphs'>b) Given A is a closed set, B is a compact set and</p>
+
+		<div lang='latex'>
+			A \ \cap \ B  = \varnothing
+		</div>
+
+	<p class='paragraphs'>Prove that</p>
+
+		<div lang='latex'>
+			\exists \ d > 0 \ : \ |y - x| \ \geq \ d \ \forall \ y \ \epsilon \ A, \ \forall \ x \ \epsilon \ B
+		</div>
+
+	<p class='paragraphs'>c) Give a counter example in R2 of A and B are closed but neither is compact.</p>
+	
+	</div>
+
+		
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
