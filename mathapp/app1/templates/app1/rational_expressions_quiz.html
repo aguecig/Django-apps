@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Rational Expressions Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 200%;
+  margin:20px;
+}
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #b4d09a;
+}
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #000000;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+
+.questions {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:100%;
+ margin:5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: center;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #b4d09a;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+  box-shadow: 0px 8px 15px;
+}
+
+.hintbutton {
+  background-color:#b4d09a;
+  padding:10px;
+
+}
+
+.hint {
+  color: #000000;
+  margin: 5px;
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #b4d09a;
+ }
+
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+
+	<div class="title">
+		<center>Rational Expressions Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+						<br>
+					<center><a class='links' href='#'>Info Sheet</a></center>
+
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: What does the following rational expression simplify to?</p></center>
+				<br>
+				<center><div lang='latex'>
+					\frac{-2x^{2}+8x}{4x^{3}}
+				</div></center>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<center><div lang='latex'>
+						-\frac{2}{x}
+					</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<center><div lang='latex'>
+						\frac{4-x}{2x^{2}}
+					</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<center><div lang='latex'>
+						\frac{x-4}{2x^{2}}
+					</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<center><div lang='latex'>
+						\frac{3}{2}
+					</div></center>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: Common factor the numerator and simplify
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: What are the restrictions on the rational expression given by</p></center>
+				<br>
+				<center><div lang='latex'>
+					\frac{8x}{16x^{2}-2x}
+				</div></center>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					1/8
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					0 and 8
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					0
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					0 and 1/8
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					There are no restrictions
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: Restricition come from the fact that you cannot divide by 0
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: Which of the following expressions is <b>not</b> equivalent to</p></center>
+				<br>
+				<center><div lang='latex'>
+					\frac{4a^{2}b^{7}}{36a^{6}b^{2}}
+				</div></center>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<center><div lang='latex'>
+						\frac{1}{9}a^{-4}b^{5}
+					</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<center><div lang='latex'>
+						9^{-1}\frac{b^{5}}{a^{4}}
+					</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					<center><div lang='latex'>
+						\frac{1}{9}a^{4}b^{5}
+					</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					<center><div lang='latex'>
+						\frac{2b^{5}}{18a^{4}}
+					</div></center>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: What does a negative exponent mean?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: Which of the following is always true for any rational expression?</p></center>
+				<br>
+				<center><div lang='latex'>
+					\frac{4a^{2}b^{7}}{36a^{6}b^{2}}
+				</div></center>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					0 will be a restriction on the variables
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					There will be a variable in the denominator
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					It is of the form a/b for some algebraic expressions a and b
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					There can only be at most 3 variables
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: Can you find a counter arguement to each of the claims?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: What does the following rational expression simplify to?</p></center>
+				<br>
+				<center><div lang='latex'>
+					\frac{1-x^{2}}{x^{2}+5x-6}
+				</div></center>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<center><div lang='latex'>
+					\frac{-1-x}{x+6}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{x+1}{x+6}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{1}{5x-6}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					None of the previous are correct
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: Factor each quadratic expression first
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: How many restrictions does the rational expression below have?</p></center>
+				<br>
+				<center><div lang='latex'>
+					\frac{x^{2}-2x-24}{x^{3}-16x}
+				</div></center>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					1
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					2
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					3
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					4
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					5
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: In this case, restrictions only come from the denominator
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: Which of the following is <b>true</b> about the rational expression given by</p></center>
+				<br>
+				<center><div lang='latex'>
+					\frac{2a^{2} - 14a - 16}{-2a^{2} - 2}
+				</div></center>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					It cannot be simplified
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					It has no restrictions on a
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					It has trinomials in both the numerator and denominator
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					It has 3 different variables
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: Try to factor the expression first before thinking of the answer
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: A soccer field has a goal area that is represented by the image below</p></center>
+				<br>
+<center><img src="https://i.ibb.co/vs9wQmQ/soccer.png" alt="soccer" border="0"></center>
+				<br>
+
+		<center><p>Which of the following represents the area of the green section?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<center><div lang='latex'>
+					\frac{(x-10)(2x+3)}{(3x+1)(x-7)} - \frac{(x+13)(x+3)}{(x-5)(x-2)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{(x-10)(2x+3)}{(3x+1)(x-7)} \div \frac{(x+13)(x+3)}{(x-5)(x-2)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{(x-10)(2x+3)}{(3x+1)(x-7)} + \frac{(x+13)(x+3)}{(x-5)(x-2)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{(x-10)(2x+3)}{(3x+1)(x-7)} \times \frac{(x+13)(x+3)}{(x-5)(x-2)}
+				</div></center>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: What do you do with the two rectangles to find the area of the green section?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: Which of the following is equivalent to the rational expression given by</p></center>
+				<center><div lang='latex'>
+					\frac{1}{x+3} - \frac{1-x}{x+2}
+				</div></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					-\frac{x-1}{(x+3)(x+2)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{-x^{2}-3x+5}{(x+3)(x+2)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{x}{(x+3)(x+2)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<center><div lang='latex'>
+					\frac{x^{2}+3x-1}{(x+3)(x+2)}
+				</div></center>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler9" style="display:none" >
+
+		Hint: Make common denominators first
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: Which of the following is a correct expression for the area of the triangle shown below?</p></center>
+<center><img src="https://i.ibb.co/jy194zg/triangle.png" height=250 width=400 alt="triangle" border="0"><br /></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{1}{2}\frac{x+2}{x-3}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<center><div lang='latex'>
+					\frac{x+2}{2(x-3)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{x+2}{3(x-3)} + \frac{6(x+2)}{2(x+2)}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{x+2}{x-3}
+				</div></center>
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: The are of a triangle is half the base times the height
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: What are the restrictions on the rational expression below?</p></center>
+				<center><div lang='latex'>
+					\frac{x^{2} + 15x + 54}{x^{3}-9x} \div \frac{6 -5x +x^{2}}{3x-11}
+				</div></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					x = -3, 3, 11/3
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					x = -9, -6, 0, -3, 3, 11/3
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					x = 0, -3, 3, 2, 11/3
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					x = 0, -3, 3, 11/3
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Hint: Remember that restrictions come from all denominators in an expression
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: Which of the following is <b>not</b> a rational expression?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{x+1}{3}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					3x^{2} - x - 2
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					2 - \frac{1-x}{1+x}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{1}{x} \div \frac{1}{x} - \frac{1}{y} \div \frac{1}{y}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					All of the previous are rational expressions
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: Why are any of the above not rational expressions?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: Which of the following correctly defines a restriction on the variable of a rational expression?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					It is a value that is too large to be used in the expression
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+					It is a value that would result in an undefined quantity for the expression
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					It is a value that can only be used after the expression has been simplified
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					It is a value that cannot be used in any rational expression
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler13" style="display:none" >
+
+		Hint: Which of the above is just another way of saying you cannot divide by zero?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: What does the rational expression below simplify to?</p></center>
+				<center><div lang='latex'>
+					1 - \frac{x+1}{x+2} \div \frac{x+1}{x-5}
+				</div></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{-x-4}{x+2}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				<center><div lang='latex'>
+					\frac{7}{x+2}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					-\frac{3}{x+2}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				<center><div lang='latex'>
+					\frac{7}{x-5}
+				</div></center>
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+					none of the previous
+				</button>
+	</div>
+
+	<div class='hint' id="spoiler14" style="display:none" >
+
+		Hint: Use BEDMAS when simplifying and rewrite 1 as 1/1
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

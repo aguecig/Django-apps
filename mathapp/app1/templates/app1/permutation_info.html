@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Permutations Information</title>
+  </head>
+
+<style>
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 150%;
+  padding: 5px;
+}
+
+.category {
+ background-color:#b4d09a;
+ font-size:150%;
+ padding: 10px;
+}
+
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:80%;
+ margin: 8px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:80%;
+  margin: 10px;
+}
+
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+    box-shadow: 0px 4px 8px #000000;
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+	<div class='title'>
+
+		<center>Organized Counting and Permutation Information</center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<a style='font-size:80%;' href='{% url 'app-home' %}'>Return Home</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'forum' %}'>Go to Forum</a>
+		&nbsp;&nbsp
+		<a style='font-size:80%;' href='{% url 'permutation_quiz' %}'>Go to Quiz</a>
+	</div>
+
+	<div class='subtitles'>
+
+		<h1 class='subtitles'>Fundamental Principle of Counting</h1>
+
+			<p class='paragraphs'>To determine how many ways we can arrange a collection of <b>A</b> number of objects 
+			with <b>B</b> number of objects, we do this by multiplying A and B. For example, in how many ways can we select
+			a cube from a set of 6 and a cone from a set of 3? Well, there are 6 ways to select the cube and 3 ways to select
+			the cone, so in total there are (6)(3) = 18 ways to select a cube and a cone.</p>
+
+			<p class='paragraphs'>How many ways can we arrange n objects? Well, there are n ways to select the first object, n-1 
+			ways to select the second object, n-2 ways to select the third object, and so on. Using the fundamental counting principle, 
+			the total number of ways to do this is given by</p>
+
+				<center><div lang='latex'>
+					(n)(n-1)(n-2)...(3)(2)(1) \\ \\
+					\phantom{aaa} = n!
+				</div></center>
+
+			<p class='paragraphs'>This is called a factorial, and is read as "n factorial". Factorials are computed by simply multiplying all 
+			natural numbers from 1 to n. So, for example, 6! = (1)(2)(3)(4)(5)(6) = 720. You can find the ! button on your calculator to quickly 
+			compute factorials.</p>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<h1 class='subtitles'>Permutations</h1>
+
+			<p class='paragraphs'>What if we don't want to arrange all objects from a group of n, but only some of them? This can be calculated 
+			by using a <b>permutation</b>. Suppose we have n objects and we wish to determine how many ways we can arrange r of them, where 
+			r <= n. This is done using the following formula</p>
+
+				<center><div lang='latex'>
+					\frac{n!}{(n-r)!} \\ \\
+					\phantom{aaa} = \ _{n}P_{r}
+				</div></center>
+
+			<p class='paragraphs'>Suppose we 10 coins and we wish to know how many ways we can order 5 of them. We can use the formula, or the 
+			permutation button on our calculator to find that</p>
+
+				<center><div lang='latex'>
+					\ _{10}P_{5} = 30 240
+				</div></center>
+
+	</div>
+
+	<div class='subtitles'>
+
+		<h1 class='subtitles'>Key words in word problems</h1>
+
+			<p class='paragraphs'>When you are given a word problem that involves counting, it is important to pay attention to the wording of 
+			the question. Take the following two similar, but computationally different, questions:</p>
+
+			<ol class='lists'>
+				<li>Given a group of 5 boys and 4 girls, in how many ways can you select 2 boys <b>and</b> 3 girls?</li>
+				<li>Given a group of 5 boys and 4 girls, in how many ways can you select 2 boys <b>or</b> 3 girls?</li>
+			</ol>
+
+			<p class='paragraphs'>In this first case, the boys and girls to be selected are part of the same group, so we should just multiply 
+			the number of ways to select 2 boys and 3 girls:</p>
+
+
+				<center><div lang='latex'>
+					 (_{5}P_{2})(_{4}P_{3}) = 480
+				</div></center>
+
+			<p class='paragraphs'>In the second case, the two situations happen seperately, so we should calculate the number of ways to select 
+			2 boys and add it to the number of ways to select 3 girls:</p>
+
+
+				<center><div lang='latex'>
+					 _{5}P_{2} \ + \ _{4}P_{3} = 44
+				</div></center>
+
+			<p class='paragraphs'>Remember that and is multiplication and or is addition.</p>
+
+	</div>
+		
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

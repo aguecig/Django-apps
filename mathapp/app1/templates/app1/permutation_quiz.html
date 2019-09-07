@@ -170,7 +170,7 @@ background: #b4d09a;
 						<br>
 					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
 						<br>
-					<center><a class='links' href='#'>Info Sheet</a></center>
+					<center><a class='links' href='{% url 'permutation_info' %}'>Info Sheet</a></center>
 
 				</div>
 		</div>
@@ -605,6 +605,38 @@ background: #b4d09a;
 
 		<button  title="question15" type="button" onclick="if(document.getElementById('spoiler15') .style.display=='none')
      		  {document.getElementById('spoiler15') .style.display=''}else{document.getElementById('spoiler15') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 16: At a certain highschool, there are three math classes for the grade 12 students: Functions, Calculus and 
+		Data. In the first semester, 7 students are taking all three classes. 16 students are taking both Calculus and Data, 22 students 
+		are taking functions and data and 18 students are taking calculus and functions. 49 students are enrolled in calculus, 64 students 
+		are enrolled in functions and 68 students are enrolled in data. How many total students are enrolled in at least one of the math 
+		courses this semester?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">111</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">153</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">181</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">244</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler16" style="display:none" >
+
+		Hint: Make a venn diagram
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question16" type="button" onclick="if(document.getElementById('spoiler16') .style.display=='none')
+     		  {document.getElementById('spoiler16') .style.display=''}else{document.getElementById('spoiler16') .style.display='none'}">Show Hint</button>
 
 	</div>
 

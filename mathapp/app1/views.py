@@ -80,6 +80,12 @@ def opt_info(request):
 def permutation_quiz(request):
     return render(request,'app1/permutation_quiz.html')
 
+def permutation_info(request):
+    return render(request,'app1/permutation_info.html')
+
+def rational_expressions_quiz(request):
+    return render(request,'app1/rational_expressions_quiz.html')
+
 # function based view for the forum
 
 def forum(request):  
