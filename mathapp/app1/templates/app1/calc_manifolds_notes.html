@@ -117,8 +117,8 @@ hr:before {
 
 .latex {
   background-color: #ffffff;
-  margin: 5px;
-  padding: 5px;
+  margin: 8px;
+  padding: 8px;
 }
 
 .paragraphs {
@@ -142,8 +142,9 @@ hr:before {
 	<div id="toc_container">
 		<p class="toc_title">Contents</p>
 			<ul class="toc_list">
-  				<li><a href="#topic1">Norms and Inner Products</a></li>
-				<li><a href="#topic2">Compact Sets</a></li>
+  				<li><a href="#topic1">1. Norms and Inner Products</a></li>
+				<li><a href="#topic2">2. Compact Sets</a></li>
+				<li><a href="#topic3">3. Functions and Continuity</a></li>
 			</ul>
 	</div>
 
@@ -288,9 +289,157 @@ hr:before {
 
 		<p class='paragraphs'>Ie - [a,b] is compact</p>
 
+<br><br>
+
+	</div>
+
+
+
+	<div class='content'>
+
+		<h4 id='topic3'><center>Functions and Continuity</center></h4>
+
+			<hr>
+
+			<p class='paragraphs'>A <b>function</b> f is a mapping that takes each point in a domain A to a single point in the image f(A). We can 
+			write this component wise as follows:</p>
+
+			<div lang='latex'>
+				f: \ A \ \longrightarrow \ \mathbb{R}^{m} \\
+				\phantom{aaa} f(x) = (f^{1}(x),f^{2}(x),...,f^{m}(x)), \ x \ \epsilon \ A
+			</div>
+
+			<p class='paragraphs'>The following function is known as the <b>ith projection</b>:</p>
+
+			<div lang='latex'>
+				\pi: \mathbb{R}^{n} \ \longrightarrow \ \mathbb{R}^{m} \\
+				\phantom{aaa} \pi (x) = x, \ \pi^{i}(x) = x^{i} \\
+				\phantom{aaa} \pi^{i}: \ (x^{1},...x^{n}) \ \longrightarrow \ x^{i}
+			</div>
+
+			<p class='paragraphs'>We define the <b>limit</b> of a function f as follows. For</b>:</p>
+
+			<div lang='latex'>
+				x \ \epsilon \ A
+			</div>
+
+			<p class='paragraphs'>we say </p>
+
+			<div lang='latex'>
+				\lim_{x \to a} f(x) = b
+			</div>
+
+			<p class='paragraphs'>if</p>
+
+			<div lang='latex'>
+				\forall \ \epsilon \ > \ 0, \ \exists \ \delta \ > \ 0 \\
+				\phantom{aaa} s.t. \ 0 \ < \ |x - a| \ < \delta, \ x \ \epsilon A
+			</div>
+
+			<p class='paragraphs'>and we have</p>
+
+			<div lang='latex'>
+				|f(x) - b| \ < \ \epsilon
+			</div>
+
+			<p class='paragraphs'>We say that a function f is <b>continuous</b> at a point a if</p>
+
+			<div lang='latex'>
+				\lim_{x \to a} f(x) = f(a)
+			</div>
+
+
+			<p class='paragraphs'>Let's look at some simple examples to illustrate the concept of when a function is continuous at a given 
+			point and when it is not. First, the case where it is. Observe the following diagram:</p>
+
+<center><img src="https://i.ibb.co/p1QgCTF/ed-proof.png" height=250 width=300 alt="ed-proof" border="0"></center>
+
+			<p class='paragraphs'>This function maps the values on the horizontal axis to the values on the vertical axis. In this 
+			particular image, we are interested in seeing if the function is continuous along x = 2 (the horizontal axis). It is 
+			clear that it is, because no matter how small we make the value e (that is, for any e > 0), we can always find a value 
+			d > 0 such that the definition of the limit holds. Now consider the altered function:</p>
+
+<center><img src="https://i.ibb.co/R7YNPxk/ed-proof-fail.png" height=250 width=300 alt="ed-proof-fail" border="0"></a><br /></center>
+
+			<p class='paragraphs'>Now there is a lower limit of what e can be. So clearly, there will be an e > 0 such that we cannot find 
+			a d that satisies the criteria for continuity. We now come to the following theorems:</p>
+
+			<p class='paragraphs'><b>Theorem 1.4</b> Given a set A and a function f such that</p>
+
+			<div lang='latex'>
+				f: \ A \ \longrightarrow \ \mathbb{R}^{m}
+			</div>
+
+			<p class='paragraphs'>then f is continuous if and only if the following is satisfied:</p>
+
+			<div lang='latex'>
+				\forall \ open \ set \ U \ \subset \ \mathbb{R}^{m} \\
+				\phantom{aaa} \exists \ open \ set \ V \ \subset \ \mathbb{R}^{n} \\
+				\phantom{aaa} s.t. \ f^{-1}(U) = V \ \cap \ A
+			</div>
+
+			<p class='paragraphs'><b>Theorem 1.5</b> Given a set A and a function f such that</p>
+
+			<div lang='latex'>
+				f: \ A \ \longrightarrow \ \mathbb{R}^{m}
+			</div>
+
+			<p class='paragraphs'>where f is continuous and A is compact, then</p>
+
+			<div lang='latex'>
+				f(A) \ \subset \ \mathbb{R}^{m}
+			</div>
+
+			<p class='paragraphs'>is also compact.</p>
+
+			<p class='paragraphs'>We define the <b>maximum</b> of a function at a point a given some value delta as</p>
+
+
+			<div lang='latex'>
+				M(a,f,\delta) = sup \{ f(x): \ x \ \epsilon \ A, \ |x-a| \ < \ \delta \}
+			</div>
+
+			<p class='paragraphs'>We define the <b>minimum</b> of a function at a point a given some value delta as</p>
+
+
+			<div lang='latex'>
+				m(a,f,\delta) = inf \{ f(x): \ x \ \epsilon \ A, \ |x-a| \ < \ \delta \}
+			</div>
+
+			<p class='paragraphs'>We define the <b>oscillation</b> of a function at a point a by</p>
+
+
+			<div lang='latex'>
+				\theta(a,f) = \lim_{\delta \to 0} | \ (M(a,f,\delta) - m(a,f,\delta) \ |
+			</div>
+
+			<p class='paragraphs'>We now have the following theorems:</p>
+
+			<p class='paragraphs'><b>Theorem 1.6</b> A bounded function f is continuous if and only if</p>
+
+
+			<div lang='latex'>
+				\theta(a,f) = 0
+			</div>
+
+			<p class='paragraphs'><b>Theorem 1.7</b> Let A be a closed set in the n dimensional Euclidean space. If</p>
+
+			<div lang='latex'>
+				f: \ A \ \longrightarrow \ \mathbb{R}
+			</div>
+
+			<p class='paragraphs'>is any bounded function then for any epsilon greater than 0, the set</p>
+
+			<div lang='latex'>
+			 \{ x \ \epsilon \ A: \ \theta(x,f) \ \geq \ \epsilon \}
+			</div>
+
+			<p class='paragraphs'>is closed.</p>
+
 
 
 	</div>
+
 
 		
 
