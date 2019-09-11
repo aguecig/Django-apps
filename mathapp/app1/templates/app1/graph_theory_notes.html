@@ -145,7 +145,9 @@ hr:before {
   				<li><a href="#topic1">1. History of Graph Theory</a></li>
 				<li><a href="#topic2">2. Terminology of Graphs</a></li>
 				<li><a href="#topic3">3. Graphs and their Degree Sequences</a></li>
-				<li><a href="#topic4">4. Graph Isomorphisms and Subgraphs</a></li>
+				<li><a href="#topic4">4. Graph Isomorphisms</a></li>
+				<li><a href="#topic5">5. Graph Classes</a></li>
+				<li><a href="#topic6">6. Subgraphs</a></li>
 			</ul>
 	</div>
 
@@ -307,7 +309,7 @@ hr:before {
 
 	<div class='content'>
 
-		<h4 id='topic4'><center>Graph Isomorphisms and Subgraphs</center></h4>
+		<h4 id='topic4'><center>Graph Isomorphisms</center></h4>
 
 			<hr>
 
@@ -344,8 +346,96 @@ hr:before {
 
 <center><img src="https://i.ibb.co/CHF49h0/graph-theory-iso3.png" height=250 width=400 alt="graph-theory-iso3" border="0"></center>
 
+		<p class='paragraphs'>There are certain structural properties of a graph that will remain unchanged under isomorphism. Such a concept 
+		is known as </b>isomorphic invariance</b> of a graph. There are many examples of these, and we will discuss a few now.</p>
+
+		<p class='paragraphs'>The order of a graph G = (V,E) : |V| is one such isomorphic invariant. In other words, if we have to graphs that 
+		are isomorphic, then they must contain the same number of vertices. This is a trivial result.</p>
+
+		<p class='paragraphs'>The degree sequence of a graph must be isomorphic invariant, as must the sum of all degrees of a graphs vertices. 
+		From this it also follows that the number of edges of a graph is an isomorphic invariant.</p>
+
 
 	</div>
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic5'><center>Graph Classes</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>Certain types of graphs are important and frequent enough that they deserve their own classification. Here is a 
+		selection of some of these graphs.</p>
+
+		<p class='paragraphs'><b>Path of length n</b></p>
+
+		<div lang='latex'>
+			P_{n} = (V = \{0,1,...,n\}, \ E = \{(i,i+1) \ | \ i = 0,...n-1 \})
+		</div>
+
+<center><img src="https://i.ibb.co/qgXrtRm/path-of-length-n.png" alt="path-of-length-n" border="0" height=250 width=300></center>
+
+		<p class='paragraphs'><b>Cycle of length n</b></p>
+
+		<div lang='latex'>
+			C_{n} = (V = \mathbb{Z} / \mathbb{Z}_{n}, \ E = \{(i,i+1) \ | \ i \ \epsilon \ \mathbb{Z} / \mathbb{Z}_{n} \} )
+		</div>
+
+<center><img src="https://i.ibb.co/y8nWCsj/cycle-of-length-n.png" height=250 width=300 alt="cycle-of-length-n" border="0"></center>
+
+
+		<p class='paragraphs'><b>Complete graph on n vertices</b></p>
+
+		<div lang='latex'>
+			K_{n} = (V = \{(1,...,n\}, \ E = [V]^{2} )
+		</div>
+
+		<p class='paragraphs'>In other words, all vertices are connected to each other.</p>
+
+<center><img src="https://i.ibb.co/096C7RY/complete-graph-on-n-vertcies.png" alt="complete-graph-on-n-vertcies" border="0" height=250 width=300></center>
+
+
+		<p class='paragraphs'><b>Complete bi-partite graph on n and m vertices</b></p>
+
+		<div lang='latex'>
+			K_{n,m} = (V = V_{1} \ U \ V_{2}, \ E = \{(v_{1},v_{2}) \ | \ v_{1} \ \epsilon \ V_{1} \ \ v_{2} \ \epsilon \ V_{2} ) \\
+			\phantom{aaa} |V_{1}| = n, \ |V_{2}| = m
+		</div>
+
+		<p class='paragraphs'>In other words, every vertex in V1 connects with a vertex in V2, however no vertices in V1 are adjacent with other 
+		vertices in V1, and the same is true of V2.</p>
+
+<center><img src="https://i.ibb.co/p0vj69D/bipartite.png" alt="bipartite" border="0" height=250 width=300></center>
+
+	</div>
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic6'><center>Subgraphs</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>Loosely speaking, a <b>subgraph</b> H of a graph G = (V,E) is a graph that is a smaller version of G. That is to 
+		say, we can take out some of the edges and/or vertices of G, and if we are still left with a graph, then we have obtained a subgraph of 
+		F. In this sense, the vertices of H are a subset of the vertices of G, and the edges of H are a subset of the edges of G. Take the following 
+		example:</p>
+
+<center><img src="https://i.ibb.co/7gf59z9/subgraph.png" alt="subgraph" border="0" height=250 width=300></center>
+
+		<p class='paragraphs'>Clearly, the graph H is a subgraph of G. A nice thing about subgraphs is the following: If a given graph G has a 
+		subgraph H and G is isomorphic to G', then there will exist a subgraph of G', H', such that H is isomorphic to H'.</p>
+
+	</div>
+
+<br>
+<br>
+
 
 
 

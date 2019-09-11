@@ -130,7 +130,6 @@ th,tr,td {
 .ansbutton {
   padding: 5px;
   margin: 20px;
-  box-shadow: 0px 8px 15px;
 }
 
 .hintbutton {
@@ -184,10 +183,12 @@ background: #b4d09a;
 					\frac{-2x^{2}+8x}{4x^{3}}
 				</div></center>
 				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
-					<center><div lang='latex'>
+					<div lang='latex'>
 						-\frac{2}{x}
-					</div></center>
+					</div>
 				</button>
+
+
 				<button class='ansbutton' type="button" onclick="alert('Correct!')">
 					<center><div lang='latex'>
 						\frac{4-x}{2x^{2}}
@@ -206,9 +207,7 @@ background: #b4d09a;
 	</div>
 
 	<div class='hint' id="spoiler1" style="display:none" >
-
-		Hint: Common factor the numerator and simplify
-
+		Hint: Factor and simplify
 	</div>
 
 	<div class='hintbutton'>
