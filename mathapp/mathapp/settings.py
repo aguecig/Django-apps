@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [ 'gcmathsite.herokuapp.com' ]
 # Application definition
 
 INSTALLED_APPS = [
+    'chemistry.apps.ChemistryConfig',
     'modelling3D.apps.Modelling3DConfig',
     'quadratictool.apps.QuadratictoolConfig',
     'matrixtool.apps.MatrixtoolConfig',

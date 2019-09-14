@@ -32,10 +32,10 @@
   margin:20px;
 }
 .links {
- background-color: #252828;
+ background-color:#b4d09a;
  color: #018268;
  font-size: 120%;
- text-shadow: 2px 2px 0px #000000;
+ text-shadow: 1px 1px 0px #000000;
 }
 
 .banner {
@@ -104,7 +104,7 @@ th,tr,td {
 }
 
 .dropbutton {
-  background-color: #252828;
+  background-color:#b4d09a;
   color: #018268;
   padding: 16px;
   font-size: 16px;
@@ -116,7 +116,7 @@ th,tr,td {
 .dropdowncontent {
   display: none;
   position: absolute;
-  background-color: #252828;
+  background-color:#b4d09a;
   min-width: 160px;
   z-index: 1;
   text-shadow: 1px 1px 0px #000000;
@@ -135,7 +135,7 @@ th,tr,td {
 
 
 .forumlink {
-  background-color: #252828;
+  background-color:#b4d09a;
   color: #018268;
   padding: 16px;
   font-size: 16px;
@@ -144,24 +144,11 @@ th,tr,td {
   text-shadow: 1px 1px 0px #000000;
 }
 
-//HTML
-<img src="https://i.ibb.co/HtTvgB8/website-background-1.jpg" id="bg" alt="">
-
-//CSS
-#bg {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
-}
 
 </style>
 
 
-<body style='background-image: url(https://i.ibb.co/cwt1TM1/website-background-2.jpg);background-size: cover;background-position: bottom;'>
+<body style='background-color:#b4d09a;'>
 
 
 		<div>
@@ -199,6 +186,7 @@ th,tr,td {
 							<button class='dropbutton'>Other Content</button>
 							<div class='dropdowncontent'>
 								<center><a class='links' href='{% url 'model-images' %}'>3D Modelling</a><center>
+								<center><a class='links' href='{% url 'organic-chemistry' %}'>Organic Chemistry</a><center>
 							</div>
 						</div>
 
@@ -224,6 +212,8 @@ th,tr,td {
 							<button class='dropbutton'>Other Content</button>
 							<div class='dropdowncontent'>
 								<center><a class='links' href='{% url 'model-images' %}'>3D Modelling</a><center>
+								<br>
+								<center><a class='links' href='{% url 'organic-chemistry' %}'>Organic Chemistry</a><center>
 							</div>
 
 

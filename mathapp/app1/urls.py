@@ -6,6 +6,7 @@ from calctool.views import FunctionListView, FunctionCreateView, FunctionDeleteV
 from matrixtool.views import MatrixView
 from quadratictool.views import QuadraticView
 from modelling3D.views import Model3dView
+from chemistry.views import OrgoChemView
 # import class based views from views.app for post related content on forums
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
@@ -58,4 +59,6 @@ urlpatterns = [
         path('quadratic_analysis/',QuadraticView.as_view(),name='quad-analysis'),
         # 3d model urls
         path('model_images/',Model3dView.as_view(),name='model-images'),
+        # chemistry urls
+        path('organic_chemistry/',OrgoChemView.as_view(),name='organic-chemistry'),
         ]
