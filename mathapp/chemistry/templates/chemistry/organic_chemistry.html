@@ -116,7 +116,7 @@ th,tr,td {
 .hline { 
   width:100%; 
   height:5px; 
-  background: #b4d09a;
+  background: #000000;
  }
 
 .models {
@@ -168,41 +168,176 @@ require perfect grammatical syntax in order to be correct. Here are some example
 	<li> 3-ethylnonane is correct, but 3-ethyl nonane is not because it contains a space </li>
 </ul>
 
-<form style="padding:5px;color: #000000; float: left " method='POST'>
-	{% csrf_token %}
-	{{ form.as_p }}
-	<button style="padding:10px;" type='submit'>Submit</button>
-</form>
-
 <br>
 
-<div style='float:left;margin:20px;'>
-{% section1 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 as grade %}
-
-<p class='paragraphs'>Results:</p>
-<p> {{grade}} </p>
-
-
-
 <div class='models'>
-<center><p class='paragraphs'>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 1</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q1 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question1 q1 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
+<br>
 <center><img src="https://i.ibb.co/7Kj9twF/2-2-diethylbutan-1-3-diol.png" alt="2-2-diethylbutan-1-3-diol" height=400 width=650  border='0'></center>
+<br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 2</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q2 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question2 q2 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
 <br>
 <center><img src="https://i.ibb.co/sJ0DVmN/2-3-6-trimethyloctane.png" alt="2-3-6-trimethyloctane" height=400 width=650 border="0"></center>
 <br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 3</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q3 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question3 q3 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
+<br>
 <center><img src="https://i.ibb.co/8NtVh8n/2-methylbutan-1-3-diene.png" alt="2-methylbutan-1-3-diene" height=400 width=650 border="0"></center>
+<br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 4</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q4 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question4 q4 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
 <br>
 <center><img src="https://i.ibb.co/5MC6n3k/2-methylcyclobutene.png" alt="2-methylcyclobutene" height=400 width=650 border="0"></center>
 <br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 5</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q5 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question5 q5 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
+<br>
 <center><img src="https://i.ibb.co/WWyVnvs/2-methylhex-3-ene.png" alt="2-methylhex-3-ene" height=400 width=650 border="0"></center>
+<br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 6</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q6 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question6 q6 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
 <br>
 <center><img src="https://i.ibb.co/wywgJPT/2-propylpentan-1-ol.png" alt="2-propylpentan-1-ol" height=400 width=650 border="0"></center>
 <br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 7</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q7 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question7 q7 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
+<br>
 <center><img src="https://i.ibb.co/mFshjy6/5-ethyl-3-methylheptan-2-ol.png" alt="5-ethyl-3-methylheptan-2-ol" height=400 width=650 border="0"></center>
+<br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 8</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q8 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question8 q8 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
 <br>
 <center><img src="https://i.ibb.co/zVVVBFx/methylcyclohexane.png" alt="methylcyclohexane" height=400 width=650 border="0"></center>
 <br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 9</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q9 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question9 q9 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
+<br>
 <center><img src="https://i.ibb.co/VVJQq5L/pent-1-3-diyne.png" alt="pent-1-3-diyne" height=400 width=650 border="0"></center>
+<br>
+
+<div class='hline'></div>
+
+<center><p class='paragraphs'>Figure 10</p></center>
+<br>
+<center><form style="padding:5px;color: #000000; " method='POST'><center>
+	{% csrf_token %}
+	{{ form.q10 }}
+	<button style="padding:10px;" type='submit'>Submit</button>
+</form></center>
+<div style='margin:20px;'>
+{% question10 q10 as grade %}
+<center><p style='padding:5px;color:red;font-size:120%'>{{ grade }}</p></center>
+</div>
 <br>
 <center><img src="https://i.ibb.co/jzKF3xX/propene.png" alt="propene" height=400 width=650 border="0"></center>
 
