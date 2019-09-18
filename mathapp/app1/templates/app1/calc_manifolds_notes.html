@@ -147,6 +147,7 @@ hr:before {
 				<li><a href="#topic3">3. Functions and Continuity</a></li>
 				<li><a href="#topic4">4. Differentiation</a></li>
 				<li><a href="#topic5">5. Partial Derivatives</a></li>
+				<li><a href="#topic6">6. Inverse Functions</a></li>
 			</ul>
 	</div>
 
@@ -546,6 +547,33 @@ hr:before {
 			\phantom{aaa} Then \\
 			\phantom{aaa} D_{i}F(a) = \sum^{m}_{j=1}D_{j}f(g_{1}(a),...,g_{m}(a)) D_{i}g_{j}(a)
 		</div>
+
+	</div>
+
+<br><br>
+
+	<div class='content'>
+
+		<h4 id='topic6'><center>Inverse Functions</center></h4>
+
+			<hr>
+		
+		<p class='paragraphs'>Now we recall the concept of an inverse function. The idea is straightforward enough: given a function f that maps 
+		a set A to a set B, the inverse of f is given by the mapping of B back onto A. The following theorem tells us about the relationship 
+		between the derivative of a function f and the derivative of its inverse.</p>
+
+		<p class='paragraphs'>Theorem 2.0 (Inverse Function Theorem)</p>
+
+			<div lang='latex'>
+				f: \ \mathbb{R}^{n} \ \longrightarrow \ \mathbb{R}^{n} \ C^{1} \\ \\
+				\phantom{aaa} a \ \epsilon \ A \ open \\ \\
+				\phantom{aaa} det(D(f(a)) \neq 0 \\ \\
+				\phantom{aaa} Then \ \exists \ V \ open, \ a \ \epsilon \ V, \\ \\
+				\phantom{aaa} W \ open \ f(a) \ \epsilon \ W \\ \\
+				\phantom{aaa} s.t. \ f: \ V \ \longrightarrow \ C^{1} \ has \ inverse \\ \\
+				\phantom{aaa} f^{-1}: \ W \ \longrightarrow \ V \ satisfying \\ \\
+				\phantom{aaa} [D(f^{-1}(y)]^{-1} = Dff^{-1}(y)
+			</div>
 
 	</div>
 
