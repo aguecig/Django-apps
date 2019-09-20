@@ -148,6 +148,8 @@ hr:before {
 				<li><a href="#topic4">4. Differentiation</a></li>
 				<li><a href="#topic5">5. Partial Derivatives</a></li>
 				<li><a href="#topic6">6. Inverse Functions</a></li>
+				<li><a href="#topic7">7. Integration</a></li>
+				<li><a href="#topic8">8. Measure Zero and Content Zero</a></li>
 			</ul>
 	</div>
 
@@ -170,12 +172,12 @@ hr:before {
 
 			<p class='paragraphs'><b>Theorem 1.1</b></p>
 
-				<center><div lang='latex'>
+				<div lang='latex'>
 					(i) \ \ |x| \geq 0 \\ \\
 					\phantom{aaa} (ii) \ \ | \sum_{i=1}^{n} x^{i}y^{i} | \leq |x||y| \\ \\
 					\phantom{aaa} (iii) \ \|x + y| \leq |x| + |y| \\ \\
 					\phantom{aaa} (iv) \ \ |ax| = |a||x|
-				</div></center>
+				</div>
 
 			<p class='paragraphs'>The <b>inner product</b> of x and y is defined as</p>
 
@@ -185,15 +187,14 @@ hr:before {
 
 			<p class='paragraphs'><b>Theorem 1.2</b></p>
 
-				<center><div lang='latex'>
+				<div lang='latex'>
 					(i) \ \ \triangleleft x,y \triangleright = \triangleleft y,x \triangleright \\ \\
 					\phantom{aaa} (ii) \ \ \triangleleft ax,y \triangleright = \triangleleft x,ay \triangleright = a \triangleleft x,y \triangleright \\ \\ 
 					\phantom{aaa} (iii) \ \ \triangleleft x_{1}+x_{2},y \triangleright = \triangleleft x_{1},y \triangleright + \triangleleft x_{2},y \triangleright \\ \\
 					\phantom{aaa} (iv) \ \ \triangleleft x,x \triangleright \geq 0 \\ \\
 					\phantom{aaa} (v) \ \ \ |x| = \sqrt{\triangleleft x,x \triangleright} \\ \\
 					\phantom{aaa} (vi) \ \ \ \triangleleft x,y \triangleright = \frac{|x+y|^{2} - |x-y|^{2}}{4}
-				</div></center>
-
+				</div>
 
 	</div>
 
@@ -562,7 +563,7 @@ hr:before {
 		a set A to a set B, the inverse of f is given by the mapping of B back onto A. The following theorem tells us about the relationship 
 		between the derivative of a function f and the derivative of its inverse.</p>
 
-		<p class='paragraphs'>Theorem 2.0 (Inverse Function Theorem)</p>
+		<p class='paragraphs'><b>Theorem 1.10 (Inverse Function Theorem)</b></p>
 
 			<div lang='latex'>
 				f: \ \mathbb{R}^{n} \ \longrightarrow \ \mathbb{R}^{n} \ C^{1} \\ \\
@@ -577,6 +578,112 @@ hr:before {
 
 	</div>
 
+
+<br><br>
+
+	<div class='content'>
+
+		<h4 id='topic7'><center>Integration</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>Recall that a partition p of [a,b] is a sequence t0, t1, ... , tn that splits [a,b] into segments (not neccessairly 
+		of even length). We can visualize this in the diagram below.</p>
+
+<center><img src='https://i.ibb.co/L826sv6/partition-1d.png' height=250 width=300></center>
+
+		<p class='paragraphs'> Here, t0 = a and tn = b. Now we would like to abstract this concept to higher dimensions, so instead of talking about 
+		the partition of an interval, we talk about the partition of an n dimensional rectangle. So we say a <b>partition</b> of a rectangle 
+		[a1,b1] x [a2,b2] x ... x [an,bn] is a collection p = (p1, p2, ... ,pn) where pi is a partition of [ai,bi]. If pi divides [ai,bi] into 
+		Ni subrectangles, then p divides [a1,b1] x [a2,b2] x ... x [an,bn] into N1, N2, ... , Nn subrectangles. Now suppose we are looking at a function 
+		over the domain of these subrectangles, say f. Then for each subrectangle S, we have</p>
+
+		<div lang='latex'>
+			m(f) = inf\{f(x): \ x \ \epsilon \ S\} \\ \\
+			\phantom{aaa} M(f) = sup\{f(x): \ x \ \epsilon \ S \}
+		</div>
+
+		<p class='paragraphs'>Each of the subrectangles S of the partition p has a capacity. In one dimension it is more commonly known as the length, 
+		in two dimensions the area, and in three dimensions the volume. We will call the capacity the <b>volume</b>, regardless of what dimension we are 
+		working in (This can be confusing at times, but it is the convention used in this course, so keep it in mind). Then let V(S) represent the 
+		volume of a particular subrectangle S for the partition p. The lower and upper sum of f for p are</p>
+
+
+		<div lang='latex'>
+			L(f,p) = \sum_{S}m_{S}(f)V(S) \\ \\
+			\phantom{aaa} U(f,p) = \sum_{S}M_{S}(f)V(S)
+		</div>
+
+		<p class='paragraphs'>For instance, suppose we were dealing with the one dimensional case where we partition [a,b] into n segments. The 
+		image below shows the maximum sum U(f,p) given the partition p and the function f over [a,b]:</p>
+
+<center><img src='https://i.ibb.co/h2sh32f/uppersum.png' height=250 width=300></center>
+
+		<p class='paragraphs'>Now suppose we had some partition p of a rectangle [a1,b1] x [a2,b2] x ... x [an,bn]. It is intuitively obvious that 
+		we can always find another partition, say p', that more accurately represents the lower and upper sum of f over p. We can do this by cutting 
+		the rectangles into smaller segements. This new partition p' is called a <b>refinement</b> of p.</p>
+
+		<p class='paragraphs'><b>Lemma</b>: Suppose we have some function f and some partition p of a rectangle [a1,b1] x [a2,b2] x ... x [an,bn]. 
+		Then if p' refines p, we have</p>
+
+		<div lang='latex'>
+			L(f,p) \leq L(f,p') \\ \\
+			\phantom{aaa} U(f,p') \leq U(f,p)
+		</div>
+
+		<p class='paragraphs'>The reason for this lemma should be quite obvious. If we refine a lower sum, then we expect to make the rectangles S 
+		to rise to the level of the function, increasing the sum. On the other hand, if we refine an upper sum, then we expect to make the rectangles S 
+		lower to the level of the function, decreasing the sum.</p>
+
+
+		<p class='paragraphs'><b>Corollary</b>: If p and p' are two partitions, then</p>
+
+		<div lang='latex'>
+			L(f,p') \leq U(f,p)
+		</div>
+
+		<p class='paragraphs'>A function f mapping a rectangle A to the real numbers is called <b>integrable</b> if f is bounded and 
+		sup{ L(f,p) } = inf{ U(f,p) }. In this case, we denote the integral of f over A as</p>
+
+		<div lang='latex'>
+			\int_{A} f \ dx = \int_{A} f(x^{1},...,x^{n})dx^{1}...dx^{n}
+		</div>
+
+		<p class='paragraphs'><b>Theorem 2.0</b>: A bounded function f is integrable on a rectangle A iff:</p>
+
+		<div lang='latex'>
+			\forall \ \epsilon \ > \ 0 \ \ \exists \ \p \ s.t. \ U(f,p) - L(f,p) \ < \ \epsilon
+		</div>
+
+	</div>
+
+<br><br>
+
+	<div class='content'>
+
+		<h4 id='topic8'><center>Measure Zero and Content Zero</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>A set A has <b>measure zero</b> if for any epsilon greater than zero, there exists a cover 
+		{U1, U2, ...} of closed rectangles such that</p>
+
+		<div lang='latex'>
+			\sum_{i=1}^{\infty} V(U_{i}) \ < \ \epsilon
+		</div>
+
+		<p class='paragraphs'> The union of sets all of measure zero results in a set that has measure zero.</p>
+
+		<p class='paragraphs'>A set A has <b>content zero</b> if for any epsilon greater than zero, there exists and finite 
+		cover {U1,...Un} of closed rectangles such that</p>
+
+		<div lang='latex'>
+			\sum_{i=1}^{n} V(U_{i}) \ < \ \epsilon
+		</div>
+
+		<p class='paragraphs'><b>Theorem 2.1</b>: If A is compact and has measure zero, then A has content zero.</p>
+
+	</div>
 
 		
 
