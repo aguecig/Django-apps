@@ -150,7 +150,7 @@ hr:before {
 				<li><a href="#topic6">6. Subgraphs</a></li>
 				<li><a href="#topic7">7. Adjacency Matrices and Graph Eigenvalues</a></li>
 				<li><a href="#topic8">8. Paths, Trees and Forests</a></li>
-				<li><a href="#topic9">8. Spanning Trees, Bridges and Banks</a></li>
+				<li><a href="#topic9">9. Spanning Trees, Bridges and Banks</a></li>
 			</ul>
 	</div>
 
@@ -596,7 +596,88 @@ hr:before {
 
 		<p class='paragraphs'>In the above graph, the subgraphs h1 and h2 are called <b>banks</b>. Two connected components are called banks. 
 		If e is a bridge in G and H1 and H2 are banks, then we have: s(G) = s(H1)s(H2), where s stands for the number of spanning trees in a 
-		graph. In the above example, s(H1) = 3 and s(H2) = 4, so s(G) = 12.</p>
+		graph. In the above example, s(H1) = 3 and s(H2) = 3, so s(G) = 9.</p>
+
+		<p class='paragraphs'>Recall that Kn is the complete graph on n vertices. Then we have the following fact about the number of spanning 
+		trees for Kn:</p>
+
+		<div lang='latex'>
+			s(k_{n}) = n^{n-2}
+		</div>
+
+		<p class='paragraphs'>Take the example of k3 below. We can find 3 trees for k3, and indeed, 3 to the power of 3-2 is 3.</p>
+
+<center><img src='https://i.ibb.co/QpNSCY2/spanning-kn.png' height=250 width=300></center>
+
+		<p class='paragraphs'>Note also that although each tree is isomorphic to the other, this is not what we are interested in. We are 
+		focused on how many trees we can make that are not identitical up to a <b>labelling</b> of the vertices.</p>
+
+		<p class='paragraphs'>Recall that Kn,m is the complete bipartite graph on m and n vertices. Then we have the following fact about 
+		the number of spanning trees for Kn,m:</p>
+
+		<div lang='latex'>
+			s(k_{n,m}) = m^{n-1}n^{m-1}
+		</div>
+
+		<p class='paragraphs'>In general, it is difficult to simply enumerate by the naked eye how many spanning trees a particular graph G 
+		may have. Fortunately, there is the following theorem that will help us compute this quantity for a graph G = (V,E).</p>
+
+		<p class='paragraphs'>Let G = (V,E) be a graph with adjacency matrix A. If D is the matrix given by</p>
+
+		<div lang='latex'> D = 
+			\begin{bmatrix}
+				d_{1}&0&...&0 \\
+				0&d_{2}&...&0 \\
+				0&0&...&d_{n}
+			\end{bmatrix} \\ \\
+
+		\phantom{aaa} d_{i} = deg(V_{i})
+		</div>
+
+		<p class='paragraphs'>Then we define the matrix L = D - A and the matrix M obtained by deleting the last row and the last column of L. 
+		Then we have s(G) = det(M).</p>
+
+		<p class='paragraphs'>Consider the following example:</p>
+
+<center><img src='https://i.ibb.co/3B52WTv/s-g-example.png' height=250 width=300></center>
+
+		<p class='paragraphs'>For this graph, we have:</p>
+
+		<div lang='latex'> D = 
+			\begin{bmatrix}
+				2&0&0&0 \\
+				0&2&0&0 \\
+				0&0&1&0 \\
+				0&0&0&3 \\
+			\end{bmatrix} \\ \\ \\
+			\phantom{aaa} A = 
+			\begin{bmatrix}
+				0&1&0&1 \\
+				1&0&0&1 \\
+				0&0&0&1 \\
+				1&1&1&0 \\
+			\end{bmatrix}
+		</div>
+
+		<p class='paragraphs'>We obtain L from the difference of D and A, and M from the deletion of the 4th row and 4th column of L:</p>
+
+		<div lang='latex'> L = 
+			\begin{bmatrix}
+				2&-1&0&1 \\
+				-1&2&0&-1 \\
+				0&0&1&0 \\
+				-1&-1&-1&3 \\
+			\end{bmatrix} \\ \\ \\
+			\phantom{aaa} M = 
+			\begin{bmatrix}
+				2&-1&0 \\
+				-1&2&0 \\
+				0&0&1 \\
+			\end{bmatrix}
+		</div>
+
+		<p class='paragraphs'>From this we have det(M) = 3. In this case, we can directly count the number of spanning trees of G by construcing 
+		them if we please.</p>
 
 	</div>
 

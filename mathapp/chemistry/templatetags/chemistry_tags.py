@@ -104,6 +104,96 @@ def question10(q10):
         return 'Correct!'
     else:
         return 'Incorrect :( '
+        
+@register.simple_tag
+def question11(q11):
+    if q11 == '':
+       return ''
+    
+    elif q11 == '3-methylpentanal':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question12(q12):
+    if q12 == '':
+       return ''
+    
+    elif q12 == '4,5-dimethylnonan-3-one':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question13(q13):
+    if q13 == '':
+       return ''
+    
+    elif q13 == '1-ethoxypropane':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question14(q14):
+    if q14 == '':
+       return ''
+    
+    elif q14 == '4-methylhexan-3-one':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question15(q15):
+    if q15 == '':
+       return ''
+    
+    elif q15 == '2-ethylbutanal':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question16(q16):
+    if q16 == '':
+       return ''
+    
+    elif q16 == '2-ethoxybutane':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question17(q17):
+    if q17 == '':
+       return ''
+    
+    elif q17 == '4-methylpentan-2-one':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question18(q18):
+    if q18 == '':
+       return ''
+    
+    elif q18 == 'cyclohexanal':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
+        
+@register.simple_tag
+def question19(q19):
+    if q19 == '':
+       return ''
+    
+    elif q19 == 'methylpropanone':
+        return 'Correct!'
+    else:
+        return 'Incorrect :( '
     
 
 #        
