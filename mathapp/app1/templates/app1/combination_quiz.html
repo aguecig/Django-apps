@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Combinations Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 200%;
+  margin:20px;
+}
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #b4d09a;
+}
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #000000;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+
+.questions {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:100%;
+ margin:5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: center;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #b4d09a;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+}
+
+.hintbutton {
+  background-color:#b4d09a;
+  padding:10px;
+
+}
+
+.hint {
+  color: #000000;
+  margin: 5px;
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #b4d09a;
+ }
+
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+
+	<div class="title">
+		<center>Combinations Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+						<br>
+					<center><a class='links' href='#'>Info Sheet</a></center>
+
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: A basket has 2 yellow cubes, 4 blue cubes and 5 red cubes. In how many ways can a person pick 3 cubes?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">55</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">165</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">330</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">462</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: Don't overthink the question, the colors don't really effect the answer
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: How many ways can you make a three card hand from a standard deck of 52 cards such that exactly two of 
+		the cards are not face cards?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2640</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5630</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">9360</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">18 720</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: The key phrase is NOT face cards
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: You are picking numbers out of a hat that range from 1 through 50 inclusive. You are to select 
+		5 numbers, and no numbers can be repeated. In how many ways can you select the numbers so that you have at least one 
+		number larger than 20?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">11 628</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">15 504</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1 981 236</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2 114 884</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">2 107 132</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: Use the indirect method
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: You are given the following two sets: A = {blue, white, black}, B = {white, yellow}. What is the 
+		value of n(A U B)?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">4</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: A U B means the elements in A or B
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: How many terms are there in the binomial expansion of</p></center>
+		<center><div lang='latex'>
+				(2x - y)^{12}
+			</div></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">12</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">13</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">24</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">25</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: How many numbers are there in the 12th row of Pascal's triangle?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: How many ways can you draw a spade or a face card from a standard deck of cards?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">12</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">13</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">21</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">22</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">25</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: Remember not to double count
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: A jury of 12 people is to selected from a group of 14 men and 10 women. How many ways can 
+		the jury be selected if there must be at least 2 women on the jury? </p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">45 045</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">2 700 425</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2 703 285</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2 704 156</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: Use indirect method
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: You are given the following two sets: X = {1,3,5,7,9} Y = {0,2,4,6,8}. What is the set 
+		given by X and Y?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">{0,1,2,3,4,5,6,7,8,9}</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">{0}</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">{1,3,5,7,9}</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">{0,2,4,6,8}</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">The empty set</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: X and Y means the elements that X and Y have in common
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: What is the value of the coefficient of the fifth power of a in the binomial expansion given by</p></center>
+		<center><div lang='latex'>
+				(a-3)^{6}
+			</div></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">18</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-243</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">-27</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">-18</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler9" style="display:none" >
+
+		Hint: You only need to find the second term in the expansion
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: How many 5 card poker hands dealt from a standard deck of cards have exactly 3 red cards and exactly 
+		2 spades?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2678</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">202 800</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">410 650</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">845 000</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: How many red cards are there? How many spades are there?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: There is a box containing 6 red balls, 3 yellow balls and 4 green balls. In how many ways can you 
+		select three balls and have either exactly 2 be red or at least 2 be green?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">159</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">206</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">286</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">163</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Hint: These are disjoint cases so you will have to add them up
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: You roll 3 dice. How many ways can you roll them such that exactly 2 of the numbers are prime?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5640</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">8000</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">10 560</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: Each dice has 3 prime numbers on it
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

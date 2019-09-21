@@ -83,6 +83,9 @@ def permutation_quiz(request):
 def permutation_info(request):
     return render(request,'app1/permutation_info.html')
 
+def combination_quiz(request):
+    return render(request,'app1/combination_quiz.html')
+
 def rational_expressions_quiz(request):
     return render(request,'app1/rational_expressions_quiz.html')
 
