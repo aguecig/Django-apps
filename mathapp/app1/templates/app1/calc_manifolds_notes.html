@@ -683,6 +683,39 @@ hr:before {
 
 		<p class='paragraphs'><b>Theorem 2.1</b>: If A is compact and has measure zero, then A has content zero.</p>
 
+		<p class='paragraphs'><b>Theorem 2.2</b>: </p>
+
+		<div lang='latex'>
+			A \ closed \ rectangle \\ \\
+			\phantom{aaa} f: \ A: \ \longrightarrow \ \mathbb{R} \ bounded \\ \\
+			\phantom{aaa} B = \{x: \ x \ \epsilon \ \A, \ f != C \ at \ x \} \\ \\
+			\phantom{aaa} Then \ f \ is \ integrable \ iff \ B \ has \ measure \ zero
+		</div>
+
+		<p class='paragraphs'>We define the <b>characteristic function</b> as follows:</p>
+
+		<div lang='latex'>
+			\forall \ C \ \subset \ \mathbb{R}^{n} \\ \\
+			\phantom{aaa} \mathcal{X}_{c}(x) = 
+			\begin{cases}
+  				  1,& \text{if } \ x \notin C \\
+    				  0,              & x \in C
+			\end{cases}
+		</div>
+
+		<p class='paragraphs'>Using this characteristic function, we can now recast our integerals to be computed over any arbitrary surface, not 
+		just rectangles. Let C be a subset of A, where A is a closed rectangle over the n dimensional Euclidean space. Then we define:</p>
+
+		<div lang='latex'>
+			\int_{C} f = \int_{A} f \mathcal{X}_{C}
+		</div>
+
+		<p class='paragraphs'>Provided both f and X are integrable.</p>
+
+		<p class='paragraphs'><b>Theorem 2.3</b>: The characteristic function X: A => R is integrable iff the boundary dC has measure zero.</p>
+
+		<p class='paragraphs'>A bounded set C whose boundary dC has measure zero is called <b>Jordan Measureable</b>.</p>
+
 	</div>
 
 		
