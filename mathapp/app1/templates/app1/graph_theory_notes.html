@@ -151,6 +151,7 @@ hr:before {
 				<li><a href="#topic7">7. Adjacency Matrices and Graph Eigenvalues</a></li>
 				<li><a href="#topic8">8. Paths, Trees and Forests</a></li>
 				<li><a href="#topic9">9. Spanning Trees, Bridges and Banks</a></li>
+				<li><a href="#topic10">10. Vertex Colorings</a></li>
 			</ul>
 	</div>
 
@@ -412,6 +413,18 @@ hr:before {
 		vertices in V1, and the same is true of V2.</p>
 
 <center><img src="https://i.ibb.co/p0vj69D/bipartite.png" alt="bipartite" border="0" height=250 width=300></center>
+
+		<p class='paragraphs'><b>Wheel on n-vertices</b></p>
+
+		<div lang='latex'>
+			W_{n} = C_{n} + V(\text{connected to every vertex in C})
+		</div>
+
+		<p class='paragraphs'>For example, W4 would look like this:</p>
+
+<center><img src='https://i.ibb.co/9NRbpqB/wheel4.png' width=300 height=250></center>
+
+		<p class='paragraphs'>Notice how for the wheel on n-vertices, the number of vertices in the graph is n + 1.</p>
 
 	</div>
 
@@ -679,6 +692,90 @@ hr:before {
 		<p class='paragraphs'>From this we have det(M) = 3. In this case, we can directly count the number of spanning trees of G by construcing 
 		them if we please.</p>
 
+	</div>
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic10'><center>Vertex Colorings</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>So far we have only discussed graphs without putting any emphasis on vertex labelling. There are a few ways to include 
+		labelling, and one works as follows. Suppose we have some graph G = (V,E) and we want to label the vertices on the graph such that no two 
+		adjacent vertices share the same label. This type of labelling is known as <b>vertex coloring</b>. The term coloring comes from the idea that 
+		we might use colors to label our vertices. This, however, introduces a quick inconvenience as we make our graphs arbitrarily large. Instead, 
+		we will "color" our graphs using numbers and say that a graph G has a vertex coloring if no two adjacent vertices share the same number.</p>
+
+		<p class='paragraphs'>Having this definition, a natural question now arises. Given a graph G = (V,E), what is the minimal amount of labels we 
+		can use so that the graph is vertex colored? This leads us to the following definition:</p>
+
+		<p class='paragraphs'><b>Chromatic number</b> of graph G = (V,E):</p>
+
+		<div lang='latex'>
+			\mathcal{X}(G) = inf\{n \ | \ \exists \ \text{a n-coloring of G}\}
+		</div>
+
+		<p class='paragraphs'>So the Chromatic number, in words, is the smallest possible number of labels (n) that we can use to create the a vertex 
+		coloring of G. Take the following examples:</p>
+
+<center><img src='https://i.ibb.co/tLXzysy/vertex-coloring.png' height=250 width=300></center>
+
+		<p class='paragraphs'>The graph on the left is not a vertex coloring since there are two vertices adjacent to each other both with the label 
+		of one. The middle graph is a vertex coloring since no two adjacent vertices share the same label. The graph on the right is also a vertex 
+		coloring, and in addition also contains the minimum number of labels to make this possible. Therefore, the chromatic number of C5 is 3.</p>
+
+		<p class='paragraphs'>Here are some useful facts about particular graph classes and their chromatic number:</p>
+
+		<div lang='latex'>
+			\mathcal{X}(C_{n}) = 
+			\begin{cases}
+  				  2,& \text{if n is even } \\
+    				  3,              & \text{if n is odd} \\
+			\end{cases}
+		</div>
+
+		<div lang='latex'>
+			\mathcal{X}(K_{n}) = n \\ \\
+		</div>
+
+		<div lang='latex'>
+			\mathcal{X}(W_{n}) = 
+			\begin{cases}
+  				  3,& \text{if n is even } \\
+    				  4,              & \text{if n is odd} \\
+			\end{cases}
+		</div>
+
+		<p class='paragraphs'>Another natural question that arises is in relation to subgraphs of a vertex colored graph G. That is, if we remove a vertex 
+		from G, is it possible that the new subgraph, say H, has the same chromatic number? In general this is possible, but in special cases, there is no 
+		vertex we could remove from G that would not reduce the chromatic number of the new subgraph. This leads us to the following definition.</p>
+
+		<p class='paragraphs'>A graph G = (V,E) is called <b>critical</b> if for any proper subgraph H of G, the chromatic number of H is strictly less 
+		that the chromatic number of G.</p>
+
+		<p class='paragraphs'>To see an example of this, consider the graph of the wheel on 5 vertices, W5.</p>
+
+<center><img src='https://i.ibb.co/Lh4vZ2K/critcal-Wheel-Five.png' width=300 height=250></center>
+
+		<p class='paragraphs'>The graph on the left is W5, which has chromatic number four. Now if we want to show that it is critical, we need to show that 
+		any proper subgraph of W5 has a chromatic number less than four. At first this may seem daunting, but we can realize the following: there are only 
+		two subgraphs, say H1 and H2, of W5 up to isomorphism that are created by the removal of one edge. Therefore, if we can show these two subgraphs of 
+		W5 have a chromatic number less than four, we are done. We don't have to test any other proper subgraphs of W5 since they will be considered proper 
+		subgraphs of the graphs H1 and H2 and therefore have a chromatic number less than or equal to the chromatic numbers of H1 and H2. As you can see in 
+		the center and right graphs, the chromatic numbers of these two proper subgraphs are both three. Thus we have shown that W5 is a critical graph.</p>
+
+		<p class='paragraphs'>We now state the following two facts about critical graphs:</p>
+
+		<ol class='paragraphs'>
+			<li>If a graph G = (V,E) is critical, it must be connected</li>
+			<li>For a graph G = (V,E), there exists a subgraph H with H being critical and the chromatic number of H is equivalent to that of G</li>
+		</ol>
+
+	
 	</div>
 
 		
