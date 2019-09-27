@@ -151,7 +151,7 @@ hr:before {
 				<li><a href="#topic7">7. Adjacency Matrices and Graph Eigenvalues</a></li>
 				<li><a href="#topic8">8. Paths, Trees and Forests</a></li>
 				<li><a href="#topic9">9. Spanning Trees, Bridges and Banks</a></li>
-				<li><a href="#topic10">10. Vertex Colorings</a></li>
+				<li><a href="#topic10">10. Vertex Colorings, Critical Graphs</a></li>
 			</ul>
 	</div>
 
@@ -700,7 +700,7 @@ hr:before {
 
 	<div class='content'>
 
-		<h4 id='topic10'><center>Vertex Colorings</center></h4>
+		<h4 id='topic10'><center>Vertex Colorings, Critical Graphs</center></h4>
 
 			<hr>
 
@@ -773,7 +773,17 @@ hr:before {
 		<ol class='paragraphs'>
 			<li>If a graph G = (V,E) is critical, it must be connected</li>
 			<li>For a graph G = (V,E), there exists a subgraph H with H being critical and the chromatic number of H is equivalent to that of G</li>
+			<li>If a graph G = (V,E) is critical, then the degree of any vertex v in V must be greater than or equal to the chromatic number of 
+			G minus 1:</li>
+				<center><div lang='latex'>deg(v) \ \geq \ \mathcal{X}(G) - 1</div></center>
+			<li>If a graph G = (V,E) is critical, then</li>
+				<center><div lang='latex'>(\mathcal{X}(G) - 1) \ \leq \ 2|E|</div></center>
 		</ol>
+
+		<p class='paragraphs'>A couple of more definitions: The <b>girth</b> of a graph G is the length of the shortest cycle in G. If no cycle 
+		exists in G, the girth is said to be infinite.</p>
+
+		<p class='paragraphs'>The <b>distance</b> between two points x and y in G, denoted d(x,y), is the shortest number of edges between x and y</p>
 
 	
 	</div>
