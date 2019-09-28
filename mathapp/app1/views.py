@@ -114,6 +114,17 @@ def calc_manifolds_problems(request):
 def prob_stats_notes(request):
     return render(request,'app1/prob_stats_notes.html')
 
+# project Euler views
+
+def project_euler_notes(request):
+    return render(request,'app1/project_euler_notes.html')
+
+def project_euler_problems(request):
+    return render(request,'app1/project_euler_problems.html')
+
+def problems_1_10(request):
+    return render(request,'app1/euler_1_10.html')
+
 # create class based views for making posts, updating
 # posts, deleting posts on the forum
     
