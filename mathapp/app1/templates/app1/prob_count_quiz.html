@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	
+    <title>Probabilities and Counting Quiz</title>
+
+
+  </head>
+
+
+
+<style>
+
+.title {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 300%;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subtitles {
+  background-color:#b4d09a;
+  color: #018268;
+  font-size: 200%;
+  margin:20px;
+}
+.links {
+ background-color: #b4d09a;
+ color: black;
+ font-size: 120%;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #b4d09a;
+}
+
+.tables {
+ color:#018268;
+ background-color: #252828;
+ text-shadow: 2px 2px 0px #000000;
+ margin: 10px;
+}
+
+.paragraphs {
+ color: #000000;
+ font-size:100%;
+ margin: 5px;
+ padding: 5px;
+}
+
+.paragraphs2 {
+ color: #000000;
+ background-color: #1e522c;
+ font-size: 100%;
+ padding: 5px;
+}
+
+
+.questions {
+ background-color:#b4d09a;
+ color: #000000;
+ font-size:100%;
+ margin:5px;
+}
+
+
+.lists {
+  color: #000000;
+  font-size:100%;
+  position: center;
+}
+
+table {
+  border: 3px solid black;
+}
+
+th,tr,td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.dropbutton {
+  background-color: #b4d09a;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  background-color: #b4d09a;
+  min-width: 160px;
+  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #000000;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+
+
+.latex {
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.ansbutton {
+  padding: 5px;
+  margin: 20px;
+}
+
+.hintbutton {
+  background-color:#b4d09a;
+  padding:10px;
+
+}
+
+.hint {
+  color: #000000;
+  margin: 5px;
+}
+
+.hline { 
+width:100%; 
+height:5px; 
+background: #b4d09a;
+ }
+
+
+
+</style>
+
+
+<body style="background-color:#b4d09a;">
+
+
+	<div class="title">
+		<center>Probability and Counting Quiz</center>
+	</div>
+
+	<div class='subtitles' style='font-size:100%;'>
+		<div class='dropdown'>
+			<button class='dropbutton'>Navigate</button>
+				<div class='dropdowncontent'>
+					<center><a class='links' href='{% url 'app-home' %}'>Return Home</a><center>
+						<br>
+					<center><a class='links' href='{% url 'forum' %}'>Go to Forum</a></center>
+						<br>
+					<center><a class='links' href='{% url 'prob_count_info' %}'>Info Sheet</a></center>
+
+				</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 1: A coin is flipped 3 times. What is the probability of flipping exactly two tails?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/3</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">3/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5/8</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler1" style="display:none" >
+
+		Hint: It might help to construct a tree diagram
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question1" type="button" onclick="if(document.getElementById('spoiler1') .style.display=='none')
+     		  {document.getElementById('spoiler1') .style.display=''}else{document.getElementById('spoiler1') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 2: A coin is flipped 3 times. What is the probability of not flipping at least 1 head?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/3</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">7/8</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">1/8</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler2" style="display:none" >
+
+		Hint: Not flipping at least one head is equivalent to flipping all tails
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question2" type="button" onclick="if(document.getElementById('spoiler2') .style.display=='none')
+     		  {document.getElementById('spoiler2') .style.display=''}else{document.getElementById('spoiler2') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 3: A jar has the following contents: 4 red balls, 6 yellow balls and 4 orange balls. What is the probability of 
+		selecting 3 balls and having at least 2 of the balls be yellow?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">5/13</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">30/91</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/7</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">43/364</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler3" style="display:none" >
+
+		Hint: The key phrase is "at least". Remember to use combinations to count the arrangements
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question3" type="button" onclick="if(document.getElementById('spoiler3') .style.display=='none')
+     		  {document.getElementById('spoiler3') .style.display=''}else{document.getElementById('spoiler3') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 4: A poker hand is made of 5 cards from a standard deck of 52. A hand is called a <b>flush</b> when all 5 cards 
+		are of the same suit. What is the probability that a given hand will be a flush?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">33/66640</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">33/16660</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">13/52</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">13/16660</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler4" style="display:none" >
+
+		Hint: Recall that there are a total of 4 different suits in a standard deck of cards
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question4" type="button" onclick="if(document.getElementById('spoiler4') .style.display=='none')
+     		  {document.getElementById('spoiler4') .style.display=''}else{document.getElementById('spoiler4') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 5: A pair of dice are rolled and the sum is recorded. Then, a random card is selected from a standard deck of 52 
+		cards. What is the probability that a sum of 4 is rolled and a face card is drawn?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/36</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">1/52</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/1872</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/39</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler5" style="display:none" >
+
+		Hint: Make sure to multiply the probabilties of each event together
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question5" type="button" onclick="if(document.getElementById('spoiler5') .style.display=='none')
+     		  {document.getElementById('spoiler5') .style.display=''}else{document.getElementById('spoiler5') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 6: A bag contains the following items: 4 black balls, 3 orange balls and 7 green balls. You are to select 4 balls. 
+		What is the probablity that at least 3 of the balls are black?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">40/1001</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">791/1001</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">210/1001</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">165/1001</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler6" style="display:none" >
+
+		Hint: Use the indirect method
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question6" type="button" onclick="if(document.getElementById('spoiler6') .style.display=='none')
+     		  {document.getElementById('spoiler6') .style.display=''}else{document.getElementById('spoiler6') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 7: What is the probability of flipping a coin 6 times and having it land heads on the first 3 flips and then 
+		tails on the last 3 flips?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/6</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/2</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3/32</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">1/64</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler7" style="display:none" >
+
+		Hint: This is equivalent to asking: What is probability of all flips being heads?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question7" type="button" onclick="if(document.getElementById('spoiler7') .style.display=='none')
+     		  {document.getElementById('spoiler7') .style.display=''}else{document.getElementById('spoiler7') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 8: There are three people in a room. What is the probability that none of them were born on the same day of the 
+		week?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3/7</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">4/9</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">5/9</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">4/7</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler8" style="display:none" >
+
+		Hint: There are 7 days in a week . . .
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question8" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none')
+     		  {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 9: If you select two cards from a standard deck without replacement, what is the probability of selecting a queen first and 
+		a spade second?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/51</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/26</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3/7</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">1/52</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler9" style="display:none" >
+
+		Hint: The answer will depend on whether or not the first queen selected was a spade
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question9" type="button" onclick="if(document.getElementById('spoiler9') .style.display=='none')
+     		  {document.getElementById('spoiler9') .style.display=''}else{document.getElementById('spoiler9') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 10: What is the probability of rolling a pair of dice and obtaining a sum that is prime?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5/12</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">13/36</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">4/9</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">7/18</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler10" style="display:none" >
+
+		Hint: Prime numbers are 2, 3, 5, 7 and 11
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question10" type="button" onclick="if(document.getElementById('spoiler10') .style.display=='none')
+     		  {document.getElementById('spoiler10') .style.display=''}else{document.getElementById('spoiler10') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 11: What is the probability of randomly selecting either a spade or a king from a standard deck of 52 cards?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">4/13</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">17/52</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">2/13</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/5</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler11" style="display:none" >
+
+		Hint: Be sure to not double count
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question11" type="button" onclick="if(document.getElementById('spoiler11') .style.display=='none')
+     		  {document.getElementById('spoiler11') .style.display=''}else{document.getElementById('spoiler11') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 12: A bag has the following contents: 3 grey balls, 5 red balls and 6 yellow balls. What is the probability that you select 
+		3 balls such that the first ball you select is yellow and the last ball you select is red?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">15/91</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">5/364</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">45/343</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/6</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler12" style="display:none" >
+
+		Hint: Every time you select a ball, the total number of balls left in the bag decreases
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question12" type="button" onclick="if(document.getElementById('spoiler12') .style.display=='none')
+     		  {document.getElementById('spoiler12') .style.display=''}else{document.getElementById('spoiler12') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 13: There is a 40% chance of it raining tommorow. If it doesn't rain, there is a 75% chance that the monkeys will 
+		come out of there den at the local zoo. What is the probability of the monkeys not coming out if it does not rain?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">3/10</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">3/20</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">1/10</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">7/10</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler13" style="display:none" >
+
+		Hint: Use the compliment of each probability
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question13" type="button" onclick="if(document.getElementById('spoiler13') .style.display=='none')
+     		  {document.getElementById('spoiler13') .style.display=''}else{document.getElementById('spoiler13') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+
+	<div class="questions">
+		<br>
+		<center><p>Question 14: Which of the following is <b>not true</b> about probabilites?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				The probability of all outcomes must sum to 1
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				The probability of any outcome must be between 0 and 1, inclusive
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				The probability of one event occuring may depend on other events having already occured
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				If outcomes happen at random, the probability of each outcome must be identical
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler14" style="display:none" >
+
+		Hint: Can you think of a situation in which any of the above would not hold true?
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question14" type="button" onclick="if(document.getElementById('spoiler14') .style.display=='none')
+     		  {document.getElementById('spoiler14') .style.display=''}else{document.getElementById('spoiler14') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+	<div class="questions">
+		<br>
+		<center><p>Question 15: A pair of dice is rolled. Which of the following statements is correct?</p></center>
+				<br>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				There are 12 total possible outcomes
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				The possible sums range from 1 to 12, inclusive
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Correct!')">
+				Their are two outcomes that identically have the lowest probability of occuring
+				</button>
+				<button class='ansbutton' type="button" onclick="alert('Incorrect')">
+				All of the above are false
+				</button>
+			
+	</div>
+
+	<div class='hint' id="spoiler15" style="display:none" >
+
+		Hint: Your on your own for this one : v )
+
+	</div>
+
+	<div class='hintbutton'>
+
+		<button  title="question15" type="button" onclick="if(document.getElementById('spoiler15') .style.display=='none')
+     		  {document.getElementById('spoiler15') .style.display=''}else{document.getElementById('spoiler15') .style.display='none'}">Show Hint</button>
+
+	</div>
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>

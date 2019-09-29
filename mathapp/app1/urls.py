@@ -36,6 +36,8 @@ urlpatterns = [
         path('permutationquiz/',views.permutation_quiz,name='permutation_quiz'),
         path('permutationinfo/',views.permutation_info,name='permutation_info'),
         path('combinationquiz/',views.combination_quiz,name='combination_quiz'),
+        path('probcountquiz/',views.prob_count_quiz,name='prob_count_quiz'),
+        path('probcountinfo/',views.prob_count_info,name='prob_count_info'),
         path('rationalexpressionsquiz/',views.rational_expressions_quiz,name='rational_express_quiz'),
         # forum urls
         path('forum/',PostListView.as_view(),name='forum'),
