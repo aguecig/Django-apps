@@ -777,6 +777,62 @@ hr:before {
 		<p class='paragraphs'>Remark: A collection of functions satisfying conditions (i) through (iii) is called a <b>partition of unity</b>, while 
 		a collection of functions satisfying conditions (i) through (iv) is called a <b>partition of unity subordinate to the open cover theta</b>.</p>
 
+		<p class='paragraphs'>An open cover theta of an open set A is said to be <b>admissible</b> if:</p>
+		
+		<div lang='latex'>
+			\forall \ U \ \epsilon \ \theta, \ U \ \subset \ A
+		</div>
+
+		<div lang='latex'>
+			\text{If} \ \Phi \ \text{is subordinate to} \ \theta, \ \text{and} \ f: \ A \ \longrightarrow \ \mathbb{R} \ \text{is bounded, and} \\ \\
+			\phantom{aaa} \{x : \ f \ \text{discontinuous at x} \} \ \text{has measure 0, then} \\ \\
+			\phantom{aaa} \int_{A}\phi|f| \ \text{exists} \ \forall \ \phi \ \epsilon \ \Phi \ \text{a partition of unity}
+		</div>
+
+		<p class='paragraphs'>We define f to be integrable in the extended ense if</p>
+
+		<div lang='latex'>
+			\sum_{\phi\epsilon\Phi} \ \int_{A}\phi \ f \ \text{converges, in which case we denote this integral as} \ \int_{A}f
+		</div>
+
+		<p class='paragraphs'><b>Theorem 2.5</b></p>
+
+		<p class='paragraphs'>(i) If psi is another partition of unity (from our already defined phi) subordinate to an abmissable cover theta prime of A, 
+		then</p>
+
+		<div lang='latex'>
+			\sum_{\psi\epsilon\Psi} \int_{A} \psi |f| \ \text{also converges, and} \\ \\
+			\phantom{aaa} \sum_{\phi\epsilon\Phi} \int_{A}\phi \ f = \sum_{\psi\epsilon\Psi} \int_{A} \psi \ f 
+		</div>
+
+		<p class='paragraphs'>IE - It doesn't matter what partition of unity you take to integrate.</p>
+
+		<p class='paragraphs'>(ii) If A and f are bounded, then f is integrable in the extended sense.</p>
+
+		<p class='paragraphs'>(iii) If A is Jordan measureable and f is bounded, then this definition agrees with the old one.</p>
+
+		<p class='paragraphs'>Now we arrive at change of variables.</p>
+
+		<div lang='latex'>
+			If \ g:[a,b] \ \longrightarrow \ \mathbb{R} \ \epsilon \ C^{\infty} \ and \ f: \ \mathbb{R} \ \longrightarrow \ \mathbb{R} \ \epsilon \ C \\ \\
+			\phantom{aaa} \int^{g(b)}_{g(a)} f = \int^{b}_{a} f\circ g \ g' \\ \\
+			\phantom{aaa} \text{if g is one to one, then} \\ \\
+			\phantom{aaa} \int_{g(a,b)} f = \int^{a}_{b} f \circ g |g'|
+		</div>
+
+		<p class='paragraphs'><b>Theorem 2.6</b></p>
+
+		<div lang='latex'>
+			\text{Let} \ A \ \subset \ \mathbb{R}^{n} \ \text{be an open set and} \ g: \ A \ \longrightarrow \ \mathbb{R}^{n} \ \text{be 1-1,} \ C^{\infty} \\ \\
+			\phantom{aaa} s.t. \ det[D(g(x)] \ \neq \ 0 \ \forall \ x \ \epsilon \ A \\ \\
+			\phantom{aaa} if \ f: \ g(A) \ \longrightarrow \ \mathbb{R} \ \text{is integrable, then} \\ \\
+			\phantom{aaa} \int_{g(A)} f = \int_{A}f\circ g |det(Dg)|
+		</div>
+
+
+
+
+	</div>
 
 
 <!-- Optional JavaScript -->
