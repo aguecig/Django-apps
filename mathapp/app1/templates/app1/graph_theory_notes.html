@@ -828,7 +828,7 @@ hr:before {
 			\phantom{aaa} (iii) \ \mathcal{X}'(K_{2n}) = 2n - 1 = \mathcal{X}'(K_{2n-1})
 		</div>
 
-		<p class='paragraphs'>A <b>matching</b> on a graph G = (V,E) is a subset of G where no two edges in the subset are adjacent to each other. 
+		<p class='paragraphs'>A <b>matching</b> on a graph G = (V,E) is a subset M of E where no two edges in the subset are adjacent to each other. 
 		Take the following example:</p>
 
 <center><img src='https://i.ibb.co/Pcmxb3t/matching.png' height=250 width=300></center>
@@ -836,8 +836,15 @@ hr:before {
 		<p class='paragraphs'>The graph G on the far left is a proper edge 2-coloring, and each of the subgraphs on the right is an example of a 
 		matching. Note how the case of one edge will always be a matching, since it cannot possibly be adjacent to any other edges in G.</p>
 
-		
+		<p class='paragraphs'>A matching is called a <b>maximal matching</b> if by adding another edge to the matching, we would then no longer 
+		have a matching. A </b>perfect matching</b> is a matching M such that every vertex in the original graph G is incident to some edge m in M. 
+		Take the following example:</p>
 
+<center><img src='https://i.ibb.co/qB3JQYq/perfect-matching.png' width=300 height=250></center>
+
+		<p class='paragraphs'>The graph G is given. The first graph on the right is an edge coloring, and it also includes all vertcies of G. In this 
+		sense, it is a perfect matching. It is also a maximal matching since adding in any other edge would no longer result in a matching. The far 
+		graph on the right is a matching, but is neither perfect or maxmial.</p>
 
 	</div>
 

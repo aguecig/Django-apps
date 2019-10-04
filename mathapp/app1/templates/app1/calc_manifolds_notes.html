@@ -152,6 +152,7 @@ hr:before {
 				<li><a href="#topic8">8. Measure Zero and Content Zero</a></li>
 				<li><a href="#topic9">9. Fubini's Theorem</a></li>
 				<li><a href="#topic10">10. Partitions of Unity</a></li>
+				<li><a href="#topic11">11. Tensors</a></li>
 			</ul>
 	</div>
 
@@ -830,7 +831,66 @@ hr:before {
 		</div>
 
 
+	</div>
 
+
+
+
+
+<br><br>
+
+	<div class='content'>
+
+		<h4 id='topic11'><center>Tensors</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>Let V be a vector space. Denote:</p>
+
+		<div lang='latex'>
+			V \times ... \times V = V^{k} \\ \\
+			\phantom{aaa}T: \ V^{K} \ \longrightarrow \ \mathbb{R}
+		</div>
+
+		<p class='paragraphs'>T is called a <b>k-tensor</b> if the following conditions are met:</p>
+
+		<div lang='latex'>
+			\forany \ 1 \ \leq \ i \ \leq \ k, \ a \ \epsilon \ \mathbb{R}: \\ \\
+			\phantom{aaa} T(v_{1},...v_{i}+v+{i}',...,v_{k}) = T(v_{1},...v_{i},...,v_{k}) + T(v_{1},...v+{i}',...,v_{k}) \\ \\
+			\phantom{aaa} T(v_{1},...a*v_{i},...,v_{k}) = a*T(v_{1},...v_{i},...,v_{k})
+		</div>
+
+		<p class='paragraphs'>The set of all k-tensors, denoted by:</p>
+
+		<div lang='latex'>\tau^{k}(v)</div>
+
+		<p class='paragraphs'>is a vector space in of itself. Consider any two tensor S and T in this vector space, and some scalar a. We have 
+		the following properties:</p>
+
+		<div lang='latex'>
+			(S + T)(v_{1},...,v_{k}) = S(v_{1},...,v_{k}) + T(v_{1},...,v_{k}) \\ \\
+			\phantom{aaa} (aS)(v_{1},...,v_{k}) = a*S(v_{1},...,v_{k}) 
+		</div>
+
+		<p class='paragraphs'>We can also define the <b>tensor product</b> of two tensors S and T. It is given by:</p>
+
+		<div lang='latex'>
+			S \ \epsilon \ \tau^{k}(v), \ v \ \epsilon \ V^{k} \\ \\
+			\phantom{aaa} T \ \epsilon \ \tau^{l}(v), \ v \ \epsilon \ V^{l} \\ \\
+			\phantom{aaa} S\otimes T \ \epsilon \ \tau^{k+l}(v) \\ \\
+			\phantom{aaa} (S\otimes T)(v_{1},...v_{k+l}) = S(v_{1},...v_{k}) T(v_{1},...v_{l})
+		</div>
+
+		<p class='paragraphs'>The tensor product has the following properties:</p>
+
+		<div lang='latex'>
+			(S_{1}+S_{2})\otimes T = S_{1}\otimes T + S_{2}\otimes T \\ \\
+			\phantom{aaa} S \otimes (T_{1}+T_{2}) = S\otimes T_{1} + S\otimes T_{2} \\ \\
+			\phantom{aaa} (aS)\otimes T = a(S\otimes T) = S \otimes (aT) \\ \\
+			\phantom{aaa} (S\otimes T) \otimes U = S \otimes (T\otimes U)
+		</div>
+
+		<p class='paragraphs'>Here it is worth noting that tensor products are generally not commutative.</p>
 
 	</div>
 
