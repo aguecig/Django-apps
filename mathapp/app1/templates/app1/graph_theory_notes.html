@@ -153,6 +153,7 @@ hr:before {
 				<li><a href="#topic9">9. Spanning Trees, Bridges and Banks</a></li>
 				<li><a href="#topic10">10. Vertex Colorings, Critical Graphs</a></li>
 				<li><a href="#topic11">11. Edge Colorings</a></li>
+				<li><a href="#topic12">12. Graph Decompositions</a></li>
 			</ul>
 	</div>
 
@@ -848,7 +849,60 @@ hr:before {
 
 	</div>
 
-		
+
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic12'><center>Graph Decompositions</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>Let G = (V,E) be a graph, and Let {H1, ... ,Hn} be a collection of subgraphs of G. Suppose the following two conditions 
+		are met:</p>
+
+		<ul class='lists'>
+			<li> Hi and Hj do not share edges for any i and j not equal</li>
+			<li> All vertices of G are in at least one Hi</li>
+		</ul>
+
+		<p class='paragraphs'>Then {H1,...Hn} is called a <b>graph decomposition</b> of G. Take the following example:</p>
+
+<center><img src='https://i.ibb.co/Bqm93Tf/graph-decomp.png' height=250 width=400></center>
+
+		<p class='paragraphs'>We can see that the two subgraphs have no common edges in K4, but they do share similar vertices. Furthermore, the union 
+		of the edges in H1 and H2 produces K4, so the set of H1 and H2 is a graph decomposition of K4. </p>
+
+		<p class='paragraphs'>Now suppose that for a graph G = (V,E), a set of subgraphs {H1,...Hn} form a graph decomposition. Furthermore, let each 
+		Hi be a proper edge coloring/ Then we call the graph decomposition a <b>graph decomposition by 1-regular subgraphs</b>. Take the example below:</p>
+
+<center><img src='https://i.ibb.co/3pnKJgF/graph-decomp-reg.png' height=250 width=400></center>
+
+		<p class='paragraphs'>We can see that the subgraphs H1, H2 and H3 are all proper edge colorings. Furthermore, none of there edges are overlapping 
+		in K4. Finally, there union forms K4. So {H1, H2, H3} form a graph decomposition by 1-regular subgraphs.</p>
+
+		<p class='paragraphs'>A <b>Hamiltonian cycle</b> of a graph G = (V,E) is  a cycle that contains all the vertices of G. This definition is 
+		fairly straight forward. For instance, C4 would be a Hamiltonian cycle of K4.</p>
+
+		<p class='paragraphs'>Here is a theorem on Hamiltonian cycles:</p>
+
+		<div lang='latex'>
+			G = (V,E) , \ |V| \ \geq \ 3. \ \text{Then} \\ \\
+			\phantom{aaa} \min_{v \ \epsilon \ V} \{deg(v) \} = \delta(G) \ \geq \ \frac{|V|}{2} \ \text{implies} \\ \\
+			\phantom{aaa} \text{G has a Hamiltonian cycle}
+		</div>
+
+		<p class='paragraphs'>Another theorem is about complete graphs:</p>
+
+		<div lang='latex'>
+			K_{2n+1} \ \text{has a decomposition by n Hamiltonian cycles} \\ \\
+			\phantom{aaa} K_{2n} \ \text{has a decomposition as n - 1 Hamiltonian cycles and one 1-factor}
+		</div>
+	
+	</div>	
 
 
 
