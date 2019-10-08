@@ -149,6 +149,7 @@ hr:before {
 				<li><a href="#topic2">2. Groups</a></li>
 				<li><a href="#topic3">3. Permutation and Symmetric Groups</a></li>
 				<li><a href="#topic4">4. Dihedral Groups</a></li>
+				<li><a href="#topic5">5. Cosets</a></li>
 			</ul>
 	</div>
 
@@ -171,7 +172,8 @@ hr:before {
 		<p class='paragraphs'>For example:</p>
 
 				<div lang='latex'>
-					A = \{-1, 0, 1\} \ \ B = \{apple, orange\}
+					A = \{-1, 0, 1\} \\ \\
+					\phantom{aaa} B = \{apple, orange\} \\ \\
 					\phantom{aaa} \mathcal{R} = \{(1, apple), (0, orange), (0, apple) \}
 				</div>
 
@@ -408,7 +410,63 @@ hr:before {
 	</div>
 
 
+
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic5'><center>Cosets</center></h4>
+
+			<hr>
 		
+		<p class='paragraphs'>Let H be a subgroup of G. Consider the following:</p>
+
+			<div lang='latex'>
+				g \ \epsilon \ G \\ \\
+				\phantom{aaa} \text{define} \ gH = \{gh \ | \ h \ \epsilon \ H \} 
+			</div>
+
+		<p class='paragraphs'>gH is called the <b>left coset</b> of g. Here is a concrete example of cosets of the multiplicative group U(8):</p>
+
+		<p class='paragraphs'>U(8) = {1,3,5,7}, H = {1, 7} (verify H is a subgroup of G if you like).</p>
+
+		<ul class='lists'>
+			<li> 1H = {1,7}</li>
+			<li> 3H = {3,5} </li>
+			<li> 5H = {5,3} = 3H </li>
+			<li> 7H = {7,1} = 1H </li>
+		</ul>
+
+		<p class='paragraphs'>To illustrate the computation for this, take the case of 3H. We have fixed a particular element in G, which in this 
+		case is 3. Now we take 3 and preform the group operation (multiplication in this case) with each element in H. So, 3*1 == 3 mod 8 and 
+		3 * 7 = 21 == 5 mod 8. Hence, 3H = {3,5}. Now we present the following properties of cosets.</p>
+
+		<p class='paragraphs'>Let G be a group and H be a subgroup of G. Furthermore, let g, g1 and g2 be elements of G. Then the folliwing hold true:</p>
+
+			<div lang='latex'>
+				(i) \ g \ \epsilon \ gH \\ \\
+				\phantom{aaa} (ii) \ gH \ \epsilon \ H \ \text{iff} \ g \ \epsilon \ H \\ \\
+				\phantom{aaa} (iii) \ g_{1}H = g_{2}H \ \texty{iff} \ g_{1} \ \epsilon \ g_{2}H \\ \\
+				\phantom{aaa} (iv) \ \text{Either} \ g_{1}H = g_{2}H \ \text{or} \ g_{1}H \ \cap \ g_{2}H = \oslash \\ \\
+				\phantom{aaa} (v) \ g_{1}H = g_{2}H \ \text{iff} \ g_{1}^{-1}g_{2} \ \epsilon \ H \\ \\
+				\phantom{aaa} (vi) \ |g_{1}H| = |g_{2}H| \\ \\
+				\phantom{aaa} (vii) \ |gH| = |H|
+			</div>
+
+		<p class='paragraphs'>Given a subgroup H of G, the <b>index</b> of H in G is noted [G:H], and represents the number of distince left cosets of 
+		H in G. In our U(8) example with H = {1,7}, we would have [G:H] = 2.</p>
+
+		<p class='paragraphs'><b>Lagrange's Theorem</b></p>
+
+			<div lang='latex'>
+				\text{Let H be a subgroup of a finite group G. Then} \ | \text{H} | \ \text{divides} \ |  \text{G}  | \ ,\ \text{and furthermore:} \\ \\
+				\phantom{aaa} [G:H] = \frac{|G|}{|H|}
+			</div>
+
+	</div>
 
 
 
