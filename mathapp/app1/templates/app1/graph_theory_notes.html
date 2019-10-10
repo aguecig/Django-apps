@@ -953,7 +953,42 @@ hr:before {
 			<li><b>Cycle</b>: A walk without repeated edges and vertices, except A1 = An</li>
 		</ul>
 
+		<p class='paragraphs'>Consider the following example:</p>
+
+<center><img src='https://i.ibb.co/ck8nm7c/sample-graph.png' width=300 height=250></center>
+
+		<ul class='lists'>
+			<li>AbAaB is not a walk</li>
+			<li>AeB is not a walk</li>
+			<li>CeC is a cycle of length 1</li>
+			<li>AbBfA is a cycle of length 2</li>
+			<li>AbBfAdC is a trail and a path</li>
+			<li>AbBcC is a path</li>
+			<li>AdCcDfA is a Hamiltonian cycle</li>
+			<li>AbBcCeCdAfBaA is a circuit</li>
+		</ul>
+
+		<p class='paragraphs'>Just like we had adjancency matrices for finite simple graphs, so to can we have them for multi and pseudographs. In 
+		simple graphs, a vertex could not be adjacent to itself. In a pseudo graph, a loop on a vertex counts as degree 2. So, in our above example, 
+		the adjacency matrix would be (with columns and rows under labelling A, B, C):</p>
+
+		<div lang='latex'>
+			A = \begin{bmatrix} 0&3&1 \\ 3&0&1 \\ 1&1&1 \end{bmatrix}
+		</div>
+
+		<p class='paragraphs'>Here is a useful theorem: The entry ij of the kth power of the adjacency matrix of a graph G is the number of walks of 
+		length k from vertex i to vertex j. Take our above example, we have:</p>
+
+		<div lang='latex'>
+			A^{2} = \begin{bmatrix} 10&1&4 \\ 1&10&4 \\ 4&4&4 \end{bmatrix}
+		</div>
 	
+		<p class='paragraphs'>This graph tells us the number of walks of length 2 from one vertex to another. For instance, we can see that A to B 
+		has only one walk of length two: AdCcB (or in reverse).</p>
+
+		<p class='paragraphs'><b>Euler's Circuit Theorem</b>: Consider a circuit that contains every possible edge of a graph G = (V,E). We say 
+		G is Eulerian. Now let G also be a connected pseudo graph. Then G is Eulerian if and only if every vertex in G has even degree.</p>
+
 
 	</div>
 
