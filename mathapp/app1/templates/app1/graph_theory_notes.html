@@ -969,7 +969,7 @@ hr:before {
 		</ul>
 
 		<p class='paragraphs'>Just like we had adjancency matrices for finite simple graphs, so to can we have them for multi and pseudographs. In 
-		simple graphs, a vertex could not be adjacent to itself. In a pseudo graph, a loop on a vertex counts as degree 2. So, in our above example, 
+		simple graphs, a vertex could not be adjacent to itself. In a pseudo graph, a loop on a vertex counts as degree 1. So, in our above example, 
 		the adjacency matrix would be (with columns and rows under labelling A, B, C):</p>
 
 		<div lang='latex'>
@@ -988,6 +988,30 @@ hr:before {
 
 		<p class='paragraphs'><b>Euler's Circuit Theorem</b>: Consider a circuit that contains every possible edge of a graph G = (V,E). We say 
 		G is Eulerian. Now let G also be a connected pseudo graph. Then G is Eulerian if and only if every vertex in G has even degree.</p>
+
+		<p class='paragraphs'>We define an <b>Euler trail</b> to be a trail that contains every edge of some graph G. An <b>open Euler trail</b> 
+		has beginning and ending vertices that are different.</p>
+
+		<p class='paragraphs'>Now we present the following fact that allow us to to solve the original problem at the beginning of this 
+		advanced topics section (the seven bridges of Konigsberg).</p>
+
+		<p class='paragraphs'>Suppose G = (V,E) is a pseudograph. G has an open Euler trail iff G has <b>exactly</b> two vertices of odd degree.</p>
+
+		<p class='paragraphs'>Recall the problem of the seven bridges of Konigsberg: </p>
+
+<center><img src='https://upload.wikimedia.org/wikipedia/commons/5/5d/Konigsberg_bridges.png' width=250 height=250 /></center>
+
+		<p class='paragraphs'>The problem is outlined as follows: Is there a way for a person to travel along each bridge, but only 
+		exactly once? The diagram can be simplified to look like:</p>
+
+<center><img src='https://i.ibb.co/7kMfJY5/bridges.png' width=300 height=250></center>
+
+		<p class='paragraphs'>The degree sequence is given by: 5,3,3,3. So, since there are four vertices of odd degree, we know there is no 
+		Euler trail for the bridges. Furthermore, we know that G has no Euler circuit either, since not every vertex is of even degree. Thus the 
+		problem has no solution. Another useful fact:</p>
+
+		<p class='paragraphs'>Let G be a connected pseudograph. Then, if G has 2h vertices of odd degree and h is not zero, then there are h trails 
+		such that every edge in G appears exactly once in one trail. Moreover: h is the smallest number of trails needed to achieve this.</p>
 
 
 	</div>
