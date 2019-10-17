@@ -17,38 +17,6 @@
 
 <style>
 
-.border {
-	padding: 40px;
-	overflow-x: hidden;
-	-webkit-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	-moz-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-}
-
 .toplinks {
 	float:right;
 	padding:10px;
@@ -147,6 +115,7 @@ hr:before {
   				<li><a href="#topic1">Problem 1</a></li>
 				<li><a href="#topic2">Problem 2</a></li>
 				<li><a href="#topic3">Problem 3</a></li>
+				<li><a href="#topic4">Problem 4</a></li>
 			</ul>
 	</div>
 
@@ -304,9 +273,72 @@ divisors <span style='color:#808030; '>=</span> <span style='color:#808030; '>[<
 <span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span><span style='color:#400000; '>max</span><span style='color:#808030; '>(</span>divisors<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
 </pre>
 
-		<p class='paragraphs'>Largest prime: 6857, run time = 348 ms</p>
+		<p class='paragraphs'>Largest prime = 6857, run time = 348 ms</p>
 
 	</div>
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic4'><center>Problem 4: Largest palindrome product</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'><i>Date posted: 17/10/2019</i></p>
+
+		<p class='paragraphs'><i>Problem rating: 5%</i></p>
+
+		<p class='paragraphs'> A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers 
+		is 9009 = 91 x 99. <b>Find the largest palindrome made from the product of two 3-digit numbers</b>.</p>
+
+		<p class='paragraphs'>Let's first think about how we could optimize our code. If we take a naive approach, we might try to multiply the 
+		number 100 by the numbers 100 through 999, check for and store any palindromes, then proceed to do the same thing for 101, etc. Immediately 
+		we see that the products of 100 x 101 and 101 x 100 are redundant, so we are wasting time. Instead, we only need to check the multiples that 
+		are greater than or equal to the number we are currently checking.</p>
+
+		<p class='paragraphs'>Once we have our product, how do we use our code to check if it is a palindrome? We can't do this directly with integers, 
+		but we could do it with string characters. For instance, suppose we wanted our program to check to see if the word "streetcar" was a palindrome. 
+		We could have our code compare the first letter in the string to the last letter, the second letter to the second last letter, etc. So how then 
+		do we make this possible for an integer like 10201? It's simple: we convert the type to string. If we determine that the string is a palindrome, 
+		we can store its integer type in a list that we will call at the very end of the code to return the maximum of all the palindromes we found. 
+		The code looks like this:</p>
+
+<pre style='color:#000000;background:#ffffff;'>palindromes <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>]</span>
+
+<span style='color:#800000; font-weight:bold; '>for</span> i in range<span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1000</span><span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+    
+    <span style='color:#800000; font-weight:bold; '>for</span> j in range<span style='color:#808030; '>(</span>i<span style='color:#808030; '>,</span><span style='color:#008c00; '>1000</span><span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+        
+        test <span style='color:#808030; '>=</span> True
+        
+        product <span style='color:#808030; '>=</span> i<span style='color:#808030; '>*</span>j
+        pString <span style='color:#808030; '>=</span> str<span style='color:#808030; '>(</span>product<span style='color:#808030; '>)</span>
+        L <span style='color:#808030; '>=</span> len<span style='color:#808030; '>(</span>pString<span style='color:#808030; '>)</span>
+        
+        <span style='color:#800000; font-weight:bold; '>for</span> k in range<span style='color:#808030; '>(</span>L<span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+            
+            <span style='color:#800000; font-weight:bold; '>if</span> pString<span style='color:#808030; '>[</span>k<span style='color:#808030; '>]</span> <span style='color:#808030; '>!</span><span style='color:#808030; '>=</span> pString<span style='color:#808030; '>[</span>L<span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>-</span>k<span style='color:#808030; '>]</span><span style='color:#800080; '>:</span>
+                
+                test <span style='color:#808030; '>=</span> False
+                <span style='color:#800000; font-weight:bold; '>break</span>
+                
+        <span style='color:#800000; font-weight:bold; '>if</span> test <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> True<span style='color:#800080; '>:</span>
+            
+            palindromes<span style='color:#808030; '>.</span>append<span style='color:#808030; '>(</span>product<span style='color:#808030; '>)</span>
+
+print<span style='color:#808030; '>(</span><span style='color:#603000; '>max</span><span style='color:#808030; '>(</span>palindromes<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+</pre>
+
+		<p class='paragraphs'>Largest palindrome = 906609, run time = 863 ms</p>
+
+	</div>
+
+
+
+
 
 		
 
