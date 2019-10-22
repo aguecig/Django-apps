@@ -17,38 +17,6 @@
 
 <style>
 
-.border {
-	padding: 40px;
-	overflow-x: hidden;
-	-webkit-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	-moz-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-}
-
 .toplinks {
 	float:right;
 	padding:10px;
@@ -151,6 +119,7 @@ hr:before {
 				<li><a href="#topic4">4. Dihedral Groups</a></li>
 				<li><a href="#topic5">5. Cosets</a></li>
 				<li><a href="#topic6">6. Prime Numbers, Groups and Euler's Theorem</a></li>
+				<li><a href="#topic7">7. Isomorphisms</a></li>
 			</ul>
 	</div>
 
@@ -499,6 +468,42 @@ hr:before {
 		the size of G is prime and if g is not the identity, then g is a generator of g. Any group of order prime p is isomorphic to the integer group 
 		modulo p.</p>
 
+
+	</div>
+
+
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic7'><center>Isomorphisms</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>Now we discuss the idea of two groups being structurally identical, or <b>isomorphic</b> to each other. We call 
+		two groups G and H isomorphic if there exists a bijection, say phi, with the following property:</p>
+
+		<div lang='latex'>
+			\phi: \ G \ \longrightarrow \ H \\ \\
+			\phantom{aaa} \phi(a*b) = \phi(a)  \phi(b)
+		</div>
+
+		<p class='paragraphs'>It turns out that if G is a group of infinite order, it is isomorphic to Z, and if G is a group of finite order n, it 
+		is isomorphic to Z modulo n. Now we list some useful isomorphic properties for groups G and H with bijection phi:</p>
+
+		<div lang='latex'>
+			(1) \ \phi(e_{G}) = e_{H} \\
+			\phantom{aaa} (2) \ |G| = |H| \\
+			\phantom{aaa} (3) \ \phi(g)^{-1} = \phi(g^{-1}) \\ 
+			\phantom{aaa} (4) \ \text{if G abelian, then H abelian} \\
+			\phantom{aaa} (5) \ \text{if G cyclic, then H cyclic} \\
+			\phantom{aaa} (6) \ \text{if G has a subgroup of order n, so does H} \\
+			\phantom{aaa} (7) \ \forany \ g \ \epsilon \ G, \ |g| = |\phi(g)|
+		</div>
+		
 
 	</div>
 
