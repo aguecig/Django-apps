@@ -120,11 +120,12 @@ hr:before {
 				<li><a href="#topic5">5. Cosets</a></li>
 				<li><a href="#topic6">6. Prime Numbers, Groups and Euler's Theorem</a></li>
 				<li><a href="#topic7">7. Isomorphisms</a></li>
+        <li><a href="#topic8">8. Direct Products</a></li>
 			</ul>
 	</div>
 
 	<div class='introduction'>
-		
+
 	</div>
 
 	<div class='content'>
@@ -158,7 +159,7 @@ hr:before {
 			<p class='paragraphs'>(ii) Symmetric:</p>
 
 				<div lang='latex'>
-					 (a,b) \ \epsilon \ \mathcal{R} \ \longrightarrow (b,a) \ \epsilon \ \mathcal{R}  
+					 (a,b) \ \epsilon \ \mathcal{R} \ \longrightarrow (b,a) \ \epsilon \ \mathcal{R}
 				</div>
 
 			<p class='paragraphs'>(iii) Transitive:</p>
@@ -167,14 +168,14 @@ hr:before {
 					 (a,b) \ \epsilon \ \mathcal{R}, \ (b,c) \ \epsilon \ \mathcal{R} \longrightarrow \ (a,c) \ \epsilon \ \mathcal{R}
 				</div>
 
-			<p class='paragraphs'>Let's take a look at a couple of examples. The first example is a relation that is not an equivalence relation. 
+			<p class='paragraphs'>Let's take a look at a couple of examples. The first example is a relation that is not an equivalence relation.
 			Take a function f defined by</p>
 
 				<div lang='latex'>
 					f: \mathbb{R} \ \to \ \mathbb{R}, \ f(x) = x^{2} \ \ \ \mathcal{R} = \{(x,x^{2}) \ | \ x \ \epsilon \ \mathbb{R} \} \ \subseteq \ \mathbb{R} \ \times \ \mathbb{R}
 				</div>
 
-			<p class='paragraphs'>The relation fails to be reflexive, since for example (2,2) is not in the subset. Indeed, 2 squared is 4, so rather it 
+			<p class='paragraphs'>The relation fails to be reflexive, since for example (2,2) is not in the subset. Indeed, 2 squared is 4, so rather it
 			is the case that (2,4) is in the subset.</p>
 
 			<p class='paragraphs'>For the next example, consider the modular arithmetic class of n = 5. Then the relation</p>
@@ -188,7 +189,7 @@ hr:before {
 
 				<div lang='latex'>
 					\forall \ \ \ a \ \epsilon \ \mathbb{Z} \\
-					\phantom{aaa} a \ \equiv \ a \ mod \ n \\ 
+					\phantom{aaa} a \ \equiv \ a \ mod \ n \\
 					\phantom{aaa} \therefore \ (a,a) \ \epsilon \ \mathcal{R}
 				</div>
 
@@ -197,9 +198,9 @@ hr:before {
 
 				<div lang='latex'>
 					\forall \ \ \ (a ,b) \ \epsilon \ \mathcal{R} \\
-					\phantom{aaa} a \ \equiv \ b \ mod \ n \\ 
-					\phantom{aaa} a - b = ln, \ l \ \epsilon \ \mathbb{Z} \\ 
-					\phantom{aaa} b - a = -ln \\ 
+					\phantom{aaa} a \ \equiv \ b \ mod \ n \\
+					\phantom{aaa} a - b = ln, \ l \ \epsilon \ \mathbb{Z} \\
+					\phantom{aaa} b - a = -ln \\
 					\phantom{aaa} b \ \equiv \ a \ mod \ n \\
 					\phantom{aaa} (b ,a) \ \epsilon \ \mathcal{R} \\
 				</div>
@@ -208,7 +209,7 @@ hr:before {
 
 				<div lang='latex'>
 					(a ,b) \ \epsilon \ \mathcal{R}, \ (b ,c) \ \epsilon \ \mathcal{R} \\
-					\phantom{aaa} a - b = ln, \ l \ \epsilon \ \mathbb{Z}, \ \phantom{aaa} b - c = mn, \ m \ \epsilon \ \mathbb{Z} \\ 
+					\phantom{aaa} a - b = ln, \ l \ \epsilon \ \mathbb{Z}, \ \phantom{aaa} b - c = mn, \ m \ \epsilon \ \mathbb{Z} \\
 					\phantom{aaa} (a - b) + (b - c) = a - c = ln - mn = (l-m)n \\
 					\phantom{aaa} a \ \equiv \ c \ mod \ n \\
 					\phantom{aaa} (a ,c) \ \epsilon \ \mathcal{R} \\
@@ -216,14 +217,14 @@ hr:before {
 
 			<p class='paragraphs'>Which shows the relation is indeed an equivalence relation.</p>
 
-			<p class='paragraphs'>Suppose we have an equivalence relation, R, on a set X. The <b>equivalence class</b> of an element x that 
+			<p class='paragraphs'>Suppose we have an equivalence relation, R, on a set X. The <b>equivalence class</b> of an element x that
 			belongs to X is defined as</p>
 
 				<div lang='latex'>
 					[x] = \{ y \ | \ (x,y) \ \epsilon \ \mathcal{R} \}
 				</div>
 
-			<p class='paragraphs'>In words: Given a fixed x, what values of y will pair with x so that the product is in the equivalence relation? 
+			<p class='paragraphs'>In words: Given a fixed x, what values of y will pair with x so that the product is in the equivalence relation?
 			Consider the example of modular arithmetic for n = 5. What is [2]? It is given by</p>
 
 				<div lang='latex'>
@@ -246,7 +247,7 @@ hr:before {
 					X = \bigcup\limits_{i=1}^{n} X_{i} \ | \ X_{m} \cup X_{n} = \varnothing, \ m \neq n
 				</div>
 
-				
+
 
 	</div>
 
@@ -267,10 +268,10 @@ hr:before {
 					\phantom{aaa} (iii) \ \forall \ a \ \epsilon \ G, \ \exists \ a^{-1} \ \epsilon \ G \ s.t. \ a*a^{-1} = a^{-1}*a = e
 				</div>
 
-			<p class='paragraphs'>An example of a group is the set of all integers under the binary operation of addition. Or better yet, 
+			<p class='paragraphs'>An example of a group is the set of all integers under the binary operation of addition. Or better yet,
 			the set of integers <b>modulo n</b> under addition, which is an example we will be coming back to time and again.</p>
 
-			<p class='paragraphs'>Suppose we have a group G and a set H which is a subset of G. We call H a <b>subgroup</b> of G if 
+			<p class='paragraphs'>Suppose we have a group G and a set H which is a subset of G. We call H a <b>subgroup</b> of G if
 			H is itself a group. In fact, we can be sure H is a subgroup of G if the following conditions are met:</p>
 
 				<ol class='paragraphs'>
@@ -279,20 +280,20 @@ hr:before {
 					<li>If h exists in H, then so does its inverse</li>
 				</ol>
 
-			<p class='paragraphs'> Suppose now we have a group G that has finite number of elements, and we can find an element in the 
-			G, say a, such that when we perform the binary operation of a with itself iteratively, we eventually obtain all elements of 
+			<p class='paragraphs'> Suppose now we have a group G that has finite number of elements, and we can find an element in the
+			G, say a, such that when we perform the binary operation of a with itself iteratively, we eventually obtain all elements of
 			the group. Then we call &lt;a&gt; the <b>cyclic group generated by a</b>.</p>
 
 			<div lang='latex'>
 				\mathbb{Z}_{6} = <1> \ is \ cyclic \\ \\
-				\phantom{aaa} U_{8} \ is \ not \ cyclic 
+				\phantom{aaa} U_{8} \ is \ not \ cyclic
 			</div>
 
-			<p class='paragraphs'>Here, the first set is integers under addition mod 6, while the second set is integers under multiplication 
+			<p class='paragraphs'>Here, the first set is integers under addition mod 6, while the second set is integers under multiplication
 			mod 8. In other words, there is not integer from 0 through 7 that can generate all the elements of U8.</p>
 
-			<p class='paragraphs'>There is always a simple way to find a subgroup of some already existing group G. Take any element a in G. 
-			Then &lt;a&gt; will always generate a subgroup of G. In fact, it is the case that if G = &lt;a&gt;, then ALL subgroups of G must 
+			<p class='paragraphs'>There is always a simple way to find a subgroup of some already existing group G. Take any element a in G.
+			Then &lt;a&gt; will always generate a subgroup of G. In fact, it is the case that if G = &lt;a&gt;, then ALL subgroups of G must
 			be cyclic.</p>
 
 	</div>
@@ -311,17 +312,17 @@ hr:before {
 
 		<p>We begin this section with a few definitions and examples.</p>
 
-		<p>Let X be a set where X = {1, 2, 3, ..., n}. A <b>permutation</b> is a bijection that maps the set X onto itself. To understand the 
+		<p>Let X be a set where X = {1, 2, 3, ..., n}. A <b>permutation</b> is a bijection that maps the set X onto itself. To understand the
 		notation we will be using for such maps, take the following example:</p>
 
 		<div lang='latex'>
 			\sigma(x) = \begin{pmatrix}1&2&3&4&5\\1&3&4&2&5\end{pmatrix}
 		</div>
 
-		<p class='paragraphs'>Here, sigma denotes the permutation map, and the value 1 is mapped to 1 (itself), the value 2 is mapped to 3, the 
+		<p class='paragraphs'>Here, sigma denotes the permutation map, and the value 1 is mapped to 1 (itself), the value 2 is mapped to 3, the
 		value 3 is mapped to 4, the value 4 is mapped to 2 and the value 5 is mapped to 5 (itself).</p>
 
-		<p class='paragraphs'>A <b>permutation group</b> of a set X is a set of permutation functions that form a group, where the operation is the 
+		<p class='paragraphs'>A <b>permutation group</b> of a set X is a set of permutation functions that form a group, where the operation is the
 		composition of functions.</p>
 
 		<p class='paragraphs'>Take the following example:</p>
@@ -333,22 +334,22 @@ hr:before {
 			\phantom{aaa} \sigma \circ \tau = \sigma[\tau(x)] = \sigma\tau = \begin{pmatrix}1&2&3&4&5\\3&4&1&5&2\end{pmatrix} \\ \\
 		</div>
 
-		<p class='paragraphs'>Fix an integer n greater than or equal to one, and let Sn be the set of all permutations of {1, 2, ..., n}. Sn is 
+		<p class='paragraphs'>Fix an integer n greater than or equal to one, and let Sn be the set of all permutations of {1, 2, ..., n}. Sn is
 		called the <b>nth symmetric group</b>. Now, if n is greater than or equal to 3, Sn is a nonabelian group of order n.</p>
 
-		<p class='paragraphs'>There is a more compact way of writing out these elements of the group, and we can do so using <b>cycle notation</b>. 
+		<p class='paragraphs'>There is a more compact way of writing out these elements of the group, and we can do so using <b>cycle notation</b>.
 		To understand cycle notation, study the following example:</p>
 
 		<div lang='latex'>
 			\begin{pmatrix}1&2&3&4&5&6\\2&1&4&6&5&3\end{pmatrix} = (1 \ 2)(3 \ 4 \ 6)
 		</div>
 
-		<p class='paragraphs'>In the above example, we see that 1 goes to 2, and 2 goes back to 1. Hence, they make a <b>cycle</b>, which we write 
-		as (1 2) for short. We also see that 3 goes to 4, 4 goes to 6 and 6 goes back to 3. This defines another cycle (3 4 6). Finally, we see 
+		<p class='paragraphs'>In the above example, we see that 1 goes to 2, and 2 goes back to 1. Hence, they make a <b>cycle</b>, which we write
+		as (1 2) for short. We also see that 3 goes to 4, 4 goes to 6 and 6 goes back to 3. This defines another cycle (3 4 6). Finally, we see
 		5 goes to itself. Its cycle notation is omitted as it is understood that this is the case upon omission.</p>
 
-		<p class='paragraphs'>A <b>2-cycle</b> is simply a permutation cycle with 2 elements. In the above example, (1 2) is a 2-cycle. Further, 
-		a 2-cycle is called a <b>transposition</b>. It is a fact that any element in a symmetric group can be written as a product of 2-cycles, 
+		<p class='paragraphs'>A <b>2-cycle</b> is simply a permutation cycle with 2 elements. In the above example, (1 2) is a 2-cycle. Further,
+		a 2-cycle is called a <b>transposition</b>. It is a fact that any element in a symmetric group can be written as a product of 2-cycles,
 		however such a representation is not unique.</p>
 
 	</div>
@@ -366,15 +367,15 @@ hr:before {
 
 			<hr>
 
-		<p class='paragraphs'>The <b>nth dihedral group</b>, or Dn (for n at least 3 or larger), is the group of rigid motions of a regular n-gon. We label the vertices in a clockwise 
+		<p class='paragraphs'>The <b>nth dihedral group</b>, or Dn (for n at least 3 or larger), is the group of rigid motions of a regular n-gon. We label the vertices in a clockwise
 		fashion. Take the example of the 4th dihedral group below:</p>
 
 <center><img src='https://i.ibb.co/wYCZxxN/D4.png' height=250 width=400></center>
 
-		<p class='paragraphs'>D4 has precisely 8 elements in it: the identity,  the three related to rigid rotations (in a clockwise manner), two related to diagonal flips 
+		<p class='paragraphs'>D4 has precisely 8 elements in it: the identity,  the three related to rigid rotations (in a clockwise manner), two related to diagonal flips
 		and two related to horizontal and vertical flips.</p>
 
-		<p class='paragraphs'>In fact, it is a fact that the nth dihedral group will have exactly 2n elements in its group. Furthermore, it is quite easy 
+		<p class='paragraphs'>In fact, it is a fact that the nth dihedral group will have exactly 2n elements in its group. Furthermore, it is quite easy
 		to see that Dn is a proper subset of Sn, the nth symmetric group (or permutation group). Dn is also <b>not</b> cyclic.</p>
 
 	</div>
@@ -391,12 +392,12 @@ hr:before {
 		<h4 id='topic5'><center>Cosets</center></h4>
 
 			<hr>
-		
+
 		<p class='paragraphs'>Let H be a subgroup of G. Consider the following:</p>
 
 			<div lang='latex'>
 				g \ \epsilon \ G \\ \\
-				\phantom{aaa} \text{define} \ gH = \{gh \ | \ h \ \epsilon \ H \} 
+				\phantom{aaa} \text{define} \ gH = \{gh \ | \ h \ \epsilon \ H \}
 			</div>
 
 		<p class='paragraphs'>gH is called the <b>left coset</b> of g. Here is a concrete example of cosets of the multiplicative group U(8):</p>
@@ -410,8 +411,8 @@ hr:before {
 			<li> 7H = {7,1} = 1H </li>
 		</ul>
 
-		<p class='paragraphs'>To illustrate the computation for this, take the case of 3H. We have fixed a particular element in G, which in this 
-		case is 3. Now we take 3 and preform the group operation (multiplication in this case) with each element in H. So, 3*1 == 3 mod 8 and 
+		<p class='paragraphs'>To illustrate the computation for this, take the case of 3H. We have fixed a particular element in G, which in this
+		case is 3. Now we take 3 and preform the group operation (multiplication in this case) with each element in H. So, 3*1 == 3 mod 8 and
 		3 * 7 = 21 == 5 mod 8. Hence, 3H = {3,5}. Now we present the following properties of cosets.</p>
 
 		<p class='paragraphs'>Let G be a group and H be a subgroup of G. Furthermore, let g, g1 and g2 be elements of G. Then the folliwing hold true:</p>
@@ -426,7 +427,7 @@ hr:before {
 				\phantom{aaa} (vii) \ |gH| = |H|
 			</div>
 
-		<p class='paragraphs'>Given a subgroup H of G, the <b>index</b> of H in G is noted [G:H], and represents the number of distince left cosets of 
+		<p class='paragraphs'>Given a subgroup H of G, the <b>index</b> of H in G is noted [G:H], and represents the number of distince left cosets of
 		H in G. In our U(8) example with H = {1,7}, we would have [G:H] = 2.</p>
 
 		<p class='paragraphs'><b>Lagrange's Theorem</b></p>
@@ -452,8 +453,8 @@ hr:before {
 
 			<hr>
 
-		<p class='paragraphs'>Prime numbers play a key role in the study of groups, so it is essential we go over some fundamental properties of them. 
-		The first such one is: given a positive integer n, how can we find the number of integers that are less than and relatively prime to n? This is 
+		<p class='paragraphs'>Prime numbers play a key role in the study of groups, so it is essential we go over some fundamental properties of them.
+		The first such one is: given a positive integer n, how can we find the number of integers that are less than and relatively prime to n? This is
 		precisely given by Euler's <b>totient function</b>:</p>
 
 		<div lang='latex'>
@@ -464,8 +465,8 @@ hr:before {
 
 		<p class='paragraphs'>This result is important given the next theorem:</p>
 
-		<p class='paragraphs'>If a group G is of finite order, and g is an element in G, then the order of g divides the size of G. Furthermore, if 
-		the size of G is prime and if g is not the identity, then g is a generator of g. Any group of order prime p is isomorphic to the integer group 
+		<p class='paragraphs'>If a group G is of finite order, and g is an element in G, then the order of g divides the size of G. Furthermore, if
+		the size of G is prime and if g is not the identity, then g is a generator of g. Any group of order prime p is isomorphic to the integer group
 		modulo p.</p>
 
 
@@ -483,7 +484,7 @@ hr:before {
 
 			<hr>
 
-		<p class='paragraphs'>Now we discuss the idea of two groups being structurally identical, or <b>isomorphic</b> to each other. We call 
+		<p class='paragraphs'>Now we discuss the idea of two groups being structurally identical, or <b>isomorphic</b> to each other. We call
 		two groups G and H isomorphic if there exists a bijection, say phi, with the following property:</p>
 
 		<div lang='latex'>
@@ -491,22 +492,72 @@ hr:before {
 			\phantom{aaa} \phi(a*b) = \phi(a)  \phi(b)
 		</div>
 
-		<p class='paragraphs'>It turns out that if G is a group of infinite order, it is isomorphic to Z, and if G is a group of finite order n, it 
+		<p class='paragraphs'>It turns out that if G is a group of infinite order, it is isomorphic to Z, and if G is a group of finite order n, it
 		is isomorphic to Z modulo n. Now we list some useful isomorphic properties for groups G and H with bijection phi:</p>
 
 		<div lang='latex'>
 			(1) \ \phi(e_{G}) = e_{H} \\
 			\phantom{aaa} (2) \ |G| = |H| \\
-			\phantom{aaa} (3) \ \phi(g)^{-1} = \phi(g^{-1}) \\ 
+			\phantom{aaa} (3) \ \phi(g)^{-1} = \phi(g^{-1}) \\
 			\phantom{aaa} (4) \ \text{if G abelian, then H abelian} \\
 			\phantom{aaa} (5) \ \text{if G cyclic, then H cyclic} \\
 			\phantom{aaa} (6) \ \text{if G has a subgroup of order n, so does H} \\
 			\phantom{aaa} (7) \ \forany \ g \ \epsilon \ G, \ |g| = |\phi(g)|
 		</div>
-		
+
 
 	</div>
 
+
+
+
+
+  <br>
+  <br>
+
+  <div class='content'>
+
+  	<h4 id='topic8'><center>Direct Products</center></h4>
+
+  		<hr>
+
+      <p class='paragraphs'>So far, we have only discussed groups as single objects with there unique binary
+        operations, but it is possible to but groups together in what is called <b>direct products</b>. This is
+        defined as follows:</p>
+
+      <div lang='latex'>
+        \text{Let }(G,*) \text{ and } (H ,\otimes) \text{ be groups.} \\
+        \phantom{aaa} \text{The direct product is defined by } GxH = \{(g,h) \ | \ g \ \epsilon \ G, \ h \ \epsilon \ H\} \\
+        \phantom{aaa} \text{Furthermore, we have } (e_{G},e_{H}) \text{ is the identity of GxH} \\
+        \phantom{aaa} \text{Product of two elements is given by } (g_{1},h_{1})x(g_{2},h_{2}) = (g_{1}*g_{2},h_{2} \otimes h_{2}) \\
+        \phantom{aaa} \text{Inverses are given by }(g,h)^{-1} = (g^{-1},h^{-1})
+      </div>
+
+      <p class='paragraphs'>Now it is a natural question to wonder if any group G can be written as the direct product of some
+      smaller subgroups H and K. This leads us to the definition of an <b>internal direct product</b>:</p>
+
+      <div lang='latex'>
+        \text{Let G be a group and H and K be subgroups of G.} \\
+        \phantom{aaa} \text{G is an internal direct product if:} \\
+        \phantom{aaa} (i) \ G = HK = \{hk \ | \ h \ \epsilon H, \ k \ \epsilon \ K \} \\
+        \phantom{aaa}(ii) \ H \ \cap \ K = \{e\} \\
+        \phantom{aaa} (iii) \ hk = kh \ \forany \ h \ \epsilon H, \ k \ \epsilon \ K
+      </div>
+
+    <p class='paragraphs'>We now illustrate this concept with an example. Take the multiplicative group
+      G = U(8) = {1,3,5,7}. It has proper subgroups H = {1,3} and K = {1,5}. Now let us check the above
+      three conditions to see if G is an internal direct product.</p>
+
+      <div lang='latex'>
+        HK = \{1*1, 1*5, 3*1, 3*5 \} \\
+        \phantom{aaa} = \{1,5,3,7 \} = G \\ \\
+        \phantom{aaa}H \ \cap \ K = \{1\} \\ \\
+        \phantom{aaa}hk = kh \ \text{is trivial, since H and K are abelian}
+      </div>
+
+      <p class='paragraphs'>If G is an internal direct product of H and K, then G is also isomorphic to HxK.</p>
+
+</div>
 
 
 <!-- Optional JavaScript -->

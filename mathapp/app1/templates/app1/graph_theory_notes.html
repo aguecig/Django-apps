@@ -17,38 +17,6 @@
 
 <style>
 
-.border {
-	padding: 40px;
-	overflow-x: hidden;
-	-webkit-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	-moz-box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-	box-shadow:
-		inset #b4b29a 0 0 0 5px,
-		inset #9fb29a 0 0 0 1px,
-		inset #9f9f88 0 0 0 10px,
-		inset #9f8d88 0 0 0 11px,
-		inset #7e8d88 0 0 0 16px,
-		inset #59725f 0 0 0 17px,
-		inset #41635f 0 0 0 22px,
-		inset #000000 0 0 0 23px;
-}
-
 .toplinks {
 	float:right;
 	padding:10px;
@@ -155,6 +123,7 @@ hr:before {
 				<li><a href="#topic11">11. Edge Colorings</a></li>
 				<li><a href="#topic12">12. Graph Decompositions</a></li>
 				<li><a href="#topic13">13. Multi Graphs and Pseudo Graphs</a></li>
+				<li><a href="#topic14">14. Cages</a></li>
 			</ul>
 	</div>
 
@@ -1012,6 +981,34 @@ hr:before {
 
 		<p class='paragraphs'>Let G be a connected pseudograph. Then, if G has 2h vertices of odd degree and h is not zero, then there are h trails 
 		such that every edge in G appears exactly once in one trail. Moreover: h is the smallest number of trails needed to achieve this.</p>
+
+
+	</div>
+
+
+
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic14'><center>Cages</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>We now turn our attention to special types of graphs known as <b>cages</b>. Cages are a subset of k-regular graphs, that 
+		is, graphs where each vertex is of degree k. We classify cages into two categories: those that fall under 3-regular, and those that fall under 
+		any other k-regular graph. A smallest finite simple 3-regular graph G with girth g is called a <b>g-cage</b>, and is denoted (3,g)-cage. Any 
+		other finite simple k-regular graph G with girth g is called a <b>k-g-cage</b> and is denoted (k,g)-cage. (Recall: the girth of a graph is equal 
+		to the shortest cycle in the graph.)</p>
+
+		<p class='paragraphs'>Take the following example below:</p>
+
+<center><img src='https://i.ibb.co/YZp29hg/3-5-cage.png' width=300 height=250></center>
+
+		<p class='paragraphs'>The graph above is a (3,5)-cage. In fact, it is the only such 5-cage.</p>
 
 
 	</div>

@@ -116,6 +116,7 @@ hr:before {
 				<li><a href="#topic2">Problem 2</a></li>
 				<li><a href="#topic3">Problem 3</a></li>
 				<li><a href="#topic4">Problem 4</a></li>
+				<li><a href="#topic5">Problem 5</a></li>
 			</ul>
 	</div>
 
@@ -339,6 +340,66 @@ print<span style='color:#808030; '>(</span><span style='color:#603000; '>max</sp
 
 
 
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic5'><center>Problem 5: Smallest multiple</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'><i>Date posted: 27/10/2019</i></p>
+
+		<p class='paragraphs'><i>Problem rating: 5%</i></p>
+
+		<p class='paragraphs'> 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. 
+		<b>What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</b></p>
+
+		<p class='paragraphs'>At first glance, we might think to simply multiply all numbers from 1 through 20 together since this would 
+		indeed give us a number that is divisible by all numbers 1 through 20. But if we stop and think about it for a moment, we will realize 
+		that this is not the <b>smallest</b> possible such number. Take a simple example: what is the smallest number that is divisible by the 
+		numbers 1 through 4? Well, if we compute 1x2x3x4 = 24, we get an answer. However it is clear that the smallest such number is not 24, it 
+		is 12. Why? Well, since 4 is divisible by 2 (2x2 = 4), our scheme produces a redundancy.</p>
+
+		<p class='paragraphs'>The way to solve this problem is to realize that any integer can be written as the distinct product of prime numbers. 
+		So when we write 1x2x3x4 = 24, we can write it instead as 1x2x3x(2x2), where I have replaced 4 with 2x2. Now we can see that we have one too 
+		manys 2s in our product. If we remove one, we get 1x2x3x2 = 12, the desired result. Now let's break down the case of 20:</p>
+
+		<div lang='latex'>
+		1 = 1 \\
+		\phantom{aaa} 2 = 2 \\
+		\phantom{aaa} 3 = 3 \\
+		\phantom{aaa} 4 = 2^{2}\\
+		\phantom{aaa} 5 = 5\\
+		\phantom{aaa} 6 = (2)(3)\\
+		\phantom{aaa} 7 = 7\\
+		\phantom{aaa} 8 = 2^{3}\\
+		\phantom{aaa} 9 = 3^{2}\\
+		\phantom{aaa} 10 = (2)(5)\\
+		\phantom{aaa} 11 = 11\\
+		\phantom{aaa} 12 = 2^{2}(3)\\
+		\phantom{aaa} 13 = 13\\
+		\phantom{aaa} 14 = (2)(7)\\
+		\phantom{aaa} 15 = (3)(5)\\
+		\phantom{aaa} 16 = 2^{4} \\
+		\phantom{aaa} 17 = 17 \\
+		\phantom{aaa} 18 = 2(3^{2})\\
+		\phantom{aaa} 19 = 19\\
+		\phantom{aaa} 20 = 2^{2}(5)\\
+		</div>
+
+		<p class='paragraphs'>So we realize that we only need each prime number, plus an additional three 2s and one 3. This gives:</p>
+
+		<div lang='latex'>
+		2^{4}(3^{2})(5)(7)(11)(13)(17)(19)
+		</div>
+
+		<p class='paragraphs'>Smallest such number = 232 792 560, run time = no coding needed</p>
+
+
+	</div>
 
 		
 
