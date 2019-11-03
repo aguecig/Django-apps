@@ -124,6 +124,7 @@ hr:before {
 				<li><a href="#topic12">12. Graph Decompositions</a></li>
 				<li><a href="#topic13">13. Multi Graphs and Pseudo Graphs</a></li>
 				<li><a href="#topic14">14. Cages</a></li>
+				<li><a href="#topic15">15. Plane Drawings</a></li>
 			</ul>
 	</div>
 
@@ -1013,6 +1014,46 @@ hr:before {
 
 	</div>
 
+
+
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic15'><center>Plane Drawings</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'>A <b>plane drawing</b> of a graph G = (V,E) in the two dimensional Euclidean space is defined as follows:</p>
+
+		<ol class='lists'>
+			<li>V is identified with points Vi in two dimensional Euclidean space</li>
+			<li> e in E has end points {v1, v2} and is identified with an arc that is not self intersecting</li>
+			<li>The interior of each edge in G does not intersect any other vertex or point</li>
+		</ol>
+
+		<p class='paragraphs'>Consider the following examples:</p>
+
+<center><img src='https://i.ibb.co/vhmPhvM/plane-graph.png' width=300 height=250></center>
+
+		<p class='paragraphs'>Only the graph on the far right is an example of a planar drawing. The other two have edges that intersect other edges 
+		or other points on the interior of the edges.</p>
+
+		<p class='paragraphs'>A graph is called <b>planar</b> if and only if it has a plane drawing. A useful fact: if we can find a subgraph of 
+		G that is not planar, then we know G itself cannot possibly be planar.</p>
+
+		<p class='paragraphs'>It is natural to define <b>faces</b> of a graph G = (V,E,F), where F denotes the faces of a graph G. The number of 
+		faces of a graph G is isomorphic invariant and they are determined by how the edges cut the graph, as in the following example:</p>
+
+<center><img src='https://i.ibb.co/9yR18mC/faces.png' width=300 height=250></center>
+
+		<p class='paragraphs'>A theorem according to Euler gives the following result: for any plane drawing of a finite simple connected graph 
+		G = (V,E,F), we have |V| - |E| + |F| = 2.</p>
+
+	</div>
 
 
 

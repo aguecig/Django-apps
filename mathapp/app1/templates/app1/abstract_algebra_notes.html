@@ -120,7 +120,9 @@ hr:before {
 				<li><a href="#topic5">5. Cosets</a></li>
 				<li><a href="#topic6">6. Prime Numbers, Groups and Euler's Theorem</a></li>
 				<li><a href="#topic7">7. Isomorphisms</a></li>
-        <li><a href="#topic8">8. Direct Products</a></li>
+        			<li><a href="#topic8">8. Direct Products</a></li>
+				<li><a href="#topic9">9. Normal Subgroups and Factor Groups</a></li>
+				<li><a href="#topic10">10. Simple Groups and Homomorphisms</a></li>
 			</ul>
 	</div>
 
@@ -558,6 +560,95 @@ hr:before {
       <p class='paragraphs'>If G is an internal direct product of H and K, then G is also isomorphic to HxK.</p>
 
 </div>
+
+
+
+
+
+  <br>
+  <br>
+
+  <div class='content'>
+
+  	<h4 id='topic9'><center>Normal Subgroups and Factor Groups</center></h4>
+
+  		<hr>
+
+     	 <p class='paragraphs'>Recall that for a subgroup H of a group G, we write:</p>
+
+		<div lang='latex'>
+			G/H = \{ g_{1}H, \ g_{2}H, ...,\}
+		</div>
+
+	 <p class='paragraphs'>is the set of all left cosets of H with G. The question that now arises is: When is this set G/H itself a group? The answer 
+	depends on what type of subgroup H is.</p>
+
+	 <p class='paragraphs'>A subgroup N of G is called a <b>normal group</b> if gN = Ng for any g in G. It follows that if G is abelian, then every 
+	subgroup of G is in fact normal. The following three statements are equivalent:</p>
+
+	<ol class='lists'>
+		<li>N is normal</li>
+		<li> <div lang='latex'>\forany \ g \ \epsilon \ G, \ gNg^{-1} = \{gng^{-1} \ | \ n \ \epsilon \ N \} \ \subset \ N </div></li>
+		<li> <div lang='latex'> gNg^{-1} = N \ \forany \ g \ \epsilon \ G</div> </li>
+	</ol>
+
+	<p class='paragraphs'><b>Theorem</b>: Let G be a group with normal subgroup N and let G/N be the set of distinct left cosets. Then this set is 
+	a group with operation (g1N)(g2N) = (g1*g2)N. G/N is called a <b>factor group</b> and is read "G mod N"</p>
+
+	</div>
+
+
+
+
+  <br>
+  <br>
+
+	<div class='content'>
+
+  	<h4 id='topic10'><center>Simple Groups and Homomorphisms</center></h4>
+
+  		<hr>
+
+	<p class='paragraphs'>We begin this section with the following fact: Let G be a finite abelian group. If p is a prime and p divides |G|, then G 
+	has an element of order p. Now we define a simple group.</p>
+
+	<p class='paragraphs'>A group is <b>simple</b> if it has no normal subgroups. For example, the set of integers modulo any prime number p is a simple 
+	group.</p>
+
+	<p class='paragraphs'>Recall that when we defined what it means for two groups to be isomorphic, we had three conditions: Injective, surjective, and 
+	a map with the following property:</p>
+
+	<div lang='latex'>
+		\theta: \ G \ \longrightarrow \ H \\
+		\phantom{aaa} \theta(a*b) = \theta(a) \times \theta(b)
+	</div>
+
+	<p class='paragraphs'>This condition of theta is what is known as a <b>homomorphism</b> between groups G and H. Homomorphisms of groups G and H 
+	have the following properties:</p>
+
+	<ol class='lists'>
+		<li> <div lang='latex'>\theta(e_{G}) = e_{H} </div> </li>
+		<li> <div lang='latex'>\theta(a)^{n} = \theta(a^{n}) </div> </li>
+		<li> <div lang='latex'>\theta(a)^{-1} = \theta(a^{-1}) </div> </li>
+		<li> <div lang='latex'>\text{If N is a subgroup of G, then } \theta(N) \ \text{is a subgroup of H} </div> </li>
+		<li> <div lang='latex'>\text{If K is a subgroup of H, then } \theta^{-1}(K) \ \text{is a subgroup of G}  </div> </li>
+		<li> <div lang='latex'>\text{If K is normal, then so is } \theta^{-1}(K) </div> </li>
+	</ol>
+
+		<p class='paragraphs'>We define the <b>kernel</b> of a group homomorphism to be the following group:</p>
+
+		<div lang='latex'>
+			ker \ \theta = \{ \ g \ \epsilon \ G \ | \ \theta(g) = e_{H} \ \}
+		</div>
+
+		<p class='paragraphs'>For example, what would be the kernal of the following homomorphism given by f:</p>
+
+		<div lang='latex'>
+			f: \ \mathbb{Z} \ \longrightarrow \ \mathbb{Z}_{n} \\
+			\phantom{aaa} ker \ f = {0,n,2n,...}
+		</div>
+
+	</div>
 
 
 <!-- Optional JavaScript -->

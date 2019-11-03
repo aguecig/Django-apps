@@ -19,14 +19,11 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '95fe5dc234c19f0e172e494c4e4ab2fce626ec99ffb08d25'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-
-SECRET_KEY = '95fe5dc234c19f0e172e494c4e4ab2fce626ec99ffb08d25'
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False

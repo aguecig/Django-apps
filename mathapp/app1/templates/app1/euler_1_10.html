@@ -117,6 +117,7 @@ hr:before {
 				<li><a href="#topic3">Problem 3</a></li>
 				<li><a href="#topic4">Problem 4</a></li>
 				<li><a href="#topic5">Problem 5</a></li>
+				<li><a href="#topic6">Problem 6</a></li>
 			</ul>
 	</div>
 
@@ -401,6 +402,65 @@ print<span style='color:#808030; '>(</span><span style='color:#603000; '>max</sp
 
 	</div>
 
+
+
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic6'><center>Problem 6: Sum square difference</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'><i>Date posted: 03/11/2019</i></p>
+
+		<p class='paragraphs'><i>Problem rating: 5%</i></p>
+
+		<p class='paragraphs'>The sum of the squares of the first ten natural numbers is</p>
+
+		<div lang='latex'>
+		1^{2} + 2^{2} + ... + 10^{2} = 385
+		</div>
+
+		<p class='paragraphs'>The square of the sum of the first ten natural numbers is</p>
+
+		<div lang='latex'>
+		(1+2+...+10)^{2} = 3025
+		</div>
+
+		<p class='paragraphs'>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the 
+		sum is 3025 - 385 = 2640. </b>Find the difference between the sum of the squares of the first one hundred natural numbers and 
+		the square of the sum.</b></p>
+
+		<p class='paragraphs'>This problem is fairly straight forward. We only need to code two functions: one that finds the sum of the squares 
+		of the first n integers and one that finds the square of the sum of the first n integers. Then we should return their difference. The code 
+		for this is as follows:</p>
+
+<pre style='color:#000000;background:#ffffff;'>def sumOfSquares<span style='color:#808030; '>(</span>n<span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+    
+    total <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span>
+    
+    <span style='color:#800000; font-weight:bold; '>for</span> i in range<span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> n <span style='color:#808030; '>+</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+        total <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> i<span style='color:#808030; '>*</span><span style='color:#808030; '>*</span><span style='color:#008c00; '>2</span>
+        
+    <span style='color:#800000; font-weight:bold; '>return</span> total
+
+def squareOfSum<span style='color:#808030; '>(</span>n<span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+    
+    total <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span>
+    
+    <span style='color:#800000; font-weight:bold; '>for</span> i in range<span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> n <span style='color:#808030; '>+</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#800080; '>:</span>
+        total <span style='color:#808030; '>+</span><span style='color:#808030; '>=</span> i
+        
+    <span style='color:#800000; font-weight:bold; '>return</span> total<span style='color:#808030; '>*</span><span style='color:#808030; '>*</span><span style='color:#008c00; '>2</span>
+
+print<span style='color:#808030; '>(</span> squareOfSum<span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>-</span> sumOfSquares<span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>)</span>
+</pre>
+
+<p class='paragraphs'><i>Answer: 25164150, run time: 1.05 s </p>
 		
 
 
