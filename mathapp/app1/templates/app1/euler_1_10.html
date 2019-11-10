@@ -118,6 +118,7 @@ hr:before {
 				<li><a href="#topic4">Problem 4</a></li>
 				<li><a href="#topic5">Problem 5</a></li>
 				<li><a href="#topic6">Problem 6</a></li>
+				<li><a href="#topic7">Problem 7</a></li>
 			</ul>
 	</div>
 
@@ -460,7 +461,59 @@ def squareOfSum<span style='color:#808030; '>(</span>n<span style='color:#808030
 print<span style='color:#808030; '>(</span> squareOfSum<span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>-</span> sumOfSquares<span style='color:#808030; '>(</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>)</span>
 </pre>
 
-<p class='paragraphs'><i>Answer: 25164150, run time: 1.05 s </p>
+<p class='paragraphs'><i>Answer: 25164150, run time: 1.05 s </i></p>
+
+
+
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic7'><center>Problem 7: 10 001st Prime</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'><i>Date posted: 10/11/2019</i></p>
+
+		<p class='paragraphs'><i>Problem rating: 5%</i></p>
+
+		<p class='paragraphs'>By listing the first six prime numbers: 2, 3, 5, 7, 11 and 13, we can see that the sixth prime is 13. <b>What is 
+		the 10 001st prime number?</b></p>
+
+		<p class='paragraphs'>We can use our code from problem 3 to generate a list of prime numbers, only this time we will finish running the code 
+		when the list of primes has a length of 10 001. The final entry in the list will be the number we are looking for.</p>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>import</span> math
+
+primes <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>3</span><span style='color:#808030; '>]</span>
+
+i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>5</span>
+
+<span style='color:#800000; font-weight:bold; '>while</span> <span style='color:#808030; '>(</span> <span style='color:#400000; '>len</span><span style='color:#808030; '>(</span>primes<span style='color:#808030; '>)</span> <span style='color:#44aadd; '>&lt;</span> <span style='color:#008c00; '>10001</span><span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+    
+    isPrime <span style='color:#808030; '>=</span> <span style='color:#074726; '>True</span>
+    
+    <span style='color:#800000; font-weight:bold; '>for</span> j <span style='color:#800000; font-weight:bold; '>in</span> <span style='color:#400000; '>range</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>3</span><span style='color:#808030; '>,</span><span style='color:#400000; '>int</span><span style='color:#808030; '>(</span>math<span style='color:#808030; '>.</span>sqrt<span style='color:#808030; '>(</span>i<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#44aadd; '>+</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+        
+        <span style='color:#800000; font-weight:bold; '>if</span> i<span style='color:#44aadd; '>%</span>j <span style='color:#44aadd; '>==</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>:</span>
+            
+            isPrime <span style='color:#808030; '>=</span> <span style='color:#074726; '>False</span>
+            
+            <span style='color:#800000; font-weight:bold; '>break</span>
+        
+    <span style='color:#800000; font-weight:bold; '>if</span> isPrime <span style='color:#44aadd; '>==</span> <span style='color:#074726; '>True</span><span style='color:#808030; '>:</span>
+        
+        primes<span style='color:#808030; '>.</span>append<span style='color:#808030; '>(</span>i<span style='color:#808030; '>)</span>
+    
+    i <span style='color:#44aadd; '>+</span><span style='color:#808030; '>=</span> <span style='color:#008c00; '>2</span>
+        
+<span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span>primes<span style='color:#808030; '>[</span><span style='color:#44aadd; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>)</span>
+</pre>
+
+<p class='paragraphs'><i>10 001st prime: 104743, run time: 360 ms </i></p>
 		
 
 

@@ -123,6 +123,8 @@ hr:before {
         			<li><a href="#topic8">8. Direct Products</a></li>
 				<li><a href="#topic9">9. Normal Subgroups and Factor Groups</a></li>
 				<li><a href="#topic10">10. Simple Groups and Homomorphisms</a></li>
+				<li><a href="#topic11">11. Isomorphism Theorems</a></li>
+				<li><a href="#topic12">12. Rings and Fields</a></li>
 			</ul>
 	</div>
 
@@ -647,6 +649,73 @@ hr:before {
 			f: \ \mathbb{Z} \ \longrightarrow \ \mathbb{Z}_{n} \\
 			\phantom{aaa} ker \ f = {0,n,2n,...}
 		</div>
+
+	</div>
+
+
+
+
+
+  <br>
+  <br>
+
+	<div class='content'>
+
+  	<h4 id='topic11'><center>Isomorphism Theorems</center></h4>
+
+  		<hr>
+
+	<p class='paragraphs'>Now we come to three important theorems of group isomorphisms. The first one is probably the most important, while the second 
+	and third are not as relevant.</p>
+
+	<div lang='latex'>
+		\theta: \ G \ \longrightarrow \ H \ \text{a group homomorphism} \\ \\
+		\phantom{aaa} \text{First Isomorphism Theorem: Let } L = Im(\theta) \ \subseteq \ H \\
+		\phantom{aaa} \text{then } G/ker(\theta) \simeq \ L \\ \\
+		\phantom{aaa} \text{Second Isomorphism Theorem: Let H be a subgroup of G and N be a normal subgroup of G. Then } \\ 
+		\phantom{aaa} \text{HN is a subgroup of G} \\
+		\phantom{aaa} \text H\cap N \text{ is normal in H} \\
+		\phantom{aaa} H/H\cap N \ \simeq \ HN/N \\ \\
+		\phantom{aaa} \text{Third Isomorphism Theorem: Let G be a group, H and N normal subgroups with } \\ \phantom{aaa} N \subseteq H \ \subseteq \ G \\
+		\phantom{aaa} \text{then } G/H \ \simeq \ (G/N)/(H/N)
+	</div>
+
+	</div>
+
+
+
+
+
+  <br>
+  <br>
+
+	<div class='content'>
+
+  	<h4 id='topic12'><center>Rings and Fields</center></h4>
+
+  		<hr>
+
+		<p class='paragraphs'>We have concluded our look at groups and now turn our attention to some other more structured objects. A 
+		<b>ring</b> is essentially a group with additional structures to it. First, we give the minimum requirements for a set R to be a 
+		ring. The set has two binary operations defined on it: addition and subtraction. Furthermore, the following properties must, at a 
+		minimum, be satisfied:</p>
+
+		<ol class='lists'>
+			<li> <div lang='latex'>a + b = b + a </div> </li>
+			<li> <div lang='latex'>(a + b) + c = a + (b + c) </div> </li>
+			<li> <div lang='latex'> \exists \ 0 \ \epsilon \ R \ s.t. \ a + 0 = 0 </div> </li>
+			<li> <div lang='latex'> \forany \ a \ \epsilon \ R, \ \exists \ -a \ \epsilon  \ R \ s.t. \ a + (-a) = 0</div> </li>
+			<li> <div lang='latex'>a(bc) = (ab)c </div> </li>
+			<li> <div lang='latex'>(a+b)c = ac + bc \ \ \ a(b+c) = ab + ac </div> </li>
+		</ol>
+
+		<p class='paragraphs'>Some things to note: the additive operation is neccessairly abelian, but the multiplicative operation does not 
+		require such constraint. If ab = ba, then R is called a <b>commutative ring</b>. Note also, that there is no mention of a strict 
+		multiplicative identity 1 such that a(1) = 1(a) = a. Finally, there is not neccessairly a multiplicative inverse for each element in the 
+		field. If a multiplicative inverse exists for any element except the additive inverse 0, then R is called a <b>division ring</b>.</p>
+
+		<p class='paragraphs'>A <b>field</b> is a division ring that is also commutative under multiplication. It is a ring that has the most 
+		restrictions on its structure. In a sense, a field is the most well defined version of a group.</p>
 
 	</div>
 
