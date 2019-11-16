@@ -119,6 +119,7 @@ hr:before {
 				<li><a href="#topic5">Problem 5</a></li>
 				<li><a href="#topic6">Problem 6</a></li>
 				<li><a href="#topic7">Problem 7</a></li>
+				<li><a href="#topic8">Problem 8</a></li>
 			</ul>
 	</div>
 
@@ -464,7 +465,7 @@ print<span style='color:#808030; '>(</span> squareOfSum<span style='color:#80803
 <p class='paragraphs'><i>Answer: 25164150, run time: 1.05 s </i></p>
 
 
-
+	</div>
 
 
 <br>
@@ -514,6 +515,88 @@ i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>5</span>
 </pre>
 
 <p class='paragraphs'><i>10 001st prime: 104743, run time: 360 ms </i></p>
+
+
+	</div>
+
+
+<br>
+<br>
+
+	<div class='content'>
+
+		<h4 id='topic8'><center>Problem 8: Largest product in a series</center></h4>
+
+			<hr>
+
+		<p class='paragraphs'><i>Date posted: 15/11/2019</i></p>
+
+		<p class='paragraphs'><i>Problem rating: 5%</i></p>
+
+		<p class='paragraphs'>The four adjacent digits in the 1000 digit number given below that have the greatest product are 9x9x8x9 = 5832.</p>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#008c00; '>73167176531330624919225119674426574742355349194934</span>
+<span style='color:#008c00; '>96983520312774506326239578318016984801869478851843</span>
+<span style='color:#008c00; '>85861560789112949495459501737958331952853208805511</span>
+<span style='color:#008c00; '>12540698747158523863050715693290963295227443043557</span>
+<span style='color:#008c00; '>66896648950445244523161731856403098711121722383113</span>
+<span style='color:#008c00; '>62229893423380308135336276614282806444486645238749</span>
+<span style='color:#008c00; '>30358907296290491560440772390713810515859307960866</span>
+<span style='color:#008c00; '>70172427121883998797908792274921901699720888093776</span>
+<span style='color:#008c00; '>65727333001053367881220235421809751254540594752243</span>
+<span style='color:#008c00; '>52584907711670556013604839586446706324415722155397</span>
+<span style='color:#008c00; '>53697817977846174064955149290862569321978468622482</span>
+<span style='color:#008c00; '>83972241375657056057490261407972968652414535100474</span>
+<span style='color:#008c00; '>82166370484403199890008895243450658541227588666881</span>
+<span style='color:#008c00; '>16427171479924442928230863465674813919123162824586</span>
+<span style='color:#008c00; '>17866458359124566529476545682848912883142607690042</span>
+<span style='color:#008c00; '>24219022671055626321111109370544217506941658960408</span>
+<span style='color:#008c00; '>07198403850962455444362981230987879927244284909188</span>
+<span style='color:#008c00; '>84580156166097919133875499200524063689912560717606</span>
+<span style='color:#008c00; '>05886116467109405077541002256983155200055935729725</span>
+<span style='color:#008c00; '>71636269561882670428252483600823257530420752963450</span>
+</pre>
+
+	<p class='paragraphs'><b>Find the thirteen adjacent digits in the 1000 digit number that have the greatest product. What is the value of this product?</b></p>
+
+	<p class='paragraphs'>To brute force this problem, we might consider finding the product of the first 13 digits and saving its value. Then, we proceed 
+	to compute the product of digits 2 through 14. If this product is greater than the previous, then it is the new largest product and we store the new 
+	value while discarding the old one. Overall this would be 987 computations, which isn't a lot for a computer, however we can notice something to make 
+	the computations slightly less taxing. If any of the 13 digits in the computation contain a zero, then we know the product will be zero so we can 
+	safely skip the computation. For a problem like this, the time saved will not be very much. However it is good practise to try and make our code 
+	as time efficient as possible. Also, as we move to the more challenging problems, we will see that brute forcing a problem takes too much time and we 
+	will have to discover methods like this one to ensure our program executes in a reasonable amount of time.</p>
+
+	<p class='paragraphs'>The code for this problem is given below:</p>
+
+<pre style='color:#000000;background:#ffffff;'>number <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>'7316717653133062491922511967...'</span>
+largestProduct <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span>
+
+<span style='color:#800000; font-weight:bold; '>for</span> i <span style='color:#800000; font-weight:bold; '>in</span> <span style='color:#400000; '>range</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>987</span><span style='color:#808030; '>)</span><span style='color:#808030; '>:</span>
+    
+    currentNumber <span style='color:#808030; '>=</span> number<span style='color:#808030; '>[</span>i <span style='color:#808030; '>:</span> i <span style='color:#44aadd; '>+</span> <span style='color:#008c00; '>13</span><span style='color:#808030; '>]</span>
+    
+    <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#0000e6; '>'0'</span> <span style='color:#800000; font-weight:bold; '>in</span> currentNumber<span style='color:#808030; '>:</span>
+        <span style='color:#800000; font-weight:bold; '>continue</span>
+    <span style='color:#800000; font-weight:bold; '>else</span><span style='color:#808030; '>:</span>
+        testProduct <span style='color:#808030; '>=</span> <span style='color:#008c00; '>1</span>
+        <span style='color:#800000; font-weight:bold; '>for</span> digit <span style='color:#800000; font-weight:bold; '>in</span> currentNumber<span style='color:#808030; '>:</span>
+            testProduct <span style='color:#808030; '>=</span> testProduct<span style='color:#44aadd; '>*</span><span style='color:#400000; '>int</span><span style='color:#808030; '>(</span>digit<span style='color:#808030; '>)</span>
+            
+    <span style='color:#800000; font-weight:bold; '>if</span> testProduct <span style='color:#44aadd; '>></span> largestProduct<span style='color:#808030; '>:</span>
+        largestProduct <span style='color:#808030; '>=</span> testProduct
+</pre>
+
+	<p class='paragraphs'>Notice how we start with the number as a string so we have a way of accessing its digits. Then, when we grab a block of 13 digits, we 
+	convert each digit to an integer so that we can multiply it by our test product.</p>
+
+<p class='paragraphs'><i>Largest product: 23514624000, run time: 3.89 ms </i></p>
+
+	</div>
+
+
+
+
 		
 
 

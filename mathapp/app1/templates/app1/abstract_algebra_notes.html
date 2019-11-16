@@ -717,6 +717,32 @@ hr:before {
 		<p class='paragraphs'>A <b>field</b> is a division ring that is also commutative under multiplication. It is a ring that has the most 
 		restrictions on its structure. In a sense, a field is the most well defined version of a group.</p>
 
+		<p class='paragraphs'>Suppose we have a ring R with elements a and b, with neither 0. Then a is called a <b>zero divisor</b> if ab = 0.	A 
+		ring with no zero divisor is called an <b>integral domain</b>. For example, the integers modulo n are an integral domain if n is any prime 
+		number.</p>
+
+		<p class='paragraphs'>Similar to how we defined the cartesian product of two groups, we can do the same for two rings. Let R and S be rings. Then 
+		RxS is given by:</p>
+
+		<div lang='latex'>
+			R\times S = \{(r,s) \ | \ r \ \epsilon \ R \ s \ \epsilon \ S \ \} \\ 
+			\phantom{aaa} (r_{1},s_{1}) + (r_{2},s_{2}) = (r_{1}+r_{2},s_{1}+s_{2}) \\
+			\phantom{aaa} (r_{1},s_{1})(r_{2},s_{2}) = (r_{1}r_{2},s_{1}s_{2})
+		</div>
+
+		<p class='paragraphs'>An integrable domain is a field if every non zero element in the field has a multiplicative inverse. Furthermore, if you 
+		have a ring that is an integrable domain with a finite number of elements, then the ring is also a field. For instance, since the integers Z 
+		mod p with p prime is an integrable domain and is finite, then it is also a field. We define the <b>characteristic of a ring, char(R)</b> to 
+		be the smallest integer n such that nr = r + r + ... + r (n-times) = 0 for any r in the ring R. If no such integer n exists, then the ring is 
+		said to have char(R) = 0.</p>
+
+		<p class='paragraphs'>Char(Z mod n) = n</p>
+
+		<p class='paragraphs'>An important fact: if 1 is in the ring R and n is the smallest integer such that 1 + 1 + ... + 1 (n-times) = 0, then 
+		char(R) = n. This is especially useful when we have larger rings that we don't want to test every element to find the char(R) of the ring.</p>
+
+		<p class='paragraphs'>Another important fact: if R is an integrable domain, then either char(R) = 0 or char(R) = p for some prime p.</p>
+
 	</div>
 
 
