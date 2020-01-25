@@ -55,6 +55,7 @@ urlpatterns = [
         path('project_euler_notes/',views.project_euler_notes,name='project-euler-notes'),
         path('project_euler_problems/',views.project_euler_problems,name='project-euler-problems'),
         path('project_euler_problems/p1_10/',views.problems_1_10,name='euler-1-10'),
+        path('project_euler_problems/p11_20/',views.problems_11_20,name='euler-11-20'),
         # calculus tool urls
         path('calculus_tool/',FunctionListView.as_view(),name='calculus_tool'),
         path('calculus_tool/function/',FunctionCreateView.as_view(),name='function-create'),

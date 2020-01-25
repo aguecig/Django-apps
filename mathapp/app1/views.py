@@ -131,6 +131,9 @@ def project_euler_problems(request):
 def problems_1_10(request):
     return render(request,'app1/euler_1_10.html')
 
+def problems_11_20(request):
+    return render(request, 'app1/euler_11_20.html')
+
 # create class based views for making posts, updating
 # posts, deleting posts on the forum
     
